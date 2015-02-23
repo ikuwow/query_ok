@@ -106,3 +106,5 @@ activate :deploy do |deploy|
     deploy.method = :git
     deploy.branch = "master"
 end
+
+activate :directory_indexes
