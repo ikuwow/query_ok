@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/yterajima/middleman-pure.git
-  revision: a3d072e7d0f01a50fa7c90de7b5f821cdfdfdf20
-  specs:
-    middleman-pure (0.5.3)
-      middleman (>= 3.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -151,4 +144,3 @@ DEPENDENCIES
   middleman-blog (~> 3.5.3)
   middleman-deploy (~> 1.0)
   middleman-livereload (~> 3.3.0)
-  middleman-pure!
