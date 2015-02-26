@@ -1,0 +1,19 @@
+/* For syntax highlighting */
+
+<%= Rouge::Themes::Base16::Solarized.mode(:dark).render(:scope => '.highlight') %>
+
+<% if false %>
+ColorSchemes:
+    ThankfulEyes
+    Colorful
+    Github
+    Base16
+    Base16::Solarized
+    Base16::Monokai
+<% end %>
+
+
+.highlight {
+    padding: 10px;
+    border-radius: 3px;
+}

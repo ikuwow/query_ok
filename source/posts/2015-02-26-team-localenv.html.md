@@ -30,7 +30,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 
 ## Vagrantで仮想マシンを立ち上げる
 
-```
+```ruby
 Vagrantfile
 chef/centos-6.6
 ```
