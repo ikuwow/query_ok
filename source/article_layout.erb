@@ -3,7 +3,7 @@
     <p class="post-meta">
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') %></time>
         <% current_article.tags.each do |tag| %>
-            <a class="post-category post-category-design" href="#"><%= tag %></a>
+            <%= link_to tag, "/tags/#{tag}", :class => "post-category post-category-design" %>
         <% end %>
 
     </p>
