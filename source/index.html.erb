@@ -39,7 +39,7 @@ per_page: 10
             <% # By <a href="#" class="post-author">Tilo Mitra</a> under  %>
             <time>Posted at <%= article.date.strftime('%b %e %Y') %></time>
             <% article.tags.each do |tag| %>
-                <a class="post-category post-category-design" href="#"><%= tag %></a>
+                <%= link_to tag, "/tags/#{tag}", :class => "post-category post-category-design" %>
             <% end %>
 
             <% # <a class="post-category post-category-pure" href="#">Pure</a> %>
