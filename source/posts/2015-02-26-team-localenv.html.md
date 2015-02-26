@@ -23,7 +23,7 @@ tags: Vagrant, Chef
 これは公式サイトから一行コピペしてターミナルに貼り付けます。
 http://brew.sh/index_ja.html
 
-```
+```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 

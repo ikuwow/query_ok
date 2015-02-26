@@ -112,3 +112,9 @@ activate :deploy do |deploy|
 end
 
 activate :directory_indexes
+
+activate :syntax
+    # :line_numbers => true
+
+set :markdown_engine, :redcarpet # not kramdown
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
