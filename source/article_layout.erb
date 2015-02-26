@@ -1,11 +1,28 @@
 <% wrap_layout :layout do %>
     <h1><%= current_article.title unless current_article.nil? %></h1>
-        <p class="post-meta">
-            <time>Posted at <%= current_article.date.strftime('%b %e %Y') %></time>
-            <% current_article.tags.each do |tag| %>
-                <a class="post-category post-category-design" href="#"><%= tag %></a>
-            <% end %>
+    <p class="post-meta">
+        <time>Posted at <%= current_article.date.strftime('%b %e %Y') %></time>
+        <% current_article.tags.each do |tag| %>
+            <a class="post-category post-category-design" href="#"><%= tag %></a>
+        <% end %>
 
-        </p>
+    </p>
     <%= yield %>
+
+
+    <!-- Disqus -->
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'queryok';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 <% end %>
