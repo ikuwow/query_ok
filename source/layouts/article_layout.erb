@@ -1,4 +1,5 @@
 <% wrap_layout :layout do %>
+
     <h1><%= current_article.title unless current_article.nil? %></h1>
     <p class="post-meta">
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
@@ -7,8 +8,8 @@
             <%= link_to tag, "/tags/#{tag}", :class => "post-category post-category-design" %>
         <% end %>
         <% end %>
-
     </p>
+
     <%= yield %>
 
     <div id="social-buttons">
