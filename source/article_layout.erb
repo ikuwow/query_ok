@@ -1,0 +1,11 @@
+<% wrap_layout :layout do %>
+    <h1><%= current_article.title unless current_article.nil? %></h1>
+        <p class="post-meta">
+            <time>Posted at <%= current_article.date.strftime('%b %e %Y') %></time>
+            <% current_article.tags.each do |tag| %>
+                <a class="post-category post-category-design" href="#"><%= tag %></a>
+            <% end %>
+
+        </p>
+    <%= yield %>
+<% end %>
