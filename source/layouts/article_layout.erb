@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
 
     <h1><%= current_article.title unless current_article.nil? %></h1>
-    <p class="post-meta">
+    <p class="post-meta" style="margin: 20px 0;">
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
         <% if !current_article.nil? %>
         <% current_article.tags.each do |tag| %>
@@ -10,18 +10,18 @@
         <% end %>
     </p>
 
+    <div class="social-buttons-box">
+        <%= partial "social_buttons" %>
+    </div>
+
     <div id="article-body" style="margin-bottom: 40px">
 
         <%= yield %>
 
     </div>
 
-    <div id="social-buttons-box">
+    <div class="social-buttons-box">
         <%= partial "social_buttons" %>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54ef412e7d400f9a" async="async"></script> -->
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <!-- <div class="addthis_sharing_toolbox"></div> -->
     </div>
 
     <!-- Disqus -->
