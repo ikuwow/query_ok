@@ -2,6 +2,7 @@
 title: Example Article
 date: 2012-01-01
 category: test
+published: false
 tags: example
 ---
 

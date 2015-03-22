@@ -3,6 +3,7 @@ title: 日本語ページの例
 date: 2015-02-23 22:54 JST
 category: test
 tags: test, example
+published: false
 ---
 
 ## Hello World
