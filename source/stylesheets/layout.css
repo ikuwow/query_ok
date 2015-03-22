@@ -9,3 +9,8 @@ p code {
     border-radius: 1px;
     padding: 0 2px;
 }
+
+#article-body h2 {
+    border-left: solid 6px #444444;
+    padding-left: 12px;
+}
