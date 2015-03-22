@@ -65,6 +65,15 @@ ga('send', 'pageview');
                     </li>
                 </ul>
             </nav>
+            <div class="tag-cloud">
+                <ul>
+                <% # blog_tags = blog.tags.sort{ |a, b| a["tag"].size <=> b["tag"].size} %>
+                <% # TODO: 記事数の多い順にソートして表示する %>
+                <% blog.tags.each do |tag,articles| %>
+                    <li><%= link_to "#{tag}(#{articles.size})", tag_path(tag) %></li>
+                <% end %>
+                </ul>
+            </div>
         </div>
     </div>
 

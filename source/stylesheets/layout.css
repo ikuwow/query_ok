@@ -19,3 +19,11 @@ p code {
 #article-body {
     font-size: 95%;
 }
+
+.tag-cloud ul {
+    list-style: none;
+}
+.tag-cloud ul li a{
+    color: white;
+}
+
