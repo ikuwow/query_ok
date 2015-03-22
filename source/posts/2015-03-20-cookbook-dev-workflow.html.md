@@ -18,7 +18,6 @@ Chefはchefdkでインストールしてあるものとする。
 
 ## Cookbookの作成
 
-### Cookbook作成
 
 新しいCookbookを作る場合は以下のコマンドで作る。
 
@@ -46,12 +45,12 @@ libraries    metadata.rb  providers    recipes      resources    templates
 この単一cookbook開発ではChef Serverを使わないのでlocal\_modeをtrueにしておく。
 これで`-z`オプションが不要になり、
 `ERROR: Your private key could not be loaded from /etc/chef/client.pem`のエラーがなくなる。
-local\_modeで使っていると.chef/local-mode-cacheができるのでこいつもignoreしておく。
+local\_modeで使っていると.chef/local-mode-cacheができるのでこいつをgitignoreしておく。
 
 ```bash
 $ mkdir .chef/
 $ echo "local_mode true" > .chef/knife.rb
-$ echo "/.chef/local-mode-cache >> .gitignore
+$ echo "/.chef/local-mode-cache" >> .gitignore
 ```
 
 ひととおりファイルができたところで`git init`してバージョン管理に乗せる。
@@ -70,7 +69,7 @@ $ git commit -m'initial commit'
  create mode 100644 recipes/default.rb
 ```
 
-### test-kitchenの設定
+## test-kitchenの設定
 
 cookbookのテストは基本的にtest-kitchenの仮想マシン上で行う。Vagrantfileは作らない。
 test-kitchenの設定ファイルである.kitchen.ymlにrun_listやテストスイートをなどを細かく書けて非常に便利なので
@@ -81,14 +80,14 @@ $ kitchen init
 IkuosMacmini:base-settings degawaikuo$ kitchen init
       create  .kitchen.yml
       create  test/integration/default
-      create  .gitignore
+      append  .gitignore
       append  .gitignore
       append  .gitignore
 Successfully installed kitchen-vagrant-0.15.0
 1 gem installed
 ```
 
-`.gitignore`と`.kitchen.yml`が追加された。
+`.gitignore`に追記され`.kitchen.yml`が新しく追加された。
 
 `.kitchen.yml`はtest-kitchenで使う種々の設定を書くファイルで非常に重要。デフォルトでは以下のようになっている。
 
@@ -142,7 +141,7 @@ suites:
 
 ここまで書けば`kichen test`が動くので動かしてみる。
 新しく仮想マシンを立ち上げるときに結構時間かかるので、仮想マシン壊さないように`--destroy=never`をつけるととっても捗る。
-あと`-c`をつけると複数の仮想マシンを並列にテストしてくれるので早い。
+あと`-c`をつけると複数の仮想マシンを並列にテストしてくれるので速い。
 
 ```bash
 $ kitchen test --destroy=never -c
@@ -160,7 +159,7 @@ recipeもテストコードはなにも書いていないので何も実行さ�
 設定がだいたい終わったので、早速テストコードとrecipeを書く。
 テストコードはserverspecで書くので、
 
-base-cookbook/test/integration/default/serverspec/user\_spec.rb
+`/test/integration/default/serverspec/user_spec.rb`
 
 ```ruby
 require 'serverspec'
@@ -173,13 +172,13 @@ describe user('ikuwow') do
 end
 ```
 
-base-cookbook/recipes/default.rb
+`/recipes/default.rb`
 
 ```ruby
 include_recipe "base-settings::user"
 ```
 
-base-cookbook/recipes/user.rb
+`base-cookbook/recipes/user.rb`
 
 ```ruby
 group "ikuwow" do
@@ -237,7 +236,7 @@ supermarket.chef.ioにあるコミュニティクックブックはぜひ積極�
 ただサービスを動かすサーバーなどセキュリティ要件が大きい場合はよくクックブックの中身を読むこと。
 自分はなるべくダウンロードが多いものを選ぶようにしている。
 
-今回は以下のSELinux無効のクックブックを使う。
+今回は以下のSELinuxのクックブックを使う。
 Chef公式でかつダウンロード数がずば抜けて多かったので信用度高い。
 
 https://supermarket.chef.io/cookbooks/selinux
@@ -284,6 +283,7 @@ include_recipe "selinux::disabled"
 
 ```bash
 $ kitchen converge
+(ubuntuは省略)
 -----> Converging <default-centos-66>...
        Preparing files for transfer
        Preparing dna.json
@@ -477,7 +477,7 @@ $ kitchen converge
 
 これは.kitchen.ymlにdata bagsを置くディレクトリを指定して、その場所にdata\_bagsを作ってやればよい。
 あくまでテスト用のdata bagsなので、`test/`ディレクトリ以下に入れるとよいかも。
-ここではdata_bag userにdata_bag_item ikuとwowを追加して、これを使ってユーザー作成を行う。
+ここではdata\_bag userにdata\_bag\_item ikuとwowを追加して、これを使ってユーザー作成を行う。
 
 .kitchen.ymlは以下のようになる。
 
@@ -524,7 +524,7 @@ $ knife data bag create users wow
 (vimが立ち上がるので以下のように編集する）
 {
   "id": "wow",
-  "comment": "ゐく"
+  "comment": "を"
 }
 (:q)
 Data bag users already exists
@@ -591,11 +591,11 @@ metadataとBerksfileでcookbookの依存は解決でき、あとは.kitchen.yml�
 依存クックブックやattributesも一つのcookbook内で完結させられるというのがよいですね。
 
 補足として、run\_listをnodesやrolesに書くよりも、
-ここで示した例として`include_recipe`を並べるcookbookを作ったほうがいい。
+ここで示した例として`include_recipe`を並べるcookbookを作ったほうがよいようだ。
 run\_listとrolesはChef Server環境だとバージョン管理を行わない一時ファイルの扱いにするのが普通なので、
-バージョン管理するcookbookのrecipeに入れておくとわかりやすい。
+バージョン管理するcookbookのrecipeに入れておくと運用しやすい。
 
-ここで作ったbase-settingsはGitHubに上げてあります。
+ここで作ったbase-settingsはGitHubに上げてあるので参考までに。
 
 https://github.com/ikuwow/base-settings
 
