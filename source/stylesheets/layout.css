@@ -2,3 +2,10 @@
     overflow: hidden;
     margin: 10px 0;
 }
+
+p code {
+    background-color: #f7f7f7;
+    border: solid 1px #dddddd;
+    border-radius: 1px;
+    padding: 0 2px;
+}
