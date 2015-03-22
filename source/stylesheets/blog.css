@@ -110,9 +110,9 @@ h3 {
     margin-left: 1em;
 }
 .post-description {
-    /* font-family: Georgia, "Cambria", serif; */
     color: #444;
     line-height: 1.8em;
+    font-size: 95%;
 }
 .post-meta {
     color: #999;

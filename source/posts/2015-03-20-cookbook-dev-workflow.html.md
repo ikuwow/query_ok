@@ -2,7 +2,7 @@
 # title: cookbook-dev-workflow
 title: Cookbook開発の基本ワークフロー
 date: 2015-03-20 07:38 JST
-tags: Chef, test-kitchen
+tags: Chef, test-kitchen, serverspec
 ---
 
 先日まで、複数のcookbookを含めたchef-repo全体をgitリポジトリ化して運用していたという非常に
