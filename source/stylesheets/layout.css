@@ -14,3 +14,8 @@ p code {
     border-left: solid 6px #444444;
     padding-left: 12px;
 }
+
+
+#article-body {
+    font-size: 95%;
+}
