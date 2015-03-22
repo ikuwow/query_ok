@@ -7,6 +7,7 @@
 a {
     text-decoration: none;
     color: rgb(61, 146, 201);
+    transition: 0.1s;
 }
 a:hover,
 a:focus {
@@ -36,6 +37,15 @@ h3 {
 .sidebar {
     background: rgb(61, 79, 93);
     color: #fff;
+}
+
+.brand-title a{
+    color: white;
+}
+
+.brand-title a:hover {
+    text-decoration: none;
+    -webkit-filter: brightness(90%);
 }
 
 .brand-title,
