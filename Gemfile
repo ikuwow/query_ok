@@ -10,6 +10,7 @@ gem "redcarpet", "~> 3.0.0"
 gem "middleman-syntax"
 gem "font-awesome-middleman"
 gem "nokogiri"
+gem "middleman-sitemap"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

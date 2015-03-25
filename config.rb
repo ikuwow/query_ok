@@ -118,3 +118,5 @@ activate :syntax
 
 set :markdown_engine, :redcarpet # not kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
+
+activate :sitemap, :hostname => "http://ikuwow.website"
