@@ -29,29 +29,9 @@ per_page: 10
 <div class="posts">
     <h1 class="content-subhead">Recent Posts</h2>
 
-    <% blog.articles[0...5].each do |article| %>
-        <section class="post">
-            <header class="post-header">
-                <h2 class="post-title"><%= link_to article.title, article %></h2>
-            </header>
+    <%= partial(:articles_list, :locals => {
+        :articles => blog.articles
+    })%>
 
-            <p class="post-meta">
-            <% # By <a href="#" class="post-author">Tilo Mitra</a> under  %>
-            <time>Posted at <%= article.date.strftime('%b %e %Y') %></time>
-            <% article.tags.each do |tag| %>
-                <%= link_to tag, tag_path(tag), :class => "post-category post-category-design"%>
-            <% end %>
-
-            <% # <a class="post-category post-category-pure" href="#">Pure</a> %>
-            </p>
-            
-            <div class="post-description">
-                <p>
-                    <%= strip_tags(article.summary) %>
-                </p>
-                <%= link_to 'もっと読む…', article %>
-            </div>
-        </section>
-    <% end %>
 
 </div>
