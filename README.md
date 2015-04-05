@@ -9,4 +9,7 @@ ikuwow's IT blog.
 * Pure CSS Framework
 * Disqus
 
+## License
+
+All rights reserved.
 
