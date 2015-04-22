@@ -27,3 +27,10 @@ p code {
     color: white;
 }
 
+.btn-read-more:hover{
+    text-decoration: none!important;
+}
+.btn-read-more {
+    float: right;
+}
+
