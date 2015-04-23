@@ -39,4 +39,18 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
+    <!-- next and previous -->
+    <div class="next-previous-article">
+    <% next_article = current_article.next_article %>
+    <% if next_article %>
+        <%= link_to "← 次の記事", next_article.url, :class => "next-article-link" %>
+    <% end %>    
+
+    <% previous_article = current_article.previous_article %>
+    <% if previous_article %>
+        <%= link_to "前の記事 →", previous_article.url, :class => "previous-article-link"  %>
+    <% end %>    
+    </div>
+
+
 <% end %>
