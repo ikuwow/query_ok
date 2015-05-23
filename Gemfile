@@ -12,6 +12,7 @@ gem "font-awesome-middleman"
 gem "nokogiri"
 gem "middleman-sitemap"
 gem "middleman-favicon-maker", "~> 3.7"
+gem "middleman-imageoptim", "~> 0.2.1"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

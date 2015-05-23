@@ -114,7 +114,7 @@ configure :build do
       { icon: "favicon.png", size: "16x16" },
       { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" }
     ]
-  } 
+  }
 end
 
 activate :deploy do |deploy|
@@ -132,3 +132,5 @@ set :markdown_engine, :redcarpet # not kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
 
 activate :sitemap, :hostname => "http://ikuwow.website"
+
+activate :imageoptim
