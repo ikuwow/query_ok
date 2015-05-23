@@ -1,2 +1,3 @@
 ExpiresActive On
 ExpiresByType text/css "access plus 1 days"
+ExpiresByType application/javascript "access plus 1 days"
