@@ -14,7 +14,7 @@
         <%= current_article.title+" : Query OK." %>
     <% end %>
   ">
-  <!-- 
+  <!--
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <meta property="og:description" content="">
@@ -48,11 +48,11 @@
     //yui.yahooapis.com/pure/0.6.0/pure-min.css
     //yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css
     //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
-    blog
-    highlight
-    layout
+    blog.css
+    highlight.css
+    layout.css
   }.each do |css| %>
-    <%= stylesheet_link_tag css %>
+    <%= stylesheet_link_tag css+'?date='+Time.now.strftime("%y%m%d") %>
   <% end %>
 
 </head>
