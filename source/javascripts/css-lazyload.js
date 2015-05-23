@@ -17,6 +17,5 @@
 
     lazyload_css('/stylesheets/highlight');
     lazyload_css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-    lazyload_css('//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css');
 
 })(document);
