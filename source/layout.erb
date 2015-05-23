@@ -44,11 +44,16 @@
   <meta name="p:domain_verify" content="1c046679ed7f50edcc527bdaea3ec02c"/>
 
   <!-- css -->
-  <%= stylesheet_link_tag "//yui.yahooapis.com/pure/0.6.0/pure-min.css" %>
-  <%= stylesheet_link_tag "//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css" %>
-  <%= stylesheet_link_tag 'blog' %>
-  <%= stylesheet_link_tag 'highlight' %>
-  <%= stylesheet_link_tag 'layout' %>
+  <% %w{
+    //yui.yahooapis.com/pure/0.6.0/pure-min.css
+    //yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css
+    //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
+    blog
+    highlight
+    layout
+  }.each do |css| %>
+    <%= stylesheet_link_tag css %>
+  <% end %>
 
 </head>
 
