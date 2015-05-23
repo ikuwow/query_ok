@@ -14,11 +14,13 @@
         <%= current_article.title+" : Query OK." %>
     <% end %>
   ">
+  <% if false %>
   <!--
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <meta property="og:description" content="">
   -->
+  <% end %>
 
   <meta charset="utf-8" />
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
@@ -46,14 +48,12 @@
   <!-- css -->
   <% %w{
     //yui.yahooapis.com/pure/0.6.0/pure-min.css
-    //yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css
-    //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
     blog.css
-    highlight.css
     layout.css
   }.each do |css| %>
     <%= stylesheet_link_tag css+'?date='+Time.now.strftime("%y%m%d") %>
   <% end %>
+  <!-- highlight.css will be lazyloaded -->
 
 </head>
 
@@ -122,6 +122,8 @@ ga('send', 'pageview');
 </div><!-- #layout -->
 
 <!-- Javascript Zone Start -->
+
+<%= javascript_include_tag 'css-lazyload' %>
 
 <script type="text/javascript"> // Disqus Comment Count 
 /* * * CONFIGURATION VARIABLES * * */
