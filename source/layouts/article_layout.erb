@@ -5,7 +5,7 @@
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
         <% if !current_article.nil? %>
         <% current_article.tags.each do |tag| %>
-            <%= link_to tag, tag_path(tag), :class => "post-category post-category-design"%>
+            <%= link_to '<i class="fa fa-tag"></i>'+tag, tag_path(tag), :class => "post-category post-category-design"%>
         <% end %>
         <% end %>
     </p>
@@ -29,7 +29,7 @@
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'queryok';
-    
+
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -44,12 +44,12 @@
     <% next_article = current_article.next_article %>
     <% if next_article %>
         <%= link_to "← 次の記事", next_article.url, :class => "next-article-link" %>
-    <% end %>    
+    <% end %>
 
     <% previous_article = current_article.previous_article %>
     <% if previous_article %>
         <%= link_to "前の記事 →", previous_article.url, :class => "previous-article-link"  %>
-    <% end %>    
+    <% end %>
     </div>
 
 
