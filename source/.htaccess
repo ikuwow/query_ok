@@ -1,3 +1,8 @@
 ExpiresActive On
 ExpiresByType text/css "access plus 1 days"
 ExpiresByType application/javascript "access plus 1 days"
+
+<Files ~ ".(gif|jpe?g|png|ico)$">
+	Header set Cache-Control "max-age=2592000, public"
+    # 30日間
+</Files>
