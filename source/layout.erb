@@ -26,15 +26,15 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ゐくを（ikuwow）の技術ブログ">
-  <% if current_article.nil? %>
-    <meta name="keywords" content="ゐくを,ブログ,ikuwow">
-  <% else %>
-      <meta name="keywords" content="ゐくを,ブログ,ikuwow
-      <% current_article.tags.each do |tag| %>
-          ,<%= tag %>
-      <% end %>
-      ">
-  <% end %>
+  <%
+    keywords= "ゐくを,ブログ,ikuwow"
+    if !current_article.nil?
+      current_article.tags.each do |tag|
+          keywords+=','+tag
+      end
+    end
+  %>
+  <meta name="keywords" content="<%= keywords %>">
   <title>
     <% if current_article.nil? %>
         <%= "Query OK. : ゐくを（ikuwow）の技術ブログ" %>
