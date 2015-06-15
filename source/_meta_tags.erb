@@ -1,19 +1,29 @@
-<% description = 'ゐくを（ikuwow）の技術ブログ' %>
-<meta charset="utf-8" />
-<meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="<%=description%>">
 <%
+  if current_article.nil?
+      title = "Query OK. : ゐくを（ikuwow）の技術ブログ"
+  else
+      title = current_article.title+" : Query OK."
+  end
   keywords= "ゐくを,ブログ,ikuwow"
   if !current_article.nil?
     current_article.tags.each do |tag|
         keywords+=','+tag
     end
   end
+  description = 'ゐくを（ikuwow）の技術ブログ'
+
+  img = '/img/ikuwow.jpg'
 %>
+
+<meta charset="utf-8" />
+<meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="<%= keywords %>">
+<title><%= title %></title>
+<meta name="description" content="<%=description%>">
 
 <!-- ogp -->
+<meta property="og:title" content="<%= title %>">
 <% if current_article.nil? %>
     <meta property="og:type" content="article">
 <% else %>
@@ -21,7 +31,16 @@
 <% end %>
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="Query OK. : ゐくを（ikuwow）の技術ブログ">
-<meta property="og:image" content="/img/ikuwow.jpg">
+<meta property="og:image" content="<%=img%>">
 <meta property="article:publisher" content="ikuwow">
+
+
+<!-- twitter card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ikuwow" />
+<meta name="twitter:image" content="<%=img%>" />
+<meta name="twitter:title" content="<%=title%>" />
+<meta name="twitter:description" content="<%=description%>" />
+
 
 <meta name="p:domain_verify" content="1c046679ed7f50edcc527bdaea3ec02c"/>
