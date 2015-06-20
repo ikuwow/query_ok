@@ -2,21 +2,10 @@
 <html>
 
 <head>
-
   <%= partial "meta_tags" %>
-
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-
-  <!-- css -->
-  <% %w{
-    //yui.yahooapis.com/pure/0.6.0/pure-min.css
-    //yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css
-    layout.css
-  }.each do |css| %>
-    <%= stylesheet_link_tag css+'?date='+Time.now.strftime("%y%m%d") %>
-  <% end %>
-  <!-- highlight.css will be lazyloaded -->
-
+  <%= partial 'head_css' %>
+  <!-- lazyloaded css -->
 </head>
 
 <body>

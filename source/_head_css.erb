@@ -1,0 +1,8 @@
+
+<% [
+  '//yui.yahooapis.com/pure/0.6.0/pure-min.css',
+  '//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css',
+  'layout.css?date='+Time.now.strftime('%y%m%d')
+].each do |css| %>
+  <%= stylesheet_link_tag css %>
+<% end %>
