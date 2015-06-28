@@ -136,3 +136,6 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => t
 activate :sitemap, :hostname => "http://ikuwow.website"
 
 activate :imageoptim
+
+# css and javascript inliner
+activate :inliner
