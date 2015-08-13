@@ -1,9 +1,8 @@
 ---
-title: エンジニアや開発者にとっての新型MacBook
+title: プログラミングする人にとっての新型MacBook
 # title: new-mac-book-for-developers
 date: 2015-08-07 22:24 JST
 tags: Mac, Apple
-published: false
 ---
 
 今までプログラム書いたりしていたMacBook Air 13inchを
