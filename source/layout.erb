@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <%= partial "dns_prefetches" %>
   <%= partial "meta_tags" %>
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   <%= partial 'head_css' %>
