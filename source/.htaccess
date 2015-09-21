@@ -2,10 +2,10 @@ ExpiresActive On
 ExpiresByType text/css "access plus 1 days"
 ExpiresByType application/javascript "access plus 1 days"
 ExpiresByType image/gif "access plus 30 days"
-ExpiresByType image/jpg "access plus 30 days"
 ExpiresByType image/jpeg "access plus 30 days"
 ExpiresByType image/png "access plus 30 days"
 ExpiresByType application/javascript "access plus 1 days"
+ExpiresByType application/x-javascript "access plus 1 days"
 
 <Files ~ ".(gif|jpe?g|png|ico)$">
 	Header set Cache-Control "max-age=2592000, public"
