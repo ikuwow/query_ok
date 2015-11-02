@@ -2,7 +2,7 @@
 title: gihyo.jpに「Webサイトのフロントパフォーマンスの基礎を見直す」という記事を書きました
 # title: gihyo-frontend-performance
 date: 2015-11-02 22:00 JST
-tags: パフォーマンス, HTTP2
+tags: パフォーマンス, HTTP/2
 ---
 
 みなさんこんにちは。ゐくをです。
