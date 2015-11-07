@@ -2,6 +2,8 @@
 # Blog settings
 ###
 
+$base_url = "http://ikuwow.website"
+
 Time.zone = "Tokyo"
 
 activate :blog do |blog|
@@ -133,7 +135,7 @@ activate :syntax
 set :markdown_engine, :redcarpet # not kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
 
-activate :sitemap, :hostname => "http://ikuwow.website"
+activate :sitemap, :hostname => $base_url
 
 activate :imageoptim
 
