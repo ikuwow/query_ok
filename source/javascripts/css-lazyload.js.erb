@@ -1,0 +1,22 @@
+<%
+css_names = %w{
+    //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
+    highlight
+}
+%>
+
+(function(d){
+
+var s = d.getElementsByTagName('head')[0];
+var css_tags = '';
+var c = d.createElement("div");
+c.id = "css-lazyload";
+<% css_names.each do |css| %>
+    css_tags += '<%= stylesheet_link_tag css%>';
+<% end %>
+c.innerHTML = css_tags;
+s.appendChild(c);
+console.log('appended');
+console.log(c);
+
+})(document);
