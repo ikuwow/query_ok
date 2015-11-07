@@ -99,7 +99,7 @@ configure :build do
   activate :minify_html
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
