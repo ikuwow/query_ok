@@ -6,7 +6,6 @@ css_names = %w{
 %>
 
 (function(d){
-
 var s = d.getElementsByTagName('head')[0];
 var css_tags = '';
 var c = d.createElement("div");
@@ -16,7 +15,4 @@ c.id = "css-lazyload";
 <% end %>
 c.innerHTML = css_tags;
 s.appendChild(c);
-console.log('appended');
-console.log(c);
-
 })(document);
