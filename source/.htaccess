@@ -1,11 +1,10 @@
 ExpiresActive On
-ExpiresByType text/css "access plus 1 days"
-ExpiresByType application/javascript "access plus 1 days"
+ExpiresByType text/css "access plus 30 days"
+ExpiresByType application/javascript "access plus 30 days"
+ExpiresByType application/x-javascript "access plus 30 days"
 ExpiresByType image/gif "access plus 30 days"
 ExpiresByType image/jpeg "access plus 30 days"
 ExpiresByType image/png "access plus 30 days"
-ExpiresByType application/javascript "access plus 30 days"
-ExpiresByType application/x-javascript "access plus 30 days"
 
 ErrorDocument 404 /error/404/index.html
 ErrorDocument 403 /error/403/index.html
