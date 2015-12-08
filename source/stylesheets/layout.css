@@ -255,10 +255,3 @@ h3 {
 
 }
 
-/*** Remove お知らせ of zenback ***/
-#zenback-news-hasimage,
-#logly-lift-869470,
-#zenback-powered {
-    display: none!important;
-}
-
