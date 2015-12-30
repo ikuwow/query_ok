@@ -1,0 +1,10 @@
+language: ruby
+
+rvm:
+  - 2.1.5
+  - 2.2.3
+
+cache: bundler
+
+script:
+  - bundle exec middleman build
