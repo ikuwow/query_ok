@@ -1,7 +1,12 @@
 
 <% [
-  '//yui.yahooapis.com/combo?pure/0.6.0/pure-min.css&pure/0.6.0/grids-responsive-min.css',
-  'layout'
+  '//yui.yahooapis.com/combo?pure/0.6.0/pure-min.css&pure/0.6.0/grids-responsive-min.css'
 ].each do |css| %>
   <%= stylesheet_link_tag css %>
+<% end %>
+
+<% [
+  'layout'
+].each do |css| %>
+<%= inline_css css %>
 <% end %>
