@@ -9,7 +9,7 @@ rvm:
 cache: bundler
 
 script:
-  - bundle exec middleman build
+  - bundle exec middleman build --verbose
 
 notifications:
   email: false
