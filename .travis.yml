@@ -6,7 +6,7 @@ rvm:
   - 2.1.5
   - 2.2.3
 
-# cache: bundler
+cache: bundler
 
 script:
   - bundle exec middleman build --verbose
