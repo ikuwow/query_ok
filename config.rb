@@ -137,7 +137,9 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => t
 
 activate :sitemap, :hostname => $base_url
 
-activate :imageoptim, :pngout => false, :svgo => false
+## imageoptim is disabled because of the bug.
+## please minify manually
+# activate :imageoptim, :pngout => false, :svgo => false
 
 # css and javascript inliner
 activate :inliner
