@@ -18,7 +18,7 @@ GitHubの自分のcontributionをウェブサイトに埋め込めるウィジ�
 <a href="http://github.com/ikuwow" class="gh-contributions" data-gh-username="ikuwow" target="_blank">ikuwow's contributions</a><script src="http://ikuwow.github.io/yourcontributions/widget.min.js"></script>
 
 前に書いた記事の
-[毎日コードを書いてGitHubのcontributionを途切らせないようにしている](http://localhost:4567/entry/everyday-commit/)で、
+[毎日コードを書いてGitHubのcontributionを途切らせないようにしている](/entry/everyday-commit/)で、
 自分の現在のcontributionを出していけるとよいなと思ったのがきっかけです。
 
 横に長いウィジェットなので、多分ブログパーツとしてはあんまり使いやすくないですが、
