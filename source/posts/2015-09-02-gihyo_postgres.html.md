@@ -2,7 +2,7 @@
 title: gihyo.jpに「PostgreSQLの基礎を見直す」という記事を書きました
 # title: gihyo_postgres
 date: 2015-09-02 23:38 JST
-tags: PostgreSQL
+tags: gihyo, PostgreSQL
 ---
 
 今月もgihyo記事を執筆しました。今回はPostgreSQLについて。
