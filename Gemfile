@@ -6,6 +6,7 @@ gem "middleman", "~> 3.3.9"
 gem "middleman-blog", "~> 3.5.3"
 gem "middleman-livereload", "~> 3.3.0"
 gem "middleman-deploy", "~> 1.0"
+gem "middleman-s3_sync", "~> 3.0"
 gem "redcarpet", "~> 3.0.0"
 gem "middleman-syntax"
 gem "font-awesome-middleman"
@@ -18,3 +19,4 @@ gem "middleman-inliner"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
