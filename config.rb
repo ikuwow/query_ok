@@ -143,3 +143,9 @@ activate :sitemap, :hostname => $base_url
 
 # css and javascript inliner
 activate :inliner
+
+activate :s3_sync do |s3_sync|
+    s3_sync.region = "ap-northeast-1"
+    s3_sync.index_document = 'index.html'
+    s3_sync.error_document = 'error/404/index.html'
+end
