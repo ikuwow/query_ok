@@ -141,3 +141,6 @@ activate :s3_sync do |s3_sync|
     s3_sync.index_document = 'index.html'
     s3_sync.error_document = 'error/404/index.html'
 end
+
+ignore '/.*.swp'
+ignore '/**/.*.swp'
