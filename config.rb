@@ -121,12 +121,6 @@ configure :build do
   }
 end
 
-activate :deploy do |deploy|
-    deploy.method = :git
-    deploy.branch = "old-on-testtube"
-    deploy.build_before = true
-end
-
 activate :directory_indexes
 
 activate :syntax
@@ -135,14 +129,12 @@ activate :syntax
 set :markdown_engine, :redcarpet # not kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
 
-activate :sitemap, :hostname => $base_url
+set :url_root, $base_url
+activate :search_engine_sitemap
 
 ## imageoptim is disabled because of the bug.
 ## please minify manually
 # activate :imageoptim, :pngout => false, :svgo => false
-
-# css and javascript inliner
-activate :inliner
 
 activate :s3_sync do |s3_sync|
     s3_sync.region = "ap-northeast-1"
