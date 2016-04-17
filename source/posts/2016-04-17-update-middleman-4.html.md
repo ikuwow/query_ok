@@ -1,5 +1,5 @@
 ---
-title: ブログをMiddlemanを3.4.1から4.1.7にアップデートした
+title: ブログのMiddlemanを3.4.1から4.1.7にアップデートした
 # title: update-middleman-4
 date: 2016-04-17 19:28 JST
 tags: Middleman
