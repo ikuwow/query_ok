@@ -2,7 +2,7 @@
 # title: lt-middleman
 title: HTML5minutesでMiddlemanを布教するLTをしました
 date: 2015-06-13 00:41 JST
-tags: Middleman
+tags: Middleman, LT
 ---
 
 「みんなもMiddlemanで技術ブログ作って幸せになろう！」というタイトルで、

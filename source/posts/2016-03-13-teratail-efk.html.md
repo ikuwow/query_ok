@@ -2,7 +2,7 @@
 title: 「teratailの解析基盤をEFKで作っていろいろ楽しい話」というLTをしました
 # title: teratail-efk
 date: 2016-03-13 17:33 JST
-tags: Elasticsearch, Fluentd, Kibana
+tags: Elasticsearch, Fluentd, Kibana, LT
 ---
 
 [ゆとり世代エンジニア交流会](http://connpass.com/event/26812/)で

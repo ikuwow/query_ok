@@ -2,7 +2,7 @@
 # title: php-cyberterro
 title: 社内勉強会で「PHPサイバーテロの技法」を紹介しました
 date: 2015-06-06 12:27 JST
-tags: PHP,
+tags: PHP, LT
 ---
 
 社内勉強会で本を紹介する機会があり、PHPサイバーテロの技法という本について発表してきました。

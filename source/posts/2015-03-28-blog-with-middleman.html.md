@@ -1,7 +1,7 @@
 ---
 title: MiddlemanとPureとその他もろもろでブログ作った
 date: 2015-03-28 15:05 JST
-tags: Middleman, YAML, Pure
+tags: Middleman, YAML, Pure, 作った
 published: true
 ---
 

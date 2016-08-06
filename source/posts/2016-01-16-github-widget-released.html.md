@@ -2,7 +2,7 @@
 # title: github-widget-released
 title: GitHubのcontributionを見られるウィジェットを作った
 date: 2016-01-16 20:09 JST
-tags: GitHub
+tags: GitHub, 作った
 ---
 
 GitHubの自分のcontributionをウェブサイトに埋め込めるウィジェット"**Yourcontributions**"を作りました。

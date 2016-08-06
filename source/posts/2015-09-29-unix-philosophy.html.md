@@ -2,7 +2,7 @@
 title: 社内勉強会で「UNIXという考え方」を発表しました
 # title: unix-philosophy
 date: 2015-09-29 22:39 JST
-tags: UNIX
+tags: UNIX, LT
 ---
 
 社内勉強会で「UNIXという考え方 その設計思想と哲学」という素晴らしい本について発表してきました。
