@@ -17,3 +17,6 @@ gem "redcarpet"
 
 # For feed.xml.builder
 gem "builder"
+
+# for bug: https://github.com/fredjean/middleman-s3_sync/issues/123
+gem "mime-types"
