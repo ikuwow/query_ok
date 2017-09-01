@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem "middleman"
+gem "middleman-ogp"
 gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-favicon-maker"
