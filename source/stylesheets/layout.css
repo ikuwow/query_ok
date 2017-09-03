@@ -145,6 +145,11 @@ h3 {
     padding: 2em 1em 0;
 }
 
+.content h1 a {
+    color: #000;
+    text-decoration: none;
+}
+
 .post {
     padding-bottom: 2em;
 }
