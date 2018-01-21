@@ -10,15 +10,9 @@ rvm:
 cache: bundler
 
 script:
-  - bundle exec middleman build --verbose
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: bundle exec middleman s3_sync
-  on:
-    branch: master
-    rvm: "2.4.2"
+  - bundle exec middleman build
+after_script:
+  - "[[ $TRAVIS_BRANCH = 'master' ]] && [[ $TRAVIS_RUBY_VERSION = '2.4.2' ]] && bundle exec middleman s3_sync"
 
 notifications:
   email: false
