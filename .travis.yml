@@ -12,5 +12,11 @@ cache: bundler
 script:
   - bundle exec middleman build --verbose
 
+deploy:
+  provider: script
+  script: bundle exec middleman s3_sync
+  on:
+    branch: master
+
 notifications:
   email: false
