@@ -35,8 +35,8 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths:
-            - vendor/bundle/*
-            - build/*
+            - vendor/bundle
+            - build
   deploy:
     working_directory: ~/repo
     docker:
@@ -45,6 +45,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: bundle install
+          command: bundle install --path=vendor/bundle
       - run:
           name: deploy to s3
           command: bundle exec middleman s3_sync
