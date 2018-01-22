@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.3
+    steps:
+      - checkout
+      - restore_cache:
+          key: vendor-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: bundle install
+          command: bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: vendor-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
