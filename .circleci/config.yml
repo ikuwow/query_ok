@@ -2,10 +2,13 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/repo
     docker:
       - image: circleci/ruby:2.4.3
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/repo
       - restore_cache:
           keys:
             - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
@@ -29,10 +32,18 @@ jobs:
           key: articles-{{ .Branch }}
           paths:
             - build
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - vendor/bundle/*
+            - build/*
   deploy:
+    working_directory: ~/repo
     docker:
       - image: circleci/ruby:2.4.3
     steps:
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: deploy to s3
           command: bundle exec middleman s3_sync
