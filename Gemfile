@@ -2,6 +2,7 @@
 # the following line to use 'https'
 source 'https://rubygems.org'
 
+gem 'therubyracer'
 gem 'middleman'
 gem 'middleman-blog'
 gem 'middleman-livereload'
