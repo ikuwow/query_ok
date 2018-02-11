@@ -12,8 +12,8 @@ jobs:
       - restore_cache:
           keys:
             - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - vendor-{{ .Branch }}
-            - vendor
+            - vendor-{{ .Branch }}-
+            - vendor-
       - run:
           name: bundle install
           command: bundle install --path=vendor/bundle --jobs=4 --retry=3
