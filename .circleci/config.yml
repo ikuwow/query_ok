@@ -49,8 +49,19 @@ jobs:
           name: bundle install
           command: bundle install --path=vendor/bundle
       - run:
+          name: Install awscli
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y awscli
+      - run:
           name: deploy to s3
           command: bundle exec middleman s3_sync
+      - run:
+          name: Invalidate Cloudfront Caches
+          command: |
+            aws cloudfront create-invalidation \
+              --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
+              --paths /
 
 workflows:
   version: 2
