@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-$base_url = "http://queryok.ikuwow.com"
+$base_url = "https://queryok.ikuwow.com"
 
 Time.zone = "Tokyo"
 
