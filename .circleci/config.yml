@@ -2,13 +2,13 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/project
     docker:
       - image: circleci/ruby:2.4.3
     steps:
       - checkout
       - attach_workspace:
-          at: ~/repo
+          at: ~/project
       - restore_cache:
           keys:
             - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
@@ -33,18 +33,18 @@ jobs:
           paths:
             - build
       - persist_to_workspace:
-          root: ~/repo
+          root: ~/project
           paths:
             - vendor/bundle
             - build
   deploy:
-    working_directory: ~/repo
+    working_directory: ~/project
     docker:
       - image: circleci/ruby:2.4.3
     steps:
       - checkout
       - attach_workspace:
-          at: ~/repo
+          at: ~/project
       - run:
           name: bundle install
           command: bundle install --path=vendor/bundle
