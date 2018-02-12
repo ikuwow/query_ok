@@ -23,13 +23,14 @@ jobs:
             - vendor/bundle
       - restore_cache:
           keys:
+            - articles-{{ .Branch }}-{{ .Revision }}
             - articles-{{ .Branch }}
             - articles
       - run:
           name: Build static pages
           command: bundle exec middleman build
       - save_cache:
-          key: articles-{{ .Branch }}
+          key: articles-{{ .Branch }}-{{ .Revision }}
           paths:
             - build
       - persist_to_workspace:
