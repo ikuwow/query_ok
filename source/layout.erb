@@ -35,7 +35,7 @@
             </nav>
             <div class="tag-cloud">
                 <ul>
-                <% blog_tags = Hash[blog.tags.sort_by { |tag, articles| - articles.size }] %>
+                <% blog_tags = Hash[blog.tags.sort_by { |tag, articles| [-articles.size, tag] }] %>
                 <% blog_tags = blog_tags.delete_if { |tag, articles| articles.size <= 1}  %>
                 <% blog_tags.each do |tag, articles| %>
                     <li><%= link_to "#{tag}(#{articles.size})", tag_path(tag) %></li>
