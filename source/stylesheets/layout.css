@@ -37,6 +37,9 @@ a:focus {
 .tag-cloud ul li a{
     color: white;
 }
+.tag-cloud .tag-cloud-more a {
+    color: rgb(176, 202, 219);
+}
 
 .btn-read-more:hover{
     text-decoration: none!important;

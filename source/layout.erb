@@ -40,6 +40,7 @@
                 <% blog_tags.each do |tag, articles| %>
                     <li><%= link_to "#{tag}(#{articles.size})", tag_path(tag) %></li>
                 <% end %>
+                    <li class="tag-cloud-more"><%= link_to 'more...', '/tags/' %></li>
                 </ul>
             </div>
         </div>

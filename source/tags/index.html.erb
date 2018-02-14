@@ -1,0 +1,9 @@
+<h1>Tags</h1>
+
+<% blog_tags = Hash[blog.tags.sort_by { |tag, articles| tag }] %>
+
+<ul>
+  <% blog_tags.each do |tag, articles| %>
+      <li><%= link_to "#{tag}(#{articles.size})", tag_path(tag) %></li>
+  <% end %>
+</ul>
