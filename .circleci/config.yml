@@ -81,7 +81,7 @@ jobs:
             - vendor-
       - run:
           name: Bundle Update
-          command: bundle update --path=vendor/bundle
+          command: bundle update
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -126,7 +126,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "36 12 * * *"
+          cron: "47 12 * * *"
           filters:
             branches:
               only:
