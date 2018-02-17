@@ -66,6 +66,49 @@ jobs:
             aws cloudfront create-invalidation \
               --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
               --paths /
+  bundle_update:
+    workind_directory: ~/project
+    docker:
+      - image: circleci/ruby:2.4.3
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - restore_cache:
+          keys:
+            - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - vendor-{{ .Branch }}-
+            - vendor-
+      - run:
+          name: Bundle Update
+          command: bundle update --path=vendor/bundle
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - vendor/bundle
+  create_pull_request:
+    workind_directory: ~/project
+    docker:
+      - image: circleci/ruby:2.4.3
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: check and commit Gemfile.lock changes
+          command: |
+            if [ ! -n $(git status -sb 2> /dev/null | grep Gemfile.lock) ]; then
+              echo 'Nothing to update.'
+              exit 0
+            fi
+            git config --global user.email circleci@ikuwow.com
+            git config --global user.name 'CircleCI'
+            BRANCH="circileci-bundle-update-$(date +%Y%m%d)"
+            git branch -M $BRANCH
+            git add Gemfile.lock
+            git commit -m "Bundle update\n\nAutomatically generated commit by circleci\n$(date)"
+            curl --header "Accept: application/vnd.github.v3+json" \
+              --data "{\"title\": \"${BRANCH}\", \"head\": \"${CIRCLE_PROJECT_USERNAME}:${BRANCH}\", \"base\":\"${CIRCLE_BRANCH}\" }" \
+              https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/pulls?access_token=${GITHUB_ACCESS_TOKEN}
 
 workflows:
   version: 2
@@ -79,3 +122,16 @@ workflows:
                 - master
           requires:
             - build
+
+  auto_bundle_update:
+    triggers:
+      - schedule:
+          cron: "36 12 * * *"
+          filters:
+            branches:
+              only:
+                - auto-bundle-update
+    jobs:
+      - bundle_update
+      - build
+      - create_pull_request
