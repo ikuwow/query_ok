@@ -38,6 +38,7 @@ jobs:
           paths:
             - vendor/bundle
             - build
+            - Gemfile.lock
   deploy:
     working_directory: ~/project
     docker:
@@ -126,7 +127,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "14 1 * * *"
+          cron: "26 1 * * *"
           filters:
             branches:
               only:
@@ -137,7 +138,7 @@ workflows:
           requires:
             - bundle_update
       - create_pull_request:
-          required:
+          requires:
             - bundle_update
             - build
 
