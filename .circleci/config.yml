@@ -87,7 +87,7 @@ jobs:
       - run:
           name: check and commit Gemfile.lock changes
           command: |
-            if $(git status -sb | grep -q Gemfile.lock); then
+            if (! $(git status -sb | grep -q Gemfile.lock)); then
               echo 'Nothing to update.'
               exit 0
             fi
@@ -117,7 +117,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "22 2 * * *"
+          cron: "28 2 * * *"
           filters:
             branches:
               only:
