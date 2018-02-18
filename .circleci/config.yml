@@ -87,7 +87,7 @@ jobs:
       - run:
           name: check and commit Gemfile.lock changes
           command: |
-            if [ ! -n $(git status -sb 2> /dev/null | grep Gemfile.lock) ]; then
+            if $(git status -sb | grep -q Gemfile.lock); then
               echo 'Nothing to update.'
               exit 0
             fi
