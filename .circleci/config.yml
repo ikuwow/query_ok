@@ -120,11 +120,11 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "35 3 * * *"
+          cron: "47 18 * * *"
           filters:
             branches:
               only:
-                - auto-bundle-update
+                - master
     jobs:
       - bundle_update_and_commit
 
