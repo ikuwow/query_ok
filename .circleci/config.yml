@@ -92,6 +92,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.3
     steps:
+      - checkout
       - attach_workspace:
           at: ~/project
       - run:
@@ -127,7 +128,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "26 1 * * *"
+          cron: "32 1 * * *"
           filters:
             branches:
               only:
