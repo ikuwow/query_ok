@@ -126,7 +126,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "11 1 * * *"
+          cron: "14 1 * * *"
           filters:
             branches:
               only:
