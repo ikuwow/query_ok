@@ -67,14 +67,12 @@ jobs:
             aws cloudfront create-invalidation \
               --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
               --paths /
-  bundle_update:
+  bundle_update_and_comit:
     workind_directory: ~/project
     docker:
       - image: circleci/ruby:2.4.3
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
       - restore_cache:
           keys:
             - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
@@ -83,18 +81,9 @@ jobs:
       - run:
           name: Bundle Update
           command: bundle update
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - vendor/bundle
-  create_pull_request:
-    workind_directory: ~/project
-    docker:
-      - image: circleci/ruby:2.4.3
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/project
+      - run:
+          name: Check if build succeed
+          command: bundle exec middleman build
       - run:
           name: check and commit Gemfile.lock changes
           command: |
@@ -128,18 +117,11 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "32 1 * * *"
+          cron: "56 1 * * *"
           filters:
             branches:
               only:
                 - auto-bundle-update
     jobs:
-      - bundle_update
-      - build:
-          requires:
-            - bundle_update
-      - create_pull_request:
-          requires:
-            - bundle_update
-            - build
+      - bundle_update_and_commit
 
