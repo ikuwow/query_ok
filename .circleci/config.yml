@@ -93,11 +93,12 @@ jobs:
             fi
             git config --global user.email circleci@ikuwow.com
             git config --global user.name 'CircleCI'
-            export COMMIT_BRANCH="circileci-bundle-update-$(date +%Y%m%d)"
+            COMMIT_BRANCH="circileci-bundle-update-$(date +%Y%m%d)"
             git branch -M $COMMIT_BRANCH
             git add Gemfile.lock
             git commit -m "Bundle update\n\nAutomatically generated commit by circleci\n$(date)"
-            curl --header "Accept: application/vnd.github.v3+json" \
+            git push origin $COMMIT_BRANCH
+            curl -f --header "Accept: application/vnd.github.v3+json" \
               --data "{\"title\": \"Bundle update (Auto commit)\", \"head\": \"${CIRCLE_PROJECT_USERNAME}:${COMMIT_BRANCH}\", \"base\":\"${CIRCLE_BRANCH}\" }" \
               https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/pulls?access_token=${GITHUB_ACCESS_TOKEN}
 
