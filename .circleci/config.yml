@@ -67,7 +67,7 @@ jobs:
             aws cloudfront create-invalidation \
               --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
               --paths /
-  bundle_update_and_comit:
+  bundle_update_and_commit:
     workind_directory: ~/project
     docker:
       - image: circleci/ruby:2.4.3
@@ -117,7 +117,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "56 1 * * *"
+          cron: "0 2 * * *"
           filters:
             branches:
               only:
