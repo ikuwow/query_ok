@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'therubyracer'
 gem 'middleman'
-gem 'middleman-blog'
+gem 'middleman-blog', github: 'middleman/middleman-blog', branch: 'master'
 gem 'middleman-livereload'
 gem 'middleman-favicon-maker'
 gem 'middleman-s3_sync'
