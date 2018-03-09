@@ -120,7 +120,7 @@ workflows:
   auto_bundle_update:
     triggers:
       - schedule:
-          cron: "47 18 * * 3"
+          cron: "45 0 * * 5"
           filters:
             branches:
               only:
