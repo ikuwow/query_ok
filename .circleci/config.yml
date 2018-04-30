@@ -102,7 +102,7 @@ jobs:
             git push origin $COMMIT_BRANCH
             curl -f --header "Accept: application/vnd.github.v3+json" \
                 --data "{\"title\": \"${TITLE}\", \"head\": \"${CIRCLE_PROJECT_USERNAME}:${COMMIT_BRANCH}\", \"base\":\"${CIRCLE_BRANCH}\", \"body\":\"${BODY}\" }" \
-              https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/pulls?access_token=${GITHUB_ACCESS_TOKEN}
+              https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/pulls?access_token=${MAGNEMITE_GITHUB_ACCESS_TOKEN}
 
 workflows:
   version: 2
@@ -126,5 +126,6 @@ workflows:
               only:
                 - master
     jobs:
-      - bundle_update_and_commit
+      - bundle_update_and_commit:
+          context: magnemite-ikuwow-can-commit
 
