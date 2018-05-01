@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/ruby:2.4.3
+      - image: circleci/ruby:2.4.4
     steps:
       - checkout
       - attach_workspace:
@@ -42,7 +42,7 @@ jobs:
   deploy:
     working_directory: ~/project
     docker:
-      - image: circleci/ruby:2.4.3
+      - image: circleci/ruby:2.4.4
     steps:
       - checkout
       - attach_workspace:
@@ -70,7 +70,7 @@ jobs:
   bundle_update_and_commit:
     workind_directory: ~/project
     docker:
-      - image: circleci/ruby:2.4.3
+      - image: circleci/ruby:2.4.4
     steps:
       - checkout
       - restore_cache:
