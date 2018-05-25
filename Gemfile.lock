@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/middleman/middleman-blog.git
+  remote: https://github.com/middleman/middleman-blog.git
   revision: 6409583373a6e72b0e96fcc02909ff885cbe64d7
   branch: master
   specs:
@@ -29,7 +29,7 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     contracts (0.13.0)
-    docile (1.3.0)
+    docile (1.3.1)
     dotenv (2.4.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -200,4 +200,4 @@ DEPENDENCIES
   therubyracer
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
