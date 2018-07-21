@@ -68,7 +68,7 @@ jobs:
               --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
               --paths /
   bundle_update_and_commit:
-    workind_directory: ~/project
+    working_directory: ~/project
     docker:
       - image: circleci/ruby:2.5.1
     steps:
