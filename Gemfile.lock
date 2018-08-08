@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/middleman/middleman-blog.git
+  remote: git://github.com/middleman/middleman-blog.git
   revision: 6409583373a6e72b0e96fcc02909ff885cbe64d7
   branch: master
   specs:
@@ -162,7 +162,7 @@ GEM
     redcarpet (3.4.0)
     ref (2.0.0)
     rouge (2.2.1)
-    ruby-progressbar (1.9.0)
+    ruby-progressbar (1.10.0)
     sass (3.4.25)
     servolux (0.13.0)
     temple (0.8.0)
@@ -200,4 +200,4 @@ DEPENDENCIES
   therubyracer
 
 BUNDLED WITH
-   1.16.2
+   1.16.3
