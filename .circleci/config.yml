@@ -1,5 +1,11 @@
 ---
 version: 2
+
+aliases:
+  bundler_force_https: &bundler_force_https
+    run:
+      name: bundle config github.https true
+
 jobs:
   build:
     working_directory: ~/project
@@ -9,6 +15,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - *bundler_force_https
       - restore_cache:
           keys:
             - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
@@ -47,6 +54,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - *bundler_force_https
       - run:
           name: bundle install
           command: bundle install --path=vendor/bundle
@@ -73,6 +81,7 @@ jobs:
       - image: circleci/ruby:2.5.1
     steps:
       - checkout
+      - *bundler_force_https
       - restore_cache:
           keys:
             - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
