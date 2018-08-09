@@ -3,8 +3,7 @@ version: 2
 
 aliases:
   bundler_force_https: &bundler_force_https
-    run:
-      name: bundle config github.https true
+    run: bundle config github.https true
 
 jobs:
   build:
