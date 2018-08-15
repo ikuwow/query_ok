@@ -1,7 +1,7 @@
 ---
 # title: lpic-level2-passed
 title: LPIC level 2に2週間で合格した
-date: 2018-08-12 22:36 JST
+date: 2018-08-16 02:11 JST
 tags: 
 ---
 
