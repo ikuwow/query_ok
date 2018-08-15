@@ -124,7 +124,7 @@ activate :syntax
     # :line_numbers => true
 
 set :markdown_engine, :redcarpet # not kramdown
-set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true, :strikethrough => true
 
 set :url_root, $base_url
 activate :search_engine_sitemap
