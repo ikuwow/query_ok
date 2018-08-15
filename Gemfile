@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
 source 'https://rubygems.org'
 
-gem 'therubyracer'
 gem 'middleman'
 gem 'middleman-blog', github: 'middleman/middleman-blog', branch: 'master'
-gem 'middleman-livereload'
 gem 'middleman-favicon-maker'
-gem 'middleman-s3_sync'
-gem 'middleman-syntax'
-gem 'middleman-search_engine_sitemap'
+gem 'middleman-livereload'
 gem 'middleman-minify-html'
+gem 'middleman-s3_sync'
+gem 'middleman-search_engine_sitemap'
+gem 'middleman-syntax'
+gem 'therubyracer'
 
 gem 'font-awesome-middleman'
 gem 'nokogiri'
