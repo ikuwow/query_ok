@@ -1,10 +1,24 @@
 ---
-version: 2
+version: 2.1
 
-aliases:
-  configure_bundler: &configure_bundler
-    run: gem update bundler
-    run: bundle config github.https true
+commands:
+  configure_bundler:
+    steps:
+      - run: gem update bundler
+      - run: bundle config github.https true
+  restore_gem_cache:
+    steps:
+      - restore_cache:
+          keys:
+            - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - vendor-{{ .Branch }}-
+            - vendor-
+  save_gem_cache:
+    steps:
+      - save_cache:
+          key: vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
 
 jobs:
   build:
@@ -15,19 +29,12 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
-      - *configure_bundler
-      - restore_cache:
-          keys:
-            - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - vendor-{{ .Branch }}-
-            - vendor-
+      - configure_bundler
+      - restore_gem_cache
       - run:
           name: bundle install
           command: bundle install --path=vendor/bundle --jobs=4 --retry=3
-      - save_cache:
-          key: vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
+      - save_gem_cache
       - restore_cache:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
@@ -54,7 +61,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
-      - *configure_bundler
+      - configure_bundler
       - run:
           name: bundle install
           command: bundle install --path=vendor/bundle
@@ -81,18 +88,15 @@ jobs:
       - image: circleci/ruby:2.5.1
     steps:
       - checkout
-      - *configure_bundler
-      - restore_cache:
-          keys:
-            - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - vendor-{{ .Branch }}-
-            - vendor-
+      - configure_bundler
+      - restore_gem_cache
       - run:
           name: Bundle Update
           command: bundle update
       - run:
           name: Check if build succeed
           command: bundle exec middleman build
+      - save_gem_cache
       - run:
           name: check and commit Gemfile.lock changes
           command: |
