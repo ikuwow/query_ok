@@ -1,6 +1,11 @@
 ---
 version: 2.1
 
+executors:
+  default:
+    working_directory: ~/project
+      - image: circleci/ruby:2.5.1
+
 commands:
   configure_bundler:
     steps:
@@ -22,9 +27,8 @@ commands:
 
 jobs:
   build:
-    working_directory: ~/project
-    docker:
-      - image: circleci/ruby:2.5.1
+    executor:
+      name: default
     steps:
       - checkout
       - attach_workspace:
@@ -54,9 +58,8 @@ jobs:
             - build
             - Gemfile.lock
   deploy:
-    working_directory: ~/project
-    docker:
-      - image: circleci/ruby:2.5.1
+    executor:
+      name: default
     steps:
       - checkout
       - attach_workspace:
@@ -83,9 +86,8 @@ jobs:
               --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
               --paths /
   bundle_update_and_commit:
-    working_directory: ~/project
-    docker:
-      - image: circleci/ruby:2.5.1
+    executor:
+      name: default
     steps:
       - checkout
       - configure_bundler
