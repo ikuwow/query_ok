@@ -35,9 +35,7 @@ jobs:
           at: ~/project
       - configure_bundler
       - restore_gem_cache
-      - run:
-          name: bundle install
-          command: bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - run: bundle install
       - save_gem_cache
       - restore_cache:
           keys:
@@ -65,9 +63,7 @@ jobs:
       - attach_workspace:
           at: ~/project
       - configure_bundler
-      - run:
-          name: bundle install
-          command: bundle install --path=vendor/bundle
+      - run: bundle install
       - run:
           name: Install awscli
           command: |
