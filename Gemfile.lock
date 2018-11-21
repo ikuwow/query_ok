@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/middleman/middleman-blog.git
+  remote: git://github.com/middleman/middleman-blog.git
   revision: 6409583373a6e72b0e96fcc02909ff885cbe64d7
   branch: master
   specs:
@@ -169,7 +169,7 @@ GEM
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
-    thor (0.20.0)
+    thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.5)
