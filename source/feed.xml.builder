@@ -4,7 +4,7 @@ xml.instruct!
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
   site_url = $base_url
   xml.title 'Query OK.'
-  xml.subtitle 'ikuwowの技術ブログ'
+  xml.subtitle @about
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, current_page.path), 'rel' => 'self'
