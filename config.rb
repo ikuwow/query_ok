@@ -5,7 +5,6 @@
 ###
 
 $base_url = 'https://queryok.ikuwow.com'
-@about = 'ikuwowの技術ブログ'
 
 Time.zone = 'Tokyo'
 
