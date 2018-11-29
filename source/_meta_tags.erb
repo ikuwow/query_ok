@@ -1,16 +1,16 @@
 <%
   if current_article.nil?
-      title = "Query OK. : ゐくを（ikuwow）の技術ブログ"
+      title = "Query OK. : ikuwowの技術ブログ"
   else
       title = current_article.title+" : Query OK."
   end
-  keywords= "ゐくを,ブログ,ikuwow"
+  keywords= "ブログ,ikuwow,ゐくを"
   if !current_article.nil?
     current_article.tags.each do |tag|
         keywords+=','+tag
     end
   end
-  description = 'ゐくを（ikuwow）の技術ブログ'
+  description = 'ikuwowの技術ブログ'
 %>
 
 <meta charset="utf-8" />
@@ -28,7 +28,7 @@
     <meta property="og:type" content="blog">
 <% end %>
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="Query OK. : ゐくを（ikuwow）の技術ブログ">
+<meta property="og:site_name" content="Query OK. : ikuwowの技術ブログ">
 <meta property="og:image" content="<%= $base_url + image_path('/img/ikuwow_200x200.png')%>">
 <meta property="article:publisher" content="ikuwow">
 
