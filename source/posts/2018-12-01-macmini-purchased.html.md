@@ -1,7 +1,7 @@
 ---
 title: 母艦MacをMac mini 2018に買い替えた
 # title: macmini-purchased
-date: 2018-12-01 23:22 JST
+date: 2018-12-01 22:38 JST
 tags:
 ---
 
