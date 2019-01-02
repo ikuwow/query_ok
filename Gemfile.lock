@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/middleman/middleman-blog.git
-  revision: 4f698b659350c5334587e2d8cf3cf4699bc108fd
+  revision: dfe64c7d45c33caf2a8939d2c8d4b9ea0a652b50
   branch: master
   specs:
-    middleman-blog (4.0.2)
+    middleman-blog (4.0.3)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
@@ -200,4 +200,4 @@ DEPENDENCIES
   therubyracer
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
