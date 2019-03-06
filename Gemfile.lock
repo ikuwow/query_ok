@@ -165,7 +165,7 @@ GEM
       ffi (~> 1.9)
       rake
     servolux (0.13.0)
-    temple (0.8.0)
+    temple (0.8.1)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
