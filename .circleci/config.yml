@@ -6,6 +6,8 @@ executors:
     working_directory: ~/project
     docker:
       - image: circleci/ruby:2.5.5
+    environment:
+      BUNDLE_APP_CONFIG: ~/project/vendor/bundle
 
 commands:
   configure_bundler:
