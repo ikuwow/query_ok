@@ -16,4 +16,6 @@
 .DS_Store
 
 /.s3_sync
+
+## NodeJS
 node_modules/
