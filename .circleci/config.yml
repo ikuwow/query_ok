@@ -5,7 +5,9 @@ executors:
   default:
     working_directory: ~/project
     docker:
-      - image: circleci/ruby:2.4.5
+      - image: circleci/ruby:2.5.5
+    environment:
+      BUNDLE_APP_CONFIG: ~/project/.bundle/
 
 commands:
   configure_bundler:
@@ -15,13 +17,13 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - vendor-{{ .Branch }}-
-            - vendor-
+            - bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - bundler-{{ .Branch }}-
+            - bundler-
   save_gem_cache:
     steps:
       - save_cache:
-          key: vendor-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
 
