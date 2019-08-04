@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
+    "@webpack-cli/init": "^0.2.2",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   }
