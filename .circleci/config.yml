@@ -5,7 +5,7 @@ executors:
   default:
     working_directory: ~/project
     docker:
-      - image: circleci/ruby:2.5.5
+      - image: circleci/ruby:2.5.5-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
 
@@ -26,6 +26,19 @@ commands:
           key: bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+  restore_npm_cache:
+    steps:
+      - restore_cache:
+          keys:
+            - npm-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - npm-{{ .Branch }}-
+            - npm-
+  save_npm_cache:
+    steps:
+      - save_cache:
+          key: npm-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - node_modules
 
 jobs:
   build:
@@ -35,6 +48,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - restore_npm_cache
+      - run: npm install
+      - save_npm_cache
       - configure_bundler
       - restore_gem_cache
       - run: bundle install
