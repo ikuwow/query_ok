@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -eu -o pipefail
 
 week_start=$(date -d 'last friday - 6 days' +%Y%m%d)
 week_end=$(date -d 'last friday' +%Y%m%d)
