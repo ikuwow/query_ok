@@ -6,6 +6,10 @@ tags: Weekly
 
 ---
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">yarnとnpm、最近はnpmが怪しいのでyarnのほうがいいんですかね。</p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1157467503192182784?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+https://yosuke-furukawa.hatenablog.com/entry/2019/06/17/191720
+
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これはハマる <a href="https://t.co/nNoNif5tZS">https://t.co/nNoNif5tZS</a></p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1157479638295183360?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 CircleCIで `bundle install` したパッケージがキャッシュされないと思ったら、.bundle/configが効いてなかったという話だった。
