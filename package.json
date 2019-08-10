@@ -1,0 +1,27 @@
+{
+  "name": "query_ok",
+  "version": "1.0.0",
+  "description": "Query OK. [![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok) ===========================",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikuwow/query_ok.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikuwow/query_ok/issues"
+  },
+  "homepage": "https://github.com/ikuwow/query_ok#readme",
+  "devDependencies": {
+    "@webpack-cli/init": "^0.2.2",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
