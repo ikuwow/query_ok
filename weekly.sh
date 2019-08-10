@@ -1,7 +1,7 @@
 #!/bin/bash
 
-week_start=$(date -d '1 week ago' +%Y%m%d)
-week_end=$(date -d '1 day ago' +%Y%m%d)
+week_start=$(date -d 'last friday - 6 days' +%Y%m%d)
+week_end=$(date -d 'last friday' +%Y%m%d)
 
 article_title="ツイートまとめ $week_start~$week_end"
 article_title_english="Weekly tweet compilation $week_start"
