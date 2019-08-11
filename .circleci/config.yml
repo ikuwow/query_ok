@@ -48,13 +48,19 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+
+      - restore_npm_cache
+      - run: npm i
+      - save_npm_cache
+      - run:
+          name: eslint
+          command: npm run lint
+
       - configure_bundler
       - restore_gem_cache
       - run: bundle install
       - save_gem_cache
-      - restore_npm_cache
-      - run: npm i
-      - save_npm_cache
+
       - restore_cache:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
@@ -67,6 +73,7 @@ jobs:
           key: articles-{{ .Branch }}-{{ .Revision }}
           paths:
             - build
+
       - persist_to_workspace:
           root: ~/project
           paths:
