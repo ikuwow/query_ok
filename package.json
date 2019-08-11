@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ikuwow/query_ok/issues"
   },
-  "homepage": "https://github.com/ikuwow/query_ok#readme"
+  "homepage": "https://github.com/ikuwow/query_ok#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  }
 }
