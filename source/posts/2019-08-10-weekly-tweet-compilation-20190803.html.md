@@ -8,6 +8,11 @@ tags: Weekly
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">yarnとnpm、最近はnpmが怪しいのでyarnのほうがいいんですかね。</p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1157467503192182784?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+npmが怪しいというのはこのあたりの話でした。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">npmが突如更新されなくなる覚悟をしといたほうがいいかも。運営母体がやばい状況。オープンソースでスタートしたが資金が厳しくVCのお金を入れ法人化。ここ1年はCTOが追い出され、新しく入ったCTOが昔の仲間を連れてきて元々いた社員と合わなくて揉め、昔からいた社員が大量離職。突然の解雇も行われた</p>&mdash; 山浦清透@技術をわかりやすく (@kiyotoyamaura) <a href="https://twitter.com/kiyotoyamaura/status/1151297024177901569?ref_src=twsrc%5Etfw">July 17, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+npm registryは大変そうだ・・・。
 https://yosuke-furukawa.hatenablog.com/entry/2019/06/17/191720
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これはハマる <a href="https://t.co/nNoNif5tZS">https://t.co/nNoNif5tZS</a></p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1157479638295183360?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
