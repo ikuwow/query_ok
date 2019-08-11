@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
-    "eslint": "^6.1.0"
+    "@webpack-cli/init": "^0.2.2",
+    "eslint": "^6.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }
