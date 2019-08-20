@@ -20,6 +20,6 @@
     "@webpack-cli/init": "^0.2.2",
     "eslint": "^6.2.0",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.7"
   }
 }
