@@ -63,6 +63,7 @@ activate :s3_sync do |s3_sync|
   s3_sync.error_document = '404/index.html'
   s3_sync.prefer_gzip = false
 end
+default_caching_policy max_age: (60 * 60 * 24 * 365)
 
 activate :external_pipeline,
   name: :webpack,
