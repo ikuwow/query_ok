@@ -145,5 +145,11 @@ activate :s3_sync do |s3_sync|
   s3_sync.prefer_gzip = false
 end
 
+activate :external_pipeline,
+  name: :webpack,
+  command: 'npm run build',
+  source: ".tmp/dist",
+  latency: 1
+
 ignore '/.*.swp'
 ignore '/**/.*.swp'
