@@ -22,6 +22,7 @@ set :css_dir, 'stylesheets'
 set :images_dir, 'images'
 
 ignore 'entry.js'
+ignore 'stylesheets/babylink.css'
 ignore '/.*.swp'
 ignore '/**/.*.swp'
 
