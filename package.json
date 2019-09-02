@@ -22,6 +22,7 @@
     "@webpack-cli/init": "^0.2.2",
     "eslint": "^6.2.2",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "webpack-merge": "^4.2.2"
   }
 }
