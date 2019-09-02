@@ -8,6 +8,6 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build/javascripts')
+    path: path.resolve(__dirname, '.tmp/dist')
   }
 }

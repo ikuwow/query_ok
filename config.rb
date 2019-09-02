@@ -148,7 +148,7 @@ end
 activate :external_pipeline,
   name: :webpack,
   command: 'npm run build',
-  source: "./build",
+  source: ".tmp/dist",
   latency: 1
 
 ignore '/.*.swp'
