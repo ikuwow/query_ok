@@ -147,7 +147,7 @@ end
 
 activate :external_pipeline,
   name: :webpack,
-  command: 'npm run build',
+  command: build? ? 'npm run build' : 'npm run watch',
   source: ".tmp/dist",
   latency: 1
 
