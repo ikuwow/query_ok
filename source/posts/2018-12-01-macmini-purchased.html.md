@@ -14,7 +14,7 @@ tags:
 
 一瞬32GBにチキったが、ここは後悔してはならないと思いキャンセルし64GBにしてすぐ購入し直した。
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="ja" dir="ltr">RAM 32GBとチキってしまったので、キャンセルして64GBにして購入し直した。こんどこそおやすみなさい。 <a href="https://twitter.com/hashtag/AppleEvent?src=hash&amp;ref_src=twsrc%5Etfw">#AppleEvent</a> <a href="https://twitter.com/hashtag/AppleEvents?src=hash&amp;ref_src=twsrc%5Etfw">#AppleEvents</a> <a href="https://t.co/GVW5RCPQfc">pic.twitter.com/GVW5RCPQfc</a></p>&mdash; ikuwow  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1057299533900607488?ref_src=twsrc%5Etfw">October 30, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="ja" dir="ltr">RAM 32GBとチキってしまったので、キャンセルして64GBにして購入し直した。こんどこそおやすみなさい。 <a href="https://twitter.com/hashtag/AppleEvent?src=hash&amp;ref_src=twsrc%5Etfw">#AppleEvent</a> <a href="https://twitter.com/hashtag/AppleEvents?src=hash&amp;ref_src=twsrc%5Etfw">#AppleEvents</a> <a href="https://t.co/GVW5RCPQfc">pic.twitter.com/GVW5RCPQfc</a></p>&mdash; ikuwow  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1057299533900607488?ref_src=twsrc%5Etfw">October 30, 2018</a></blockquote>
 
 ## 過程
 
@@ -52,11 +52,11 @@ Thunderbolt DisplayがなくなってからLGがAppleお墨付きになってい
 
 罠だったのが音声の光デジタル出力に対応してないこと。USB-C出力のディスプレイ経由の音声を別のスピーカーから出してみると意外と悪くなかったのでそれでいったん満足している。
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">やっぱりMac mini 2018は音声の光デジタル出力は対応していないようだ・・・。 <a href="https://t.co/iaw9QVKYqf">pic.twitter.com/iaw9QVKYqf</a></p>&mdash; ikuwow  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1061621071110012928?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">やっぱりMac mini 2018は音声の光デジタル出力は対応していないようだ・・・。 <a href="https://t.co/iaw9QVKYqf">pic.twitter.com/iaw9QVKYqf</a></p>&mdash; ikuwow  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1061621071110012928?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote>
 
 ---
 
 ちなみにMacBookの方はMacBook Air 2013 => MacBook 2015 => MacBook Pro 2017と友人などに譲りながら細かく買い替えている。
 次に13inchでRAMが32GBが搭載できるものが出たら買い替えてしまうと思う。
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">メモリが余りすぎている <a href="https://t.co/kHzYQF2eTS">pic.twitter.com/kHzYQF2eTS</a></p>&mdash; ikuwow  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1061107695275532289?ref_src=twsrc%5Etfw">November 10, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">メモリが余りすぎている <a href="https://t.co/kHzYQF2eTS">pic.twitter.com/kHzYQF2eTS</a></p>&mdash; ikuwow  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1061107695275532289?ref_src=twsrc%5Etfw">November 10, 2018</a></blockquote>

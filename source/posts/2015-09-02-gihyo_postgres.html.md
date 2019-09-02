@@ -20,7 +20,7 @@ VACUUMの仕組みもPostgreSQLを触る人なら確実に理解すべきとこ�
 
 日本PostgreSQLユーザ会のアカウントにもシェアしていただけて大変光栄。
 
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">[新着はてブ] 第5回　PostgreSQLの基礎を見直す：聞いたら一生の宝，プログラミングの基礎の基礎 ｜gihyo.jp … 技術評論社: みなさんこんにちは。技術系Q&amp;Aサイトteratail開発チームの出川幾夫で... <a href="http://t.co/o8E0N9nmFa">http://t.co/o8E0N9nmFa</a></p>&mdash; 日本PostgreSQLユーザ会 (@PostgreSQL\_JP) <a href="https://twitter.com/PostgreSQL_JP/status/638689029156835328">2015, 9月 1</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">[新着はてブ] 第5回　PostgreSQLの基礎を見直す：聞いたら一生の宝，プログラミングの基礎の基礎 ｜gihyo.jp … 技術評論社: みなさんこんにちは。技術系Q&amp;Aサイトteratail開発チームの出川幾夫で... <a href="http://t.co/o8E0N9nmFa">http://t.co/o8E0N9nmFa</a></p>&mdash; 日本PostgreSQLユーザ会 (@PostgreSQL\_JP) <a href="https://twitter.com/PostgreSQL_JP/status/638689029156835328">2015, 9月 1</a></blockquote>
 
 最近「内部構造から学ぶPostgreSQL 設計・運用計画の鉄則」っていう、これまた技術評論社の出している本を買った。
 初級者向けの余計な情報はほぼなくて、RDBの基礎はわかっていて最近ポスグレちょっと使い始めたぐらいの
