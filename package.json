@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "build": "webpack",
-    "watch": "webpack --watch -d"
+    "build": "webpack --config webpack.prod.js",
+    "watch": "webpack --config webpack.dev.js --watch -d"
   },
   "repository": {
     "type": "git",
