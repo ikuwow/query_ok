@@ -88,7 +88,7 @@ activate :livereload
 
 set :css_dir, 'stylesheets'
 
-ignore 'javascripts/*'
+ignore 'entry.js'
 
 set :images_dir, 'images'
 
