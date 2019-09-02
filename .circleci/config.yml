@@ -90,6 +90,7 @@ jobs:
       - configure_bundler
       - restore_gem_cache
       - run: bundle install
+      - run: npm install
       - save_gem_cache
       - run:
           name: Install awscli
