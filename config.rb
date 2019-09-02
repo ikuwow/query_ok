@@ -88,7 +88,7 @@ activate :livereload
 
 set :css_dir, 'stylesheets'
 
-set :js_dir, 'javascripts'
+ignore 'javascripts/*'
 
 set :images_dir, 'images'
 
@@ -144,6 +144,12 @@ activate :s3_sync do |s3_sync|
   s3_sync.error_document = '404/index.html'
   s3_sync.prefer_gzip = false
 end
+
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? 'npm run build' : 'npm run watch',
+  source: ".tmp/dist",
+  latency: 1
 
 ignore '/.*.swp'
 ignore '/**/.*.swp'
