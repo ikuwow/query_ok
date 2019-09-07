@@ -1,4 +1,5 @@
-console.log('This is index.js, imported by webpack bundle.');
+import 'purecss/build/pure-min.css';
+import 'purecss/build/grids-responsive-min.css';
 
 // Font awesome
 // see: https://fontawesome.com/how-to-use/with-the-api/setup/getting-started
