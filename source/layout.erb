@@ -5,7 +5,6 @@
   <%= partial "dns_prefetches" %>
   <%= partial "meta_tags" %>
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-  <%= partial 'head_css' %>
   <%= javascript_include_tag "bundle", async: "async" %>
   <%= partial 'ga_tracking_code' %>
   <%= partial 'twitter_widget_fetch' %>

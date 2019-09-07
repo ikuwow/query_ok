@@ -1,5 +1,6 @@
 import 'purecss/build/pure-min.css';
 import 'purecss/build/grids-responsive-min.css';
+import './stylesheets/layout.css';
 
 // Font awesome
 // see: https://fontawesome.com/how-to-use/with-the-api/setup/getting-started
