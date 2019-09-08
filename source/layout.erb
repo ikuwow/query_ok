@@ -5,8 +5,8 @@
   <%= partial "dns_prefetches" %>
   <%= partial "meta_tags" %>
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-  <%= partial 'head_css' %>
-  <%= javascript_include_tag "bundle", async: "async" %>
+  <%= javascript_include_tag "bundle-critical" %>
+  <%= javascript_include_tag "bundle-main", async: "async" %>
   <%= partial 'ga_tracking_code' %>
   <%= partial 'twitter_widget_fetch' %>
   <link rel="canonical" href="<%= $base_url + current_page.url %>">
