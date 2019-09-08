@@ -3,9 +3,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   bail: true,
-  entry: './source/entry.js',
+  entry: {
+    critical: './source/critical.js',
+    main: './source/entry.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle-[name].js',
     path: path.resolve(__dirname, '.tmp/dist')
   },
   module: {
