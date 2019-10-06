@@ -1,5 +1,4 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const mainConfig = {
   bail: true,
@@ -18,9 +17,7 @@ const mainConfig = {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin()
-  ]
+  plugins: []
 }
 
 const criticalConfig = {
@@ -40,9 +37,7 @@ const criticalConfig = {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin()
-  ]
+  plugins: []
 }
 
 module.exports = {main: mainConfig, critical: criticalConfig};
