@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const outputPath = path.resolve(__dirname, '.tmp/dist');
 
 const mainConfig = {
@@ -34,11 +35,13 @@ const criticalConfig = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
-  plugins: []
+  plugins: [
+    new MiniCssExtractPlugin()
+  ]
 }
 
 module.exports = {main: mainConfig, critical: criticalConfig};
