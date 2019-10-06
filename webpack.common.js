@@ -1,4 +1,5 @@
 const path = require('path');
+const outputPath = path.resolve(__dirname, '.tmp/dist');
 
 const mainConfig = {
   bail: true,
@@ -7,7 +8,7 @@ const mainConfig = {
   },
   output: {
     filename: 'bundle-[name].js',
-    path: path.resolve(__dirname, '.tmp/dist')
+    path: outputPath
   },
   module: {
     rules: [
@@ -27,7 +28,7 @@ const criticalConfig = {
   },
   output: {
     filename: 'bundle-[name].js',
-    path: path.resolve(__dirname, '.tmp/dist')
+    path: outputPath
   },
   module: {
     rules: [
