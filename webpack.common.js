@@ -45,4 +45,4 @@ const criticalConfig = {
   ]
 }
 
-module.exports = [mainConfig, criticalConfig];
+module.exports = {main: mainConfig, critical: criticalConfig};
