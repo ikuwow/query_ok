@@ -26,7 +26,7 @@ const mainConfig = {
 const criticalConfig = {
   bail: true,
   entry: {
-    critical: './source/critical.js',
+    critical: './source/entry-critical.js',
   },
   output: {
     filename: 'bundle-[name].js',
