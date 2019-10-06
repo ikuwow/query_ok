@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const outputPath = path.resolve(__dirname, '.tmp/dist');
 
 const mainConfig = {
   bail: true,
@@ -9,7 +8,7 @@ const mainConfig = {
   },
   output: {
     filename: 'bundle-[name].js',
-    path: outputPath
+    path: path.resolve(__dirname, '.tmp/dist')
   },
   module: {
     rules: [
@@ -29,7 +28,7 @@ const criticalConfig = {
   },
   output: {
     filename: 'bundle-[name].js',
-    path: outputPath
+    path: path.resolve(__dirname, '.tmp/dist')
   },
   module: {
     rules: [
