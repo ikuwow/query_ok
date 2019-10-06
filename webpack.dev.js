@@ -1,6 +1,8 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-module.exports = merge(common, {
-  mode: 'development'
-});
+module.exports = merge.multiple(common, [
+  {
+    mode: 'development'
+  }
+]);
