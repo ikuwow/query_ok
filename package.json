@@ -21,7 +21,7 @@
   "devDependencies": {
     "@webpack-cli/init": "^0.2.2",
     "clean-webpack-plugin": "^3.0.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2"
