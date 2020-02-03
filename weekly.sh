@@ -13,5 +13,5 @@ article_file=$(echo "$output" | awk '{print $NF}')
 
 sed -i "s/$article_title_english/$article_title/" "$article_file"
 
-open "https://twilog.org/ikuwow/date-$(date -d "$week_start" +%y%m%d)/asc"
+open -a Safari "https://twilog.org/ikuwow/date-$(date -d "$week_start" +%y%m%d)/asc"
 vimr "$article_file"
