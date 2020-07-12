@@ -12,7 +12,6 @@ gem 'middleman-minify-html'
 gem 'middleman-s3_sync'
 gem 'middleman-search_engine_sitemap'
 gem 'middleman-syntax'
-gem 'therubyracer'
 
 gem 'font-awesome-middleman'
 gem 'nokogiri'

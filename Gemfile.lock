@@ -62,7 +62,6 @@ GEM
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
     kramdown (1.17.0)
-    libv8 (3.16.14.19)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -151,16 +150,12 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.0)
-    ref (2.0.0)
     rouge (3.5.1)
     ruby-progressbar (1.10.0)
     sassc (2.3.0)
       ffi (~> 1.9)
     servolux (0.13.0)
     temple (0.8.2)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -189,7 +184,6 @@ DEPENDENCIES
   mime-types
   nokogiri
   redcarpet
-  therubyracer
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
