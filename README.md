@@ -9,7 +9,6 @@ ikuwow's IT blog.
 
 * Middleman
 * Pure CSS Framework
-* Disqus
 
 ## How to Deploy
 
