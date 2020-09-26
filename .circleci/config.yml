@@ -10,31 +10,27 @@ executors:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
 
 commands:
-  configure_bundler:
+  bundle_install:
     steps:
       - run: gem update bundler
-  restore_gem_cache:
-    steps:
       - restore_cache:
           keys:
             - bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - bundler-{{ .Branch }}
             - bundler-master
-  save_gem_cache:
-    steps:
+      - run: bundle install
       - save_cache:
           key: bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-  restore_npm_cache:
+  npm_install:
     steps:
       - restore_cache:
           keys:
             - npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
             - npm-{{ .Branch }}
             - npm-master
-  save_npm_cache:
-    steps:
+      - run: npm install
       - save_cache:
           key: npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
@@ -49,18 +45,11 @@ jobs:
       - attach_workspace:
           at: ~/project
 
-      - restore_npm_cache
-      - run: npm i
-      - save_npm_cache
+      - npm_install
       - run:
           name: eslint
           command: npm run lint
-
-      - configure_bundler
-      - restore_gem_cache
-      - run: bundle install
-      - save_gem_cache
-
+      - bundle_install
       - restore_cache:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
@@ -87,13 +76,8 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
-      - configure_bundler
-      - restore_gem_cache
-      - run: bundle install
-      - save_gem_cache
-      - restore_npm_cache
-      - run: npm install
-      - save_npm_cache
+      - bundle_install
+      - npm_install
       - run:
           name: Install awscli
           command: |
@@ -101,10 +85,10 @@ jobs:
             sudo apt-get install -y python-pip python-dev
             sudo pip install awscli --upgrade
             aws configure set preview.cloudfront true
-      - run:
+      - deploy:
           name: deploy to s3
           command: bundle exec middleman s3_sync
-      - run:
+      - deploy:
           name: Invalidate Cloudfront Caches
           command: |
             echo "Distribution ID: ${CLOUDFRONT_DISTRIBUTION_ID}"
