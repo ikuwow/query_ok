@@ -27,7 +27,7 @@
     "webpack-merge": "^5.1.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "css-loader": "^4.2.2",
     "purecss": "^2.0.3",
