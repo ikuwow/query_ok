@@ -31,6 +31,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "css-loader": "^4.3.0",
     "purecss": "^2.0.3",
-    "style-loader": "^1.2.1"
+    "style-loader": "^2.0.0"
   }
 }
