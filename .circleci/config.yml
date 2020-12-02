@@ -18,7 +18,7 @@ commands:
             - bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - bundler-{{ .Branch }}
             - bundler-master
-      - run: bundle install
+      - run: bundle install --path=vendor/bundle
       - save_cache:
           key: bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
