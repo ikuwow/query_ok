@@ -16,12 +16,15 @@ commands:
           bundle --version
           gem update bundler
           bundle --version
+      - run: |
+          bundle config set --local frozen true
+          bundle config set --local path vendor/bundle
       - restore_cache:
           keys:
             - bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - bundler-{{ .Branch }}
             - bundler-master
-      - run: bundle install --path=vendor/bundle
+      - run: bundle install
       - save_cache:
           key: bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
