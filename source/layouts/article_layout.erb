@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
 
     <h1><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
-    <p class="post-meta" style="margin: 20px 0;">
+    <p class="post-meta">
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
         <% if !current_article.nil? %>
         <% current_article.tags.each do |tag| %>
@@ -10,7 +10,7 @@
         <% end %>
     </p>
 
-    <div id="article-body" style="margin-bottom: 40px">
+    <div id="article-body">
         <%= yield %>
     </div>
 
