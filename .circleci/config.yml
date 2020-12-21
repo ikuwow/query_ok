@@ -12,13 +12,17 @@ executors:
 commands:
   bundle_install:
     steps:
-      - run: |
-          bundle --version
-          gem update bundler
-          bundle --version
-      - run: |
-          bundle config set --local frozen true
-          bundle config set --local path vendor/bundle
+      - run:
+          name: Update bundler to latest
+          command: |
+            bundle --version
+            gem update bundler
+            bundle --version
+      - run:
+          name: bundle config
+          command: |
+            bundle config set --local frozen true
+            bundle config set --local path vendor/bundle
       - restore_cache:
           keys:
             - bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
