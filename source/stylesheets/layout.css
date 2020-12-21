@@ -174,14 +174,14 @@ h3 {
 }
 .post-description {
     color: #444;
-    line-height: 1.8em;
+    line-height: 1.8;
     font-size: 95%;
 }
 .post-meta {
     color: #999;
     font-size: 90%;
     margin: 0;
-    line-height: 160%;
+    line-height: 1.6;
 }
 
 .post-category {
