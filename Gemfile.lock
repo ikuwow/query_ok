@@ -175,7 +175,7 @@ PLATFORMS
 DEPENDENCIES
   builder
   font-awesome-middleman
-  middleman
+  middleman (= 4.3.8)
   middleman-blog
   middleman-favicon-maker
   middleman-livereload

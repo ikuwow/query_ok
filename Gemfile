@@ -4,7 +4,7 @@
 # the following line to use 'https'
 source 'https://rubygems.org'
 
-gem 'middleman'
+gem 'middleman', '4.3.8'
 gem 'middleman-blog'
 gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
