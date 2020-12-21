@@ -7,6 +7,10 @@
     overflow-wrap: break-word;
 }
 
+body {
+    line-height: 1.5;
+}
+
 em {
     font-style: normal;
     font-weight: bold;
@@ -35,6 +39,8 @@ a:focus {
 
 #article-body {
     font-size: 95%;
+    margin-bottom: 40px;
+    line-height: 1.7;
 }
 
 .tag-cloud ul {
@@ -174,14 +180,14 @@ h3 {
 }
 .post-description {
     color: #444;
-    line-height: 1.8em;
+    line-height: 1.8;
     font-size: 95%;
 }
 .post-meta {
     color: #999;
     font-size: 90%;
-    margin: 0;
-    line-height: 160%;
+    margin: 20px 0;
+    line-height: 1.6;
 }
 
 .post-category {
