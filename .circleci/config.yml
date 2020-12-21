@@ -15,7 +15,6 @@ commands:
       - run:
           name: Update bundler to latest
           command: |
-            bundle --version
             gem update bundler
             bundle --version
       - run:
