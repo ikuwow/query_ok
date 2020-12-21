@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --config webpack.dev.js --watch -d"
+    "watch": "webpack --config webpack.dev.js --watch"
   },
   "repository": {
     "type": "git",
