@@ -37,6 +37,7 @@ a:focus {
 #article-body {
     font-size: 95%;
     margin-bottom: 40px;
+    line-height: 1.7;
 }
 
 .tag-cloud ul {
