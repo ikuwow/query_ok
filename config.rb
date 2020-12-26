@@ -31,7 +31,7 @@ ignore '/**/.*.swp'
 
 configure :build do
   activate :minify_css
-  activate :minify_javascript, compressor: -> {
+  activate :minify_javascript, compressor: lambda {
     Uglifier.new(harmony: true)
   }
   activate :minify_html
@@ -71,7 +71,7 @@ end
 default_caching_policy max_age: (60 * 60 * 24 * 365)
 
 activate :external_pipeline,
-  name: :webpack,
-  command: build? ? 'npm run build' : 'npm run watch',
-  source: ".tmp/dist",
-  latency: 1
+         name: :webpack,
+         command: build? ? 'npm run build' : 'npm run watch',
+         source: '.tmp/dist',
+         latency: 1
