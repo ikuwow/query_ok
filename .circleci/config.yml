@@ -53,11 +53,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
-
       - npm_install
       - run:
           name: eslint
           command: npm run lint
+      - run: npx stylelint "**/*.css"
       - bundle_install
       - run: bundle exec rubocop
       - restore_cache:
