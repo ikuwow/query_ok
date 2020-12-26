@@ -10,7 +10,6 @@ gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-s3_sync'
-gem 'middleman-search_engine_sitemap'
 gem 'middleman-syntax'
 
 gem 'font-awesome-middleman'
