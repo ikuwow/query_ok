@@ -2,8 +2,6 @@
 
 require 'uglifier'
 
-$base_url = 'https://queryok.ikuwow.com'
-
 Time.zone = 'Tokyo'
 
 activate :blog do |blog|
@@ -31,7 +29,7 @@ ignore '/**/.*.swp'
 
 configure :build do
   activate :minify_css
-  activate :minify_javascript, compressor: -> {
+  activate :minify_javascript, compressor: lambda {
     Uglifier.new(harmony: true)
   }
   activate :minify_html
@@ -60,7 +58,7 @@ set :markdown,
     autolink: true,
     strikethrough: true
 
-set :url_root, $base_url
+set :url_root, 'https://queryok.ikuwow.com'
 
 activate :s3_sync do |s3_sync|
   s3_sync.region = 'ap-northeast-1'
@@ -71,7 +69,7 @@ end
 default_caching_policy max_age: (60 * 60 * 24 * 365)
 
 activate :external_pipeline,
-  name: :webpack,
-  command: build? ? 'npm run build' : 'npm run watch',
-  source: ".tmp/dist",
-  latency: 1
+         name: :webpack,
+         command: build? ? 'npm run build' : 'npm run watch',
+         source: '.tmp/dist',
+         latency: 1

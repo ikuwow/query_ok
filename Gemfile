@@ -21,3 +21,5 @@ gem 'builder'
 
 # for bug: https://github.com/fredjean/middleman-s3_sync/issues/123
 gem 'mime-types'
+
+gem 'rubocop', require: false

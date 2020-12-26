@@ -2,15 +2,13 @@
 
 xml.instruct!
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
-  site_url = $base_url
+  site_url = app.config.url_root
   xml.title 'Query OK.'
   xml.subtitle 'ikuwowの技術ブログ'
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, current_page.path), 'rel' => 'self'
-  unless blog.articles.empty?
-    xml.updated(blog.articles.first.date.to_time.iso8601)
-  end
+  xml.updated(blog.articles.first.date.to_time.iso8601) unless blog.articles.empty?
   xml.author { xml.name '@ikuwow' }
 
   blog.articles[0..5].each do |article|
