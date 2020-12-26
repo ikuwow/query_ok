@@ -2,8 +2,6 @@
 
 require 'uglifier'
 
-$base_url = 'https://queryok.ikuwow.com'
-
 Time.zone = 'Tokyo'
 
 activate :blog do |blog|
@@ -60,7 +58,7 @@ set :markdown,
     autolink: true,
     strikethrough: true
 
-set :url_root, $base_url
+set :url_root, 'https://queryok.ikuwow.com'
 
 activate :s3_sync do |s3_sync|
   s3_sync.region = 'ap-northeast-1'

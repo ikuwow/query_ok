@@ -2,7 +2,7 @@
 
 xml.instruct!
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
-  site_url = $base_url
+  site_url = app.config.url_root
   xml.title 'Query OK.'
   xml.subtitle 'ikuwowの技術ブログ'
   xml.id URI.join(site_url, blog.options.prefix.to_s)

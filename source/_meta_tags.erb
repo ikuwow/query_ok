@@ -29,13 +29,13 @@
 <% end %>
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="Query OK. : ikuwowの技術ブログ">
-<meta property="og:image" content="<%= $base_url + image_path('/img/ikuwow_200x200.png')%>">
+<meta property="og:image" content="<%= app.config.url_root + image_path('/img/ikuwow_200x200.png')%>">
 <meta property="article:publisher" content="ikuwow">
 
 <!-- twitter card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@ikuwow" />
-<meta name="twitter:image" content="<%=$base_url + image_path('/img/ikuwow.jpg')%>" />
+<meta name="twitter:image" content="<%= app.config.url_root + image_path('/img/ikuwow.jpg')%>" />
 <meta name="twitter:title" content="<%=title%>" />
 <meta name="twitter:description" content="<%=description%>" />
 

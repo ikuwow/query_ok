@@ -4,7 +4,7 @@
             <h2 class="post-title">
                 <%= link_to article.title, article %>
                 <% # hatena entry %>
-                <% entry_url = $base_url+article.url %>
+                <% entry_url = app.config.url_root + article.url %>
                 <a href="http://b.hatena.ne.jp/entry/<%= entry_url %>">
                     <img src="https://b.hatena.ne.jp/entry/image/large/<%= entry_url %>"/>
                 </a>
