@@ -59,6 +59,7 @@ jobs:
           name: eslint
           command: npm run lint
       - bundle_install
+      - run: bundle exec rubocop
       - restore_cache:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
