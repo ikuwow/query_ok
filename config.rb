@@ -61,7 +61,6 @@ set :markdown,
     strikethrough: true
 
 set :url_root, $base_url
-activate :search_engine_sitemap
 
 activate :s3_sync do |s3_sync|
   s3_sync.region = 'ap-northeast-1'
