@@ -48,20 +48,49 @@ a:focus {
   list-style: none;
 }
 
+.brand-title a {
+  color: white;
+}
+
+.footer a {
+  color: #ccc;
+  font-size: 80%;
+}
+
+.nav-item a {
+  background: transparent;
+  border: 2px solid rgb(176, 202, 219);
+  color: #fff;
+  margin-top: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+}
+
+.content h1 a {
+  color: #000;
+  text-decoration: none;
+}
+
 .tag-cloud ul li a {
   color: white;
+}
+
+.brand-title a:hover {
+  text-decoration: none;
+  -webkit-filter: brightness(90%);
 }
 
 .tag-cloud .tag-cloud-more a {
   color: rgb(176, 202, 219);
 }
 
-.btn-read-more:hover {
-  text-decoration: none !important;
-}
-
 .btn-read-more {
   float: right;
+}
+
+.btn-read-more:hover {
+  text-decoration: none !important;
 }
 
 .next-previous-article {
@@ -108,15 +137,6 @@ h3 {
   color: #fff;
 }
 
-.brand-title a {
-  color: white;
-}
-
-.brand-title a:hover {
-  text-decoration: none;
-  -webkit-filter: brightness(90%);
-}
-
 .brand-title,
 .brand-tagline {
   margin: 0;
@@ -139,16 +159,6 @@ h3 {
   zoom: 1;
 }
 
-.nav-item a {
-  background: transparent;
-  border: 2px solid rgb(176, 202, 219);
-  color: #fff;
-  margin-top: 1em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-size: 85%;
-}
-
 .nav-item a:hover,
 .nav-item a:focus {
   border: 2px solid rgb(61, 146, 201);
@@ -167,11 +177,6 @@ h3 {
 
 .content {
   padding: 2em 1em 0;
-}
-
-.content h1 a {
-  color: #000;
-  text-decoration: none;
 }
 
 .post {
@@ -243,11 +248,6 @@ h3 {
   padding: 1em 0;
 }
 
-.footer a {
-  color: #ccc;
-  font-size: 80%;
-}
-
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
   background: none;
@@ -260,7 +260,6 @@ h3 {
 .fa-tag {
   margin-right: 8px;
 }
-
 
 /* media queries */
 @media (min-width: 48em) {
