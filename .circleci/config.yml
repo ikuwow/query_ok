@@ -46,6 +46,16 @@ commands:
             - node_modules
 
 jobs:
+  lint:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - bundle_install
+      - npm_install
+      - run: bundle exec rubocop
+      - run: npm run lint
+      - run: npx stylelint "**/*.css"
   build:
     executor:
       name: default
@@ -53,13 +63,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
-      - npm_install
-      - run:
-          name: eslint
-          command: npm run lint
-      - run: npx stylelint "**/*.css"
       - bundle_install
-      - run: bundle exec rubocop
       - restore_cache:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
@@ -72,7 +76,6 @@ jobs:
           key: articles-{{ .Branch }}-{{ .Revision }}
           paths:
             - build
-
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -111,6 +114,7 @@ workflows:
   build_and_deploy:
     jobs:
       - build
+      - lint
       - deploy:
           filters:
             branches:
@@ -118,3 +122,4 @@ workflows:
                 - master
           requires:
             - build
+            - lint
