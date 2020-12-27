@@ -64,6 +64,7 @@ jobs:
       - attach_workspace:
           at: ~/project
       - bundle_install
+      - npm_install
       - restore_cache:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
