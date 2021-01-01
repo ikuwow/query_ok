@@ -56,6 +56,7 @@ jobs:
       - run: bundle exec rubocop
       - run: npm run lint
       - run: npx stylelint "**/*.css"
+      - run: npx textlint source/posts/
   build:
     executor:
       name: default
