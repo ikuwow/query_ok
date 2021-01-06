@@ -20,9 +20,9 @@ per_page: 12
 </ul>
 <% end %>
 
-<%= partial(:articles_list, :locals => {
-    :articles => page_articles
-}) %>
+<%= partial(:articles_list, locals: {
+              articles: page_articles
+            }) %>
 
 <% if paginate %>
   <% if next_page %>
