@@ -27,7 +27,7 @@ Webアプリの開発チームにニューカマーが来た時、まず環境�
 http://brew.sh/index_ja.html
 
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 
@@ -39,7 +39,7 @@ chef/centos-6.6
 ```
 
 ```
-$ vagrant up
+vagrant up
 ```
 
 ## Chefrepoを流し込む
