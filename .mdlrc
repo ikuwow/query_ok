@@ -1,1 +1,1 @@
-tags "~html", "~links", "~line_length"
+tags "~headers", "~html", "~links", "~line_length", "~whitespace"
