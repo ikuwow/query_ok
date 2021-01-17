@@ -23,4 +23,5 @@ gem 'builder'
 gem 'mime-types'
 
 gem 'erb_lint', '~> 0.0.36', require: false
+gem 'mdl', require: false
 gem 'rubocop', require: false

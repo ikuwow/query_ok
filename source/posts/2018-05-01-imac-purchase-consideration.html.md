@@ -37,11 +37,11 @@ iMac Pro買いたい欲望に毎日襲われるようになった。
 ## 選択肢
 
 * iMac Proを最小構成で買う
-    * 高いからね
+  * 高いからね
 * iMacを大幅にカスタマイズして購入
-    * あまり強くないからね
+  * あまり強くないからね
 * 今は買わず、今後のAppleの発表を待つ
-    * おそらく2018年秋には次のデスクトップMacの発表があるだろう
+  * おそらく2018年秋には次のデスクトップMacの発表があるだろう
 
 Mac ProとUSB-Cポートが付いていないMac ProとMac miniは候補としてなし。
 MacBook Proをもりもりにして
@@ -60,18 +60,18 @@ iMacは、プロセッサは最大、メモリはiMac Proの最小と同じ32GB�
 差分を見てみると以下のような感じ。これらが15万ほどの金額の差になる。
 
 * プロセッサ
-    * iMac Pro: 3.2GHz 8コアIntel Xeon Wプロセッサ（Turbo Boost使用時最大4.2GHz）
-    * iMac: 第7世代の4.2GHzクアッドコアIntel Core i7プロセッサ（Turbo Boost使用時最大4.5GHz）
+  * iMac Pro: 3.2GHz 8コアIntel Xeon Wプロセッサ（Turbo Boost使用時最大4.2GHz）
+  * iMac: 第7世代の4.2GHzクアッドコアIntel Core i7プロセッサ（Turbo Boost使用時最大4.5GHz）
 * メモリ
-    * iMac Pro: 32GB 2,666MHz DDR4 ECCメモリ
-    * iMac: 32GB 2,400MHz DDR4
+  * iMac Pro: 32GB 2,666MHz DDR4 ECCメモリ
+  * iMac: 32GB 2,400MHz DDR4
 * グラフィック
-    * iMac Pro: Radeon Pro Vega 56（8GB HBM2メモリ搭載）
-    * iMac: Radeon Pro 580（8GBビデオメモリ搭載）
+  * iMac Pro: Radeon Pro Vega 56（8GB HBM2メモリ搭載）
+  * iMac: Radeon Pro 580（8GBビデオメモリ搭載）
 * ストレージ
-    * どちらも1TB SSD
+  * どちらも1TB SSD
 * その他
-    * 筐体とキーボード、トラックパッドの色が違
+  * 筐体とキーボード、トラックパッドの色が違
 
 やっぱりXeonとグラフィック性能の差が一番大きそう。
 ただ、どう考えても僕の使う母艦Macとしての用途ではXeonは使いきれる気がしない。

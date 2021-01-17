@@ -55,6 +55,7 @@ jobs:
       - npm_install
       - run: bundle exec rubocop
       - run: bundle exec erblint source/
+      - run: bundle exec mdl source/
       - run: npm run lint
       - run: npx stylelint "**/*.css"
   build:

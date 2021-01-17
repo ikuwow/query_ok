@@ -48,16 +48,16 @@ libraries    metadata.rb  providers    recipes      resources    templates
 local\_modeで使っていると.chef/local-mode-cacheができるのでこいつをgitignoreしておく。
 
 ```bash
-$ mkdir .chef/
-$ echo "local_mode true" > .chef/knife.rb
-$ echo "/.chef/local-mode-cache" >> .gitignore
+mkdir .chef/
+echo "local_mode true" > .chef/knife.rb
+echo "/.chef/local-mode-cache" >> .gitignore
 ```
 
 ひととおりファイルができたところで`git init`してバージョン管理に乗せる。
 GitHubへの登録は省略。
 
 ```bash
-$ git init 
+$ git init
 Initialized empty Git repository in /path/to/cookbook/base-settings/.git/
 $ git add .
 $ git commit -m'initial commit'
@@ -144,7 +144,7 @@ suites:
 あと`-c`をつけると複数の仮想マシンを並列にテストしてくれるので速い。
 
 ```bash
-$ kitchen test --destroy=never -c
+kitchen test --destroy=never -c
 ```
 
 だいぶ時間をかけて、vagrantで２つの仮想マシンが立ち上がり、それぞれにVirtualBoxのGuestAdditionsがインストールされ、
@@ -403,7 +403,7 @@ include_recipe "openssh::default"
 とりあえずattributesを書かない状態で適用してみる。
 
 ```bash
-$ kitchen test --destroy=never -c 
+kitchen test --destroy=never -c
 ```
 
 成功したのを確認したら.kitchen.ymlにattributeを書いていく。
@@ -578,7 +578,7 @@ end
 ```
 
 ```bash
-$ kitchen converge && kitchen verify
+kitchen converge && kitchen verify
 ```
 
 これで`iku`ユーザーと`wow`ユーザーが作成される。

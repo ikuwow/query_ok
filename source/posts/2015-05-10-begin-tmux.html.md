@@ -70,13 +70,13 @@ C-b %
 現在のtmuxの状態を保存して閉じるときは`tmux detach`をターミナルに打つ。
 
 ```
-$ tmux detach
+tmux detach
 ```
 
 次回以降は`$ tmux attach`でもとの状態に戻る。
 
 ```
-$ tmux attach
+tmux attach
 ```
 
 以上のコマンドぐらいでtmuxはほぼほぼ便利に使える。

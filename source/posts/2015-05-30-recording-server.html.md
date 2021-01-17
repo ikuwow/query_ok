@@ -170,15 +170,15 @@ OSを入れた後に、Chef Server管理にして個人的に秘伝のcookbook�
 この後は以下の流れ。
 
 * PT3のドライバインストール
- * https://github.com/m-tsudo/pt3
+  * https://github.com/m-tsudo/pt3
 * SCR3310の読み込み
- * `aptitude install pcscd`
- * B-CASを認識するかテスト
- * サービスの自動起動
+  * `aptitude install pcscd`
+  * B-CASを認識するかテスト
+  * サービスの自動起動
 * chinachuインストール
- * GitHubのwikiを参照
+  * GitHubのwikiを参照
 * chinachu設定
- * 同じくGitHubのwikiを参照
+  * 同じくGitHubのwikiを参照
 
 chinachuのセットアップのこの流れは途中まで作業しながら大急ぎでcookbookにした。
 
