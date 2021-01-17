@@ -1,5 +1,6 @@
 Query OK.
 [![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok)
+[![GitHub Super-Linter](https://github.com/ikuwow/query_ok/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ===========================
 
 
