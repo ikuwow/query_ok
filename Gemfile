@@ -22,6 +22,6 @@ gem 'builder'
 # for bug: https://github.com/fredjean/middleman-s3_sync/issues/123
 gem 'mime-types'
 
-gem 'erb_lint', '~> 0.0.36', require: false
+gem 'erb_lint', '~> 0.0.37', require: false
 gem 'mdl', require: false
 gem 'rubocop', require: false
