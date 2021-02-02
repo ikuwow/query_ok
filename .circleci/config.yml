@@ -1,6 +1,9 @@
 ---
 version: 2.1
 
+orbs:
+  aws-cli: circleci/aws-cli@1.3.2
+
 executors:
   default:
     working_directory: ~/project
@@ -95,13 +98,7 @@ jobs:
           at: ~/project
       - bundle_install
       - npm_install
-      - run:
-          name: Install awscli
-          command: |
-            sudo apt-get update
-            sudo apt-get install -y python-pip python-dev
-            sudo pip install awscli --upgrade
-            aws configure set preview.cloudfront true
+      - aws-cli/install
       - deploy:
           name: deploy to s3
           command: bundle exec middleman s3_sync
