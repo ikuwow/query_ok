@@ -5,4 +5,4 @@ import { faTag } from '@fortawesome/free-solid-svg-icons';
 library.add(faTag);
 dom.i2svg();
 
-import './stylesheets/babylink.css'
+import './stylesheets/babylink.scss'
