@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
-    "@webpack-cli/init": "^1.1.1",
+    "@webpack-cli/init": "^1.1.2",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.19.0",
     "stylelint": "^13.9.0",
