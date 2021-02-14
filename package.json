@@ -1,5 +1,6 @@
 {
   "name": "query_ok",
+  "private": true,
   "version": "1.0.0",
   "description": "Query OK. [![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok) ===========================",
   "main": "index.js",
