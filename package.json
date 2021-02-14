@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Query OK. [![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok) ===========================",
   "main": "index.js",
+  "engine": {
+    "node": "~12.16.3"
+  },
   "scripts": {
     "lint": "eslint .",
     "build": "webpack --config webpack.prod.js",
