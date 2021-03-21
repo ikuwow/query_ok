@@ -6,7 +6,7 @@ tags: Elasticsearch, Fluentd, Kibana, LT
 ---
 
 2016/9/15に開催したteratail Meetup「集まっtail」にて
-「Elasticsearch on EC2からAmazon Elasticsearch Serviceに 移行してだいぶ楽になった話」
+「Elasticsearch on EC2からAmazon Elasticsearch Serviceに 移行してだいぶ楽になった話」
 というLTをしました。
 
 <script async class="speakerdeck-embed" data-id="099c9c8cd85f4cca92c61ea001bb9928" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
