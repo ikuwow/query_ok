@@ -62,6 +62,7 @@ jobs:
       - run: bundle exec mdl source/
       - run: npm run lint
       - run: npx stylelint "**/*.css"
+      - run: npx textlint source/posts/
   build:
     executor:
       name: default
