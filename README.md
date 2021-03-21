@@ -21,4 +21,3 @@ bundle exec middleman s3_sync
 ## License
 
 All rights reserved.
-

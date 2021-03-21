@@ -433,7 +433,7 @@ suites:
     run_list:
       - recipe[base-settings::default]
     attributes:
-      openssh: 
+      openssh:
         server:
           password_authentication: "no"
           permit_root_login: "no"
@@ -442,7 +442,7 @@ suites:
 これで`kichen converge`すれば望んだ状態になるはず。
 
 ```bash
-$ kitchen converge 
+$ kitchen converge
 〜（省略）〜
        Recipe: openssh::default
          * apt_package[openssh-client] action install (up to date)
@@ -498,7 +498,7 @@ suites:
     run_list:
       - recipe[base-settings::default]
     attributes:
-      openssh: 
+      openssh:
         server:
           password_authentication: "no"
           permit_root_login: "no"
@@ -603,4 +603,3 @@ https://github.com/ikuwow/base-settings
 
 * test-kitchenを並列実行する：http://think-t.hatenablog.com/entry/2014/12/12/002237
 * [和訳] 初心者Chefアンチパターン by Julian Dunn #opschef_ja：http://www.creationline.com/lab/3080
-

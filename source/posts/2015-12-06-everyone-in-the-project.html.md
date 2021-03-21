@@ -138,6 +138,3 @@ teratailというまさにITエンジニアのためにあるというサービ�
 > [営業さんまで、社員全員がSQLを使う 「越境型組織」 ができるまでの3+1のポイント | リブセンス](http://www.slideshare.net/livesense/150225-sql-foreveryone-45695818)
 
 > [「全員がコードを書ける組織づくりをする」MAISIN&CO.が語る企業文化とプロダクト開発。 | TechStars Blog](https://techstars.jp/blog/maisin-int1/)
-
-
-

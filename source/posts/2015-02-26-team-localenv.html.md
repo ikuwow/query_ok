@@ -43,6 +43,3 @@ vagrant up
 ```
 
 ## Chefrepoを流し込む
-
-
-

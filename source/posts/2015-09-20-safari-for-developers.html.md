@@ -134,5 +134,3 @@ SafariよりもChromeやFirefoxのほうが開発ツールが充実している�
 「Safariこういうところもいいよ」とか「Chromeだってそれできるよ」などの意見は大歓迎ですので、ぜひ教えて下さい。
 
 Happy Browsing!
-
-
