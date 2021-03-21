@@ -137,4 +137,3 @@ defaultsに移していく。
 
 開発環境をDocker化して、1年に1回はMacをリストアする人。Macをimmutableにする勇気。
 http://saboyutaka.hatenablog.com/entry/2018/08/23/023925
-

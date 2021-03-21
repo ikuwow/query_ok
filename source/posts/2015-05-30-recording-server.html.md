@@ -223,4 +223,3 @@ Ace Playerというやつが録画した生ファイルの.m2tsファイルを�
 * [クリスマスに安心して一日中アニメを見るために録画鯖を作る技術](http://tolarian-academy.net/christmas-anime-2014/)
 * [PT3を買ってセットアップ Part1(接続編)](http://ameblo.jp/akitoshi0406/entry-11973962076.html)
 * [5万円でTV録画サーバを作る](http://5mande.blogspot.jp)
-

@@ -19,4 +19,3 @@ tags: Weekly
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ああ〜完全に別のconfigにして並べるわけね。理解しました。そのうちやってみよ。</p>&mdash; ikuwow (@ikuwow) <a href="https://twitter.com/ikuwow/status/1170683433611251712?ref_src=twsrc%5Etfw">September 8, 2019</a></blockquote>
 
 そのうち試す。miniCssExtractPluginはconfig全体に有効化されちゃうと。
-

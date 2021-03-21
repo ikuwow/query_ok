@@ -117,4 +117,3 @@ dotfilesやブログみたいな些細な事でもいいので、
 
 > 毎日コードを書くことと、それにまつわること  
 > http://ksoichiro.blogspot.jp/2015/07/blog-post.html
-
