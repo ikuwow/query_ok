@@ -39,7 +39,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "css-loader": "^5.1.1",
+    "css-loader": "^5.2.0",
     "purecss": "^2.0.5",
     "style-loader": "^2.0.0"
   }
