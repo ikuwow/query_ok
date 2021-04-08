@@ -6,7 +6,7 @@ Time.zone = 'Tokyo'
 
 activate :blog do |blog|
   blog.permalink = 'entry/{title}.html'
-  blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
+  blog.sources = 'posts/{year}-{month}-{day}-{title}/index.html'
   blog.layout = 'layouts/article_layout'
   blog.summary_length = 200
   blog.default_extension = '.md'
