@@ -13,7 +13,7 @@ tags:
 価格は2万円ちょい。
 価格.comの最安値で購入したらAmazonよりも5000円ぐらい安かった。
 
-![LEOPOLD FC660C](/img/2017-09-03_overview.jpg)
+![LEOPOLD FC660C](overview.jpg)
 
 ---
 
@@ -53,22 +53,22 @@ Happy Hacking Keyboard Professional 2(以下HHKB Pro2）が有名で、
 
 パッケージ
 
-![LEOPOLD FC660Cのパッケージトップ](/img/2017-09-03_package-top.jpg)
+![LEOPOLD FC660Cのパッケージトップ](package-top.jpg)
 
-![LEOPOLD FC660Cのパッケージ下](/img/2017-09-03_package-bottom.jpg)
+![LEOPOLD FC660Cのパッケージ下](package-bottom.jpg)
 
-![LEOPOLD FC660Cの付属品](/img/2017-09-03_accessories.jpg)
+![LEOPOLD FC660Cの付属品](accessories.jpg)
 
 同梱物。
 とはいっても接続用のケーブルとCtrl, CapsLockの交換用キートップだけ。
 
-![LEOPOLD FC660Cの右側](/img/2017-09-03_rightside.jpg)
+![LEOPOLD FC660Cの右側](rightside.jpg)
 
 キーの右側。
 基本的にMacの配列とほぼ同じなのが嬉しい。
 InsertとDeleteキーが別にある。Fnキーは右にある。
 
-![LEOPOLD FC660Cの左側](/img/2017-09-03_leftside.jpg)
+![LEOPOLD FC660Cの左側](leftside.jpg)
 
 キーの左側。
 ControlとCapsLockはキートップを変更した状態の写真。
@@ -86,11 +86,11 @@ ControlとCapsLockはキートップを変更した状態の写真。
 キーボード裏のスイッチでCapsLockとCtrlを、
 MacのModifier Keysで⌘コマンドと⌥オプション（Alt）を、それぞれ交換したら充分。
 
-![スイッチ](/img/2017-09-03_switches.jpg)
+![スイッチ](switches.jpg)
 
 1番をonにするとCapsLockとCtrlが切り替わる。キートップもそれぞれ換えが用意されている。
 
-![Modifier Keys](/img/2017-09-03_modifier-keys.png)
+![Modifier Keys](modifier-keys.png)
 
 Modifier Keysで行う変更に関しては自分の中ではセーフ。
 
@@ -105,6 +105,6 @@ Modifier Keysで行う変更に関しては自分の中ではセーフ。
 かなりデフォルトの配列に近くて、MacBook Proに写って作業を始めるときもタイプミスが少なくて非常に良い。
 HHKBの打鍵感が好きな人にはかなりオススメしたい。
 
-![capacitance](/img/2017-09-03_capacitance.jpg)
+![capacitance](capacitance.jpg)
 
 なぜか右手元についている静電容量の式。
