@@ -11,13 +11,13 @@ tags: Apple
 
 現在は Mac mini 2012とThunderbolt Displayを使っている。
 
-![Mac mini](img/2018-05-01_macmini.png)
+![Mac mini](macmini.png)
 
 オフィスでDellの4Kディスプレイを使い始めてから、
 身近にあるディスプレイで唯一RetinaでないのがこのThudnerboltディスプレイだけになってしまい、
 解像度の低さが気になるようになってしまった。
 
-![Thunderbolt displayの画面](img/2018-05-01_thunderbolt_display.png)
+![Thunderbolt displayの画面](thunderbolt_display.png)
 
 このよう液晶の粒が見えて意外と粗い。
 これでも以前のディスプレイよりは解像度高くてきれいなんだけどね・・・・。
@@ -49,9 +49,9 @@ MacBook Proをもりもりにして
 
 それぞれカスタマイズするとこんなかんじ。
 
-![iMac Pro](img/2018-05-01_imac_pro.png)
+![iMac Pro](imac_pro.png)
 
-![iMac](img/2018-05-01_imac.png)
+![iMac](imac.png)
 
 iMacは、プロセッサは最大、メモリはiMac Proの最小と同じ32GB、ストレージはデフォルトの1TBSSD。
 
