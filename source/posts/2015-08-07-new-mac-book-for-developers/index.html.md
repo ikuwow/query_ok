@@ -19,7 +19,7 @@ tags: Mac, Apple
 
 まず触ってみた感じは、すごく小さくてパワフル。
 
-![MacBook1](/img/2015-08-12_macbook1.jpg)
+![MacBook1](macbook1.jpg)
 
 ディスプレイは12inchと、今まで使っていたMacBook Air 13inchよりもやや小さい。
 ただRetinaディスプレイなので、設定でデフォルトより一段階小さめに全体を表示するようにしたらむしろ以前よりも格段に広く感じる。
@@ -36,7 +36,7 @@ MacBook Air 11inchだと無駄に横に大きくて強引に小さくした感�
 
 使用感としてはスマホに非常に近いかもしれない。
 
-![MacBook1](/img/2015-08-12_macbook2.jpg)
+![MacBook1](macbook2.jpg)
 
 キーボードの打鍵感は独特。
 カシャカシャではなくポチポチした感じ。
