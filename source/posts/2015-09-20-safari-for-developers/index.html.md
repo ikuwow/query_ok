@@ -22,7 +22,7 @@ Appleの世界では純正というだけで結構利点があるもの。
 ヘッダのサイズを比べてみると、ほぼおなじ機能が表示されている状態でSafariのほうが狭く、
 画面を広く使ってブラウジングできる。
 
-![SafariとChromeのヘッダの高さの違い](/img/2015-09-20_safar_chrome_header.png)
+![SafariとChromeのヘッダの高さの違い](safari_chrome_header.png)
 
 ## メモリ使用量が少ない
 
@@ -80,7 +80,7 @@ SafariでトラックパッドかMagic Mouseでスワッと横にスワイプし
 直前に見たページをちら見できる、というわけです。
 これも地味によいですね。
 
-![Safariの戻る](/img/2015-09-20_safari_back.png)
+![Safariの戻る](safari_back.png)
 
 ## iCloudでブックマークとタブを同期できる
 
