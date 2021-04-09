@@ -79,12 +79,12 @@ homebrew-cask管理じゃない状態でアップデートがインストール�
 
 そうするとSpotlightのランチャーに複数出てきてしまって、Launchpadから開く場合とSpotlightから開く場合と、はたまたDockアイコンから開く場合と別の実体が起動されてしまうという始末。つらい。
 
-![Spotlightに複数のバージョンが！](/img/2015-10-24_multiple_version_on_spotlight.png)
+![Spotlightに複数のバージョンが！](multiple_version_on_spotlight.png)
 
 これを避けるためには「Auto updateしますか？」というアラートが出てくるたびに、
 「Install Update」を押したい誘惑をぐっとこらえて「Remind me later」を押し、後でhomebrew-caskでアップデートする。
 
-![自動アップデートのアラート](/img/2015-10-24_update_alert.png)
+![自動アップデートのアラート](update_alert.png)
 
 このアラートがFlash playerやEvernoteだとすごく頻繁に出てくるのが鬱陶しい。
 出てきてアップデートがリリースされてから最速で入れられるならよいのだが、
