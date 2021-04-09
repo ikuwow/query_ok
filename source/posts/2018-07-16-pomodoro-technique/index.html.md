@@ -87,7 +87,7 @@ tags:
 
 ## やってみてどう
 
-![Pomodoro Trackerのログ](/img/2018-07-16_pomodoro-log.png)
+![Pomodoro Trackerのログ](pomodoro-log.png)
 
 こんなかんじ。
 とりあえず1日に8ポモドーロができたら、働くと決めている8時間が半分程度収まるからよいなと思っっていたが、まだまだ道のりは遠い。

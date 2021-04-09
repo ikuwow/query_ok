@@ -10,7 +10,7 @@ GitHubの自分のcontributionをウェブサイトに埋め込めるウィジ�
 > Yourcontributions: GitHub Contribution widget  
 > https://ikuwow.github.io/yourcontributions/
 
-![Yourcontributions](/img/2016-01-16_yourcontributions.png)
+![Yourcontributions](yourcontributions.png)
 
 フォームにGitHubのユーザー名（`https://github.com/[:username:]`の部分）を入力すると
 以下の様な自分のpublic contribution chartが見られるウィジェットが出力できます。

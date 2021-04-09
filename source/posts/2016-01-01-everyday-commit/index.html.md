@@ -19,7 +19,7 @@ tags: GitHub, キャリア
 現在は以下の様な感じ。2015/12/31現在でcurrent streakが46、年間のcontributionが
 914。
 
-![contributions](/img/2015-12-31_contributions.png)
+![contributions](contributions.png)
 
 > ikuwow (ikuwow)
 > https://github.com/ikuwow

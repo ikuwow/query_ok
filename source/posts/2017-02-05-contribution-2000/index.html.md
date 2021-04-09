@@ -10,7 +10,7 @@ tags: GitHub, キャリア
 > ikuwow (Ikuo Degawa)  
 > https://github.com//ikuwow
 
-![2017/02/05現在](/img/2017-02-05_contribution_2000.png)
+![2017/02/05現在](contribution_2000.png)
 
 いまはちょうど2000を越えて数日たった状態。
 
