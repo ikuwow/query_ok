@@ -83,7 +83,7 @@ tmux attach
 
 よきtmuxライフを。
 
-![tmux](/img/2015-05-18_tmux.png)
+![tmux](tmux.png)
 
 ## 参考URL
 
