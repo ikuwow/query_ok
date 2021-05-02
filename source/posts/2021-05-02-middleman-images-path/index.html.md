@@ -59,7 +59,9 @@ $ bundle exec middleman article foobar
 ![someimage](someimage.png)
 ```
 
-ただし `middleman build` した後の画像の階層には `blog.permalink = 'entry/{title}.html'` のような設定は反映されず、 `/posts/2021-04-08-foobar/image.png` となる。これはやや気持ち悪いが妥協した。
+ただし `middleman build` した後の画像の階層には `blog.permalink = 'entry/{title}.html'` のような設定は反映されず、
+`/posts/2021-04-08-foobar/image.png` となる。
+これはやや気持ち悪いが妥協した。
 
 ## Typoraで記事を書きつつ画像を追加
 
