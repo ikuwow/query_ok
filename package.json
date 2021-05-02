@@ -40,7 +40,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "css-loader": "^5.2.0",
-    "purecss": "^2.0.5",
+    "purecss": "^2.0.6",
     "style-loader": "^2.0.0"
   }
 }
