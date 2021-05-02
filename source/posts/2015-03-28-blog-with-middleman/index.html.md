@@ -2,7 +2,6 @@
 title: MiddlemanとPureとその他もろもろでブログ作った
 date: 2015-03-28 15:05 JST
 tags: Middleman, YAML, Pure, 作った
-published: true
 ---
 
 自分の発信の場として技術ブログをきちんと立ち上げようと思って、
@@ -65,7 +64,7 @@ GitHub Pagesと合わせて`git push origin master`でデプロイするよう�
 しかも自動リロード機能付き。ガシガシMarkdownで書くのに本当に役に立つやつです。
 
 業務などだと企業のコーポレートサイトとかを作るのにもいいかもしれない。
-どうやらMiddlemanは日本でも海外でもそこまで知名度は高くないようで、
+どうやらMiddlemanは日本だけでなく海外でもそこまで知名度は高くないようで、
 これからの発展に期待。
 
 
