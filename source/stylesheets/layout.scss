@@ -161,12 +161,12 @@ h3 {
   display: inline-block;
   *display: inline;
   zoom: 1;
-}
 
-.nav-item a:hover,
-.nav-item a:focus {
-  border: 2px solid rgb(61, 146, 201);
-  text-decoration: none;
+  a:hover,
+  a:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+  }
 }
 
 .content-subhead {
