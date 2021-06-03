@@ -50,10 +50,6 @@ a {
   }
 }
 
-.tag-cloud ul {
-  list-style: none;
-}
-
 .brand-title a {
   color: white;
 }
@@ -78,17 +74,25 @@ a {
   text-decoration: none;
 }
 
-.tag-cloud ul li a {
-  color: white;
+.tag-cloud {
+  display: none;
+
+  ul {
+    list-style: none;
+
+    li a {
+      color: white;
+    }
+  }
+
+  .tag-cloud-more a {
+    color: rgb(176, 202, 219);
+  }
 }
 
 .brand-title a:hover {
   text-decoration: none;
   -webkit-filter: brightness(90%);
-}
-
-.tag-cloud .tag-cloud-more a {
-  color: rgb(176, 202, 219);
 }
 
 .btn-read-more {
@@ -251,10 +255,6 @@ h3 {
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
   background: none;
-}
-
-.tag-cloud {
-  display: none;
 }
 
 .fa-tag {
