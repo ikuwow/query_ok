@@ -1,8 +1,8 @@
 <%
   if current_article.nil?
-      title = "Query OK. : ikuwowの技術ブログ"
+    title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
   else
-      title = current_article.title+" : Query OK."
+    title = "#{current_article.title} : #{app.config.blog_title}"
   end
   keywords= "ブログ,ikuwow,ゐくを"
   if !current_article.nil?
@@ -10,7 +10,7 @@
         keywords+=','+tag
     end
   end
-  description = 'ikuwowの技術ブログ'
+  description = app.config.blog_subtitle
 %>
 
 <meta charset="utf-8" />
@@ -28,7 +28,7 @@
     <meta property="og:type" content="blog">
 <% end %>
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="Query OK. : ikuwowの技術ブログ">
+<meta property="og:site_name" content="<%= "#{app.config.blog_title} : #{app.config.blog_subtitle}" %>">
 <meta property="og:image" content="<%= app.config.url_root + image_path('/img/ikuwow_200x200.png')%>">
 <meta property="article:publisher" content="ikuwow">
 

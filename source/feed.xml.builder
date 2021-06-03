@@ -3,8 +3,8 @@
 xml.instruct!
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
   site_url = app.config.url_root
-  xml.title 'Query OK.'
-  xml.subtitle 'ikuwowの技術ブログ'
+  xml.title app.config.blog_title
+  xml.subtitle app.config.blog_subtitle
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, current_page.path), 'rel' => 'self'

@@ -4,6 +4,10 @@ require 'uglifier'
 
 Time.zone = 'Tokyo'
 
+set :url_root, 'https://queryok.ikuwow.com'
+set :blog_title, 'Query OK.'
+set :blog_subtitle, 'ikuwowの技術/ガジェット/内省なブログ'
+
 activate :blog do |blog|
   blog.permalink = 'entry/{title}.html'
   blog.sources = 'posts/{year}-{month}-{day}-{title}/index.html'
@@ -60,7 +64,6 @@ set :markdown,
     autolink: true,
     strikethrough: true
 
-set :url_root, 'https://queryok.ikuwow.com'
 
 activate :s3_sync do |s3_sync|
   s3_sync.region = 'ap-northeast-1'
