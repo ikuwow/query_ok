@@ -97,10 +97,10 @@ a {
 
 .btn-read-more {
   float: right;
-}
 
-.btn-read-more:hover {
-  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
 .next-previous-article {
