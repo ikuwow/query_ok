@@ -64,7 +64,6 @@ set :markdown,
     autolink: true,
     strikethrough: true
 
-
 activate :s3_sync do |s3_sync|
   s3_sync.region = 'ap-northeast-1'
   s3_sync.index_document = 'index.html'
