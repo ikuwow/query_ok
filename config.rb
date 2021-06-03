@@ -6,7 +6,7 @@ Time.zone = 'Tokyo'
 
 set :url_root, 'https://queryok.ikuwow.com'
 set :blog_title, 'Query OK.'
-set :blog_subtitle, 'ikuwowの技術/ガジェット/内省なブログ'
+set :blog_subtitle, 'ikuwowの技術/ガジェット/内省'
 
 activate :blog do |blog|
   blog.permalink = 'entry/{title}.html'
