@@ -20,11 +20,11 @@ a {
   text-decoration: none;
   color: #256fba;
   transition: 0.1s;
-}
 
-a:hover,
-a:focus {
-  text-decoration: underline;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 #article-body h2 {
