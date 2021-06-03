@@ -27,21 +27,27 @@ a {
   }
 }
 
-#article-body h2 {
-  border-left: solid 6px #444;
-  padding-left: 12px;
-}
-
-#article-body blockquote {
-  border-left: solid 4px #bbb;
-  color: #444;
-  padding-left: 8px;
-}
-
 #article-body {
   font-size: 95%;
   margin-bottom: 40px;
   line-height: 1.7;
+
+  h2 {
+    border-left: solid 6px #444;
+    padding-left: 12px;
+  }
+
+  blockquote {
+    border-left: solid 4px #bbb;
+    color: #444;
+    padding-left: 8px;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .tag-cloud ul {
@@ -103,12 +109,6 @@ a {
 
 .next-article-link {
   float: left;
-}
-
-#article-body img {
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
 }
 
 h3 {
