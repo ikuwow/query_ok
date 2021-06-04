@@ -1,11 +1,5 @@
 @import "base";
-
-/* Mixins */
-@mixin whenMobile() {
-  @media (min-width: 48em) {
-    @content;
-  }
-}
+@import "mixin";
 
 #article-body {
   font-size: 95%;
