@@ -1,4 +1,14 @@
 {
   "extends": "stylelint-config-standard",
-  "ignoreFiles": ["build/**/*.css", "vendor/**/*.css"]
+  "ignoreFiles": ["build/**/*.css", "vendor/**/*.css"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "mixin"
+        ]
+      }
+    ]
+  }
 }
