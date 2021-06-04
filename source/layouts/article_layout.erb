@@ -1,5 +1,6 @@
 <% wrap_layout :layout do %>
 
+    <div class="post">
     <h1><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
     <p class="post-meta">
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
@@ -29,6 +30,7 @@
     <% if article_previous %>
         <%= link_to "前の記事 →", article_previous.url, :class => "previous-article-link"  %>
     <% end %>
+    </div>
     </div>
 
 <% end %>

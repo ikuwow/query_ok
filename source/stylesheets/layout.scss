@@ -175,50 +175,33 @@
 
 .post {
   padding-bottom: 2em;
-}
 
-.post-title {
-  font-size: 2em;
-  color: #222;
-  margin-bottom: 0.2em;
-}
+  .post-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+  }
 
-.post-avatar {
-  border-radius: 50px;
-  float: right;
-  margin-left: 1em;
-}
+  .post-description {
+    color: #444;
+    line-height: 1.8;
+    font-size: 95%;
+  }
 
-.post-description {
-  color: #444;
-  line-height: 1.8;
-  font-size: 95%;
-}
+  .post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 20px 0;
+    line-height: 1.6;
 
-.post-meta {
-  color: #999;
-  font-size: 90%;
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-.post-category {
-  margin: 0 0.1em;
-  padding: 0.3em 1em;
-  color: #fff;
-  background: #5aba59;
-  font-size: 80%;
-}
-
-.post-images {
-  margin: 1em 0;
-}
-
-.post-image-meta {
-  margin-top: -3.5em;
-  margin-left: 1em;
-  color: #fff;
-  text-shadow: 0 1px 1px #333;
+    .post-category {
+      margin: 0 0.1em;
+      padding: 0.3em 1em;
+      color: #fff;
+      background: #5aba59;
+      font-size: 80%;
+    }
+  }
 }
 
 .footer {
