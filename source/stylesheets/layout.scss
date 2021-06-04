@@ -141,12 +141,6 @@
   }
 }
 
-/* LAYOUT CSS */
-.pure-img-responsive {
-  max-width: 100%;
-  height: auto;
-}
-
 #layout {
   padding: 0;
 }
@@ -201,6 +195,10 @@
       background: #5aba59;
       font-size: 80%;
     }
+
+    .post-category-icon {
+      margin-right: 0.8em;
+    }
   }
 }
 
@@ -219,8 +217,4 @@
       }
     }
   }
-}
-
-.fa-tag {
-  margin-right: 8px;
 }
