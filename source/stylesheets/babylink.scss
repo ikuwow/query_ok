@@ -1,22 +1,24 @@
 /** Babylink override **/
 
 /** babylink.herokuapp.com **/
-.babylink-title,
-.babylink-manufacturer {
-  font-size: normal;
-}
+.babylink {
+  &-title,
+  &-manufacturer {
+    font-size: normal;
+  }
 
-.babylink-box {
-  overflow: hidden !important;
-  font-size: small !important;
-  zoom: 1 !important;
-  margin: 15px 0 !important;
-  text-align: left !important;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 15px;
-}
+  &-box {
+    overflow: hidden !important;
+    font-size: small !important;
+    zoom: 1 !important;
+    margin: 15px 0 !important;
+    text-align: left !important;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 15px;
+  }
 
-.babylink-image {
-  margin: 0 15px 0 0 !important;
+  &-image {
+    margin: 0 15px 0 0 !important;
+  }
 }
