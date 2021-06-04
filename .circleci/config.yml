@@ -61,7 +61,7 @@ jobs:
       - run: bundle exec erblint source/
       - run: bundle exec mdl source/
       - run: npm run lint
-      - run: npx stylelint "**/*.css"
+      - run: npx stylelint "**/*.css" "**/*.scss"
       - run: npx textlint source/posts/
   build:
     executor:
