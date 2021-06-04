@@ -69,11 +69,6 @@ a {
   color: rgb(176, 202, 219);
 }
 
-.footer a {
-  color: #ccc;
-  font-size: 80%;
-}
-
 .nav-item a {
   background: transparent;
   border: 2px solid rgb(176, 202, 219);
@@ -250,11 +245,18 @@ h3 {
 .footer {
   text-align: center;
   padding: 1em 0;
-}
 
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-  background: none;
+  .pure-menu {
+    &-link {
+      color: #ccc;
+      font-size: 80%;
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+  }
 }
 
 .fa-tag {
