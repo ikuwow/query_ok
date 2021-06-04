@@ -5,7 +5,7 @@
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
         <% if !current_article.nil? %>
         <% current_article.tags.each do |tag| %>
-            <%= link_to '<i class="fa fa-tag"></i>'+tag, tag_path(tag), :class => "post-category post-category-design"%>
+            <%= link_to '<i class="fa fa-tag"></i>'+tag, tag_path(tag), :class => "post-category"%>
         <% end %>
         <% end %>
     </p>

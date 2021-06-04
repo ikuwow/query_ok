@@ -10,10 +10,9 @@
         <% # By <a href="#" class="post-author">Tilo Mitra</a> under  %>
         <time>Posted at <%= article.date.strftime('%b %e %Y') %></time>
         <% article.tags.each do |tag| %>
-            <%= link_to '<i class="fa fa-tag"></i>'+tag, tag_path(tag), :class => "post-category post-category-design"%>
+            <%= link_to '<i class="fa fa-tag"></i>'+tag, tag_path(tag), :class => "post-category"%>
         <% end %>
 
-        <% # <a class="post-category post-category-pure" href="#">Pure</a> %>
         </p>
 
         <div class="post-description">
