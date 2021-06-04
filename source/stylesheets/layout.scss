@@ -124,6 +124,11 @@ h3 {
     font-weight: 500;
     letter-spacing: 0.1em;
   }
+
+  @include whenMobile {
+    padding: 2em 3em 0;
+    margin-left: 25%;
+  }
 }
 
 .tag-cloud {
@@ -139,6 +144,10 @@ h3 {
 
   .tag-cloud-more a {
     color: rgb(176, 202, 219);
+  }
+
+  @include whenMobile {
+    display: block;
   }
 }
 
@@ -176,11 +185,22 @@ h3 {
   text-align: center;
   top: auto;
   margin: 3em auto;
+
+  @include whenMobile {
+    margin: 80% 2em 0;
+    text-align: right;
+  }
 }
 
 .sidebar {
   background: rgb(61, 79, 93);
   color: #fff;
+
+  @include whenMobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
 }
 
 .post {
@@ -250,27 +270,4 @@ h3 {
 
 .fa-tag {
   margin-right: 8px;
-}
-
-/* media queries */
-@media (min-width: 48em) {
-  .content {
-    padding: 2em 3em 0;
-    margin-left: 25%;
-  }
-
-  .header {
-    margin: 80% 2em 0;
-    text-align: right;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-
-  .tag-cloud {
-    display: block;
-  }
 }
