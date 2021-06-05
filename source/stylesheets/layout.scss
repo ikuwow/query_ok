@@ -202,6 +202,10 @@
   padding: 1em 0;
 
   .pure-menu {
+    ul {
+      padding: 0;
+    }
+
     &-link {
       color: #ccc;
       font-size: 80%;
