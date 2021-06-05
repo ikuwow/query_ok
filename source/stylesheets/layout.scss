@@ -80,16 +80,6 @@
     text-decoration: none;
   }
 
-  &-subhead {
-    text-transform: uppercase;
-    color: #aaa;
-    border-bottom: 1px solid #eee;
-    padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-  }
-
   @include whenMobile {
     padding: 2em 3em 0;
     margin-left: 25%;
@@ -162,8 +152,28 @@
   }
 }
 
+.posts {
+  .content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+}
+
 .post {
   padding-bottom: 2em;
+
+  h1 {
+    font-size: 1.5em;
+
+    @include whenMobile {
+      font-size: 2em;
+    }
+  }
 
   .post-title {
     font-size: 2em;
