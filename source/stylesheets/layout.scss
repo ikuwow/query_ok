@@ -80,7 +80,7 @@
     text-decoration: none;
   }
 
-  @include whenMobile {
+  @include whenDesktop {
     padding: 2em 3em 0;
     margin-left: 25%;
   }
@@ -101,7 +101,7 @@
     color: rgb(176, 202, 219);
   }
 
-  @include whenMobile {
+  @include whenDesktop {
     display: block;
   }
 }
@@ -135,7 +135,7 @@
   top: auto;
   margin: 2em auto;
 
-  @include whenMobile {
+  @include whenDesktop {
     margin: 80% 2em 0;
     text-align: right;
   }
@@ -145,7 +145,7 @@
   background: rgb(61, 79, 93);
   color: #fff;
 
-  @include whenMobile {
+  @include whenDesktop {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -172,7 +172,7 @@
     color: #222;
     margin-bottom: 0.2em;
 
-    @include whenMobile {
+    @include whenDesktop {
       font-size: 2em;
     }
   }

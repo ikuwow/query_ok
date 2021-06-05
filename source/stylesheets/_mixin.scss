@@ -1,4 +1,4 @@
-@mixin whenMobile() {
+@mixin whenDesktop() {
   @media (min-width: 48em) {
     @content;
   }
