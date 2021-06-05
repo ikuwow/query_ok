@@ -167,18 +167,13 @@
 .post {
   padding-bottom: 2em;
 
-  h1 {
+  .post-title {
     font-size: 1.5em;
-
+    color: #222;
+    margin-bottom: 0.2em;
     @include whenMobile {
       font-size: 2em;
     }
-  }
-
-  .post-title {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 0.2em;
   }
 
   .post-description {
@@ -190,7 +185,7 @@
   .post-meta {
     color: #999;
     font-size: 90%;
-    margin: 20px 0;
+    margin: 8px 0;
     line-height: 1.6;
 
     .post-category {

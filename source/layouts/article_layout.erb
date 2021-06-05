@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
 
     <div class="post">
-    <h1><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
+    <h1 class="post-title"><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
     <p class="post-meta">
         <time>Posted at <%= current_article.date.strftime('%b %e %Y') unless current_article.nil? %></time>
         <% if !current_article.nil? %>
