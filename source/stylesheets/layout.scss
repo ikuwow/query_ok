@@ -171,6 +171,7 @@
     font-size: 1.5em;
     color: #222;
     margin-bottom: 0.2em;
+
     @include whenMobile {
       font-size: 2em;
     }
