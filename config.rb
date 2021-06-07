@@ -77,3 +77,8 @@ activate :external_pipeline,
          command: build? ? 'npm run build' : 'npm run watch',
          source: '.tmp/dist',
          latency: 1
+
+activate :twitter_oembed do |twitter|
+  twitter.omit_script = true
+  twitter.cache_dir = '.cache/twitter_oembed'
+end
