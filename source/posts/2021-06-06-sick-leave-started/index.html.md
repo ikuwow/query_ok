@@ -68,7 +68,6 @@ tags:
 
 まず肉体の健康が全然ダメで肩首背中腕のコリが常にある状態なので、ジョギング、筋トレ、整体などしようかと。
 
-
 文章を書こうかと思っています。
 blog.ikuwow.comとかを内省用ブログとして置いていたんですがプラットフォームに不満を抱いており
 
@@ -80,8 +79,8 @@ blog.ikuwow.comとかを内省用ブログとして置いていたんですが�
 
 直近は作りたいキーボードができたので
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【委託】REVIUNG41 が再入荷しました！<a href="https://t.co/ypR9GKdKlh">https://t.co/ypR9GKdKlh</a></p>&mdash; 遊舎工房 (@yushakobo) <a href="https://twitter.com/yushakobo/status/1400366557415444481?ref_src=twsrc%5Etfw">June 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/yushakobo/status/1400366557415444481
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今日の戦利品 <a href="https://t.co/CygcH9QqI5">pic.twitter.com/CygcH9QqI5</a></p>&mdash; ikuwow🐉 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1400034664555769858?ref_src=twsrc%5Etfw">June 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/ikuwow/status/1400034664555769858
 
 さてやっと休職ブログを書くという大事なことが2週間放置した後に終わったので、これからしばらく好きなことをやっていこうと思います。あと人にも会いたいと思うので密を避けながら会話する機会を作ろうと思います。
