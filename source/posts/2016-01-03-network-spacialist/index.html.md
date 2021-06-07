@@ -8,7 +8,7 @@ tags: キャリア
 2015年10月の試験日のネットワークスペシャリスト試験を受験して受かりました。
 2014年10月の試験に落ちたので二回目の受験。
 
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">ネットワークスペシャリストになりました <a href="https://t.co/0gH4LICfLq">pic.twitter.com/0gH4LICfLq</a></p>&mdash; ゐくを (@ikuwow) <a href="https://twitter.com/ikuwow/status/677884055602380800">2015, 12月 18</a></blockquote>
+https://twitter.com/ikuwow/status/677884055602380800
 
 意外と午後Iの点がギリギリで焦る・・・。
 
@@ -28,7 +28,7 @@ Webエンジニアにしてはネットワークに関する興味と知識が�
 
 そういえば今回の試験では妙にZigBeeが印象に残っている。
 
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">午前でZigBeeを知らない人に存在を教え、休憩時間に調べさせる→午後に出す&#10;という優しい世界 <a href="https://twitter.com/hashtag/%E3%83%8D%E3%82%B9%E3%83%9A?src=hash">#ネスペ</a></p>&mdash; ひけし (@hikeshi09) <a href="https://twitter.com/hikeshi09/status/655649440393330689">2015, 10月 18</a></blockquote>
+https://twitter.com/hikeshi09/status/655649440393330689
 
 勉強に使ったのは、[公式のテキスト](http://www.amazon.co.jp/情報処理教科書-ネットワークスペシャリスト-2015年版-ICTワークショップ/dp/4798140953/)と[過去問集](http://www.amazon.co.jp/平成27年度-ネットワークスペシャリスト-パーフェクトラーニング過去問題集-情報処理技術者試験-エディフィストラーニング株式会社/dp/4774172081/)。
 過去問は全部をフルで解くことはしなかったが、答えも含めて精読することはやった。

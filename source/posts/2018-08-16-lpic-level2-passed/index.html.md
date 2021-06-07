@@ -85,7 +85,7 @@ LPIC level 2に、わけあって2週間で合格せにゃならず（後述）�
 あまり確信が持てないまま答えた問題が多かった。
 逆にApacheやNginxなど触ったことがあるものは知識をおさらいしたぐらいで特に困らなかった。
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">試験勉強というものを久しぶりにやってみると、自明な一つの正解が存在することが保証されている世界というのは本当に楽なものだと感じますね</p>&mdash; Ikuo Degawa  (@ikuwow) <a href="https://twitter.com/ikuwow/status/1027593697544663042?ref_src=twsrc%5Etfw">August 9, 2018</a></blockquote>
+https://twitter.com/ikuwow/status/1027593697544663042
 
 こういう試験っていうのは雑多に頭の中に入れた知識を定期的に体系化するとか、
 学習のマイルストーンとして使うことにしていて、今回もいい感じの知識整理ができました ☺️
