@@ -88,7 +88,6 @@ jobs:
           keys:
             - articles-{{ .Branch }}-{{ .Revision }}
             - articles-{{ .Branch }}
-            - articles
       - run:
           name: Build static pages
           command: bundle exec middleman build
