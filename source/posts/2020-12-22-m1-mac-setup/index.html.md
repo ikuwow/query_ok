@@ -6,7 +6,7 @@ tags: Apple, Mac
 
 ---
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">M1 Mac開けてくぞ <a href="https://t.co/y3RVvv5JLx">pic.twitter.com/y3RVvv5JLx</a></p>&mdash; 起床マスターikuwow (@ikuwow) <a href="https://twitter.com/ikuwow/status/1340280004563804161?ref_src=twsrc%5Etfw">December 19, 2020</a></blockquote>
+https://twitter.com/ikuwow/status/1340280004563804161
 
 ## 買った理由
 
@@ -49,7 +49,7 @@ M1向けの修正に限らず、Macを買うたびに大がかりな修正が必
 
 評判の早さは、なんというか、今までのパーソナルコンピュータとはそもそも違うという感覚。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">M1 Mac、画面の解像度変更が直ちに反映されるあたり次元の違いを感じる <a href="https://t.co/pBtEOqAR15">pic.twitter.com/pBtEOqAR15</a></p>&mdash; 起床マスターikuwow (@ikuwow) <a href="https://twitter.com/ikuwow/status/1340290209351528448?ref_src=twsrc%5Etfw">December 19, 2020</a></blockquote>
+https://twitter.com/ikuwow/status/1340290209351528448
 
 まだ新しいMacというのもあるが全ての挙動がキビキビしている。Macと意識との距離が縮まって第二の脳としての地位がさらに強まったような。これでバッテリーの持ちがずっといいんだからたいしたもんだ。ただただ強い。
 

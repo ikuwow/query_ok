@@ -13,7 +13,7 @@ YAPCの名前はフリーらしいし10回も開催したので、きっと来�
 会場では主にのオリジナルタオルを配布しておりました。
 場内で大量のタオルを身にまといながらチラシを配っていたのは私です。
 
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/yapcasia?src=hash">#yapcasia</a> teratailさんのところでタオルが豊作です！まだまだタオルもらえます！ リピーターも！ <a href="http://t.co/3tl2ro6BkV">pic.twitter.com/3tl2ro6BkV</a></p>&mdash; 鶉 (@uzulla) <a href="https://twitter.com/uzulla/status/634970322920280065">2015, 8月 22</a></blockquote>
+https://twitter.com/uzulla/status/634970322920280065
 
 だいたい受付に張っていたりしたのでセッションは2つ+LTのみ聞いた。あとでレポートを大量に読もうと思います。
 

@@ -9,7 +9,7 @@ tags: gihyo, パフォーマンス, HTTP/2, 執筆
 
 今月もgihyo.jpに記事を寄稿しました。今回はフロントエンドのパフォーマンスの話。
 
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">聞いたら一生の宝，プログラミングの基礎の基礎 「第7回　Webサイトのフロントパフォーマンスの基礎を見直す」by <a href="https://twitter.com/ikuwow">@ikuwow</a> 公開 <a href="https://t.co/eKIaFPZ52h">https://t.co/eKIaFPZ52h</a></p>&mdash; gihyo.jp (@gihyojp) <a href="https://twitter.com/gihyojp/status/660996002627780608">2015, 11月 2</a></blockquote>
+https://twitter.com/gihyojp/status/660996002627780608
 
 ここしばらくはサイトのパフォーマンスチューングを積極的に行っていました。
 なのでフロントエンド周りの話を纏めることにしました。

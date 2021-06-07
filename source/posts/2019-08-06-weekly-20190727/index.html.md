@@ -5,19 +5,19 @@ date: 2019-08-06 10:29 JST
 tags: Weekly
 ---
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">thefuck --alias が十分早くなっていたのでまた入れた <a href="https://t.co/gMCpzLzhfI">https://t.co/gMCpzLzhfI</a></p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1155005361423671297?ref_src=twsrc%5Etfw">July 27, 2019</a></blockquote>
+https://twitter.com/ikuwow/status/1155005361423671297
 
 .bash_profileに書く `eval $(thefuck --alias)` が昔かなり遅かったけど、今はキャッシュされるようになったのか二回目以降非常に早くなったのでまた使い始めた。fuck癖が抜けているので思い出していく。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">コードレビューやチャットでのおはなしあたりなら自宅でもシュッとやれるけど、まとめて深く考える作業は外出た方が他のやることに気を取られないな</p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1155796368939556865?ref_src=twsrc%5Etfw">July 29, 2019</a></blockquote>
+https://twitter.com/ikuwow/status/1155796368939556865
 
 まあ単に集中力が持ちやすいかどうかの問題かな。引き続き周辺のいろんなカフェを模索している。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">最近GitHubでFile changedのタブに変更が反映されないことがあって非常に困っている</p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1156530566734336001?ref_src=twsrc%5Etfw">July 31, 2019</a></blockquote>
+https://twitter.com/ikuwow/status/1156530566734336001
 
 これは一時的だったようでもう起きなくなっている様子。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">最近はDBAとかterraformおじさんとかansibleおじさんとか権限管理ちゃんとしろよおじさんとかリリースは小さくしろよおじさんをしている</p>&mdash; 納税成功 (@ikuwow) <a href="https://twitter.com/ikuwow/status/1157117404582797312?ref_src=twsrc%5Etfw">August 2, 2019</a></blockquote>
+https://twitter.com/ikuwow/status/1157117404582797312
 
 あんまりコードを書いてない。terraformやansible、ドキュメントの類は鬼のように書いてる。
 権限管理ちゃんとしろおじさんをしていると「人は・・・」という気持ちになりMPが減るのでほどほどにしておきたい。
