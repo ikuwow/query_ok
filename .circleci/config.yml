@@ -57,12 +57,24 @@ jobs:
       - checkout
       - bundle_install
       - npm_install
-      - run: bundle exec rubocop
-      - run: bundle exec erblint source/
-      - run: bundle exec mdl source/
-      - run: npm run lint
-      - run: npx stylelint "**/*.css" "**/*.scss"
-      - run: npx textlint source/posts/
+      - run:
+          command: bundle exec rubocop
+          when: always
+      - run:
+          command: bundle exec erblint source/
+          when: always
+      - run:
+          command: bundle exec mdl source/
+          when: always
+      - run:
+          command: npm run lint
+          when: always
+      - run:
+          command: npx stylelint "**/*.css" "**/*.scss"
+          when: always
+      - run:
+          command: npx textlint source/posts/
+          when: always
   build:
     executor:
       name: default
