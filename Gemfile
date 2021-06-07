@@ -9,6 +9,7 @@ gem 'middleman-blog'
 gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
+gem 'middleman-twitter-oembed'
 gem 'middleman-s3_sync'
 gem 'middleman-syntax'
 
