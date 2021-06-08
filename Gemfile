@@ -13,7 +13,6 @@ gem 'middleman-s3_sync'
 gem 'middleman-syntax'
 gem 'middleman-twitter-oembed'
 
-gem 'nokogiri'
 gem 'redcarpet'
 
 # For feed.xml.builder

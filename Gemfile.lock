@@ -253,7 +253,6 @@ DEPENDENCIES
   middleman-syntax
   middleman-twitter-oembed
   mime-types
-  nokogiri
   redcarpet
   rubocop
 
