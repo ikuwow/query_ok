@@ -252,7 +252,6 @@ DEPENDENCIES
   middleman-s3_sync
   middleman-syntax
   middleman-twitter-oembed
-  mime-types
   redcarpet
   rubocop
 
