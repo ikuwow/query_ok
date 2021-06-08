@@ -13,15 +13,10 @@ gem 'middleman-s3_sync'
 gem 'middleman-syntax'
 gem 'middleman-twitter-oembed'
 
-gem 'font-awesome-middleman'
-gem 'nokogiri'
 gem 'redcarpet'
 
 # For feed.xml.builder
 gem 'builder'
-
-# for bug: https://github.com/fredjean/middleman-s3_sync/issues/123
-gem 'mime-types'
 
 gem 'erb_lint', '~> 0.0.37', require: false
 gem 'mdl', require: false
