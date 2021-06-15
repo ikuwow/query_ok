@@ -10,7 +10,7 @@ set :blog_subtitle, 'ikuwowの技術/ガジェット/内省'
 
 activate :blog do |blog|
   blog.permalink = 'entry/{title}.html'
-  blog.sources = 'posts/{year}-{month}-{day}-{title}/index.html'
+  blog.sources = 'posts/{year}/{year}-{month}-{day}-{title}/index.html'
   blog.layout = 'layouts/article_layout'
   blog.summary_length = 200
   blog.default_extension = '.md'
