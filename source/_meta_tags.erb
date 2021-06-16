@@ -1,16 +1,15 @@
 <%
-  if current_article.nil?
-    title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
-  else
-    title = "#{current_article.title} : #{app.config.blog_title}"
-  end
-  keywords= "ブログ,ikuwow,ゐくを"
+  title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+  keywords = "ブログ,ikuwow,ゐくを"
+  description = app.config.blog_subtitle
+
+  # Override
   if !current_article.nil?
+    title = "#{current_article.title} : #{app.config.blog_title}"
     current_article.tags.each do |tag|
-        keywords+=','+tag
+      keywords += ",#{tag}"
     end
   end
-  description = app.config.blog_subtitle
 %>
 
 <meta charset="utf-8" />
@@ -18,7 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="<%= keywords %>">
 <title><%= title %></title>
-<meta name="description" content="<%=description%>">
+<meta name="description" content="<%= description %>">
 
 <!-- twitter card -->
 <meta name="twitter:card" content="summary" />
