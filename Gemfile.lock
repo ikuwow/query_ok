@@ -149,6 +149,8 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
+    middleman-ogp (1.4.0)
+      middleman-core (>= 4.0)
     middleman-s3_sync (4.0.3)
       ansi (~> 1.5.0)
       fog-aws (>= 0.1.1)
@@ -249,6 +251,7 @@ DEPENDENCIES
   middleman-favicon-maker
   middleman-livereload
   middleman-minify-html
+  middleman-ogp
   middleman-s3_sync
   middleman-syntax
   middleman-twitter-oembed
