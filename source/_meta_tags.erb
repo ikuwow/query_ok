@@ -1,16 +1,27 @@
 <%
-  if current_article.nil?
-    title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
-  else
-    title = "#{current_article.title} : #{app.config.blog_title}"
-  end
-  keywords= "ブログ,ikuwow,ゐくを"
-  if !current_article.nil?
-    current_article.tags.each do |tag|
-        keywords+=','+tag
-    end
-  end
+  # Defaults
+  title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+  keywords = "ブログ,ikuwow,ゐくを"
   description = app.config.blog_subtitle
+  thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
+  og_type = 'website'
+  twitter_card = 'summary'
+
+  # Override per page
+  if !current_page.data.thumbnail.nil?
+    thumbnail = app.config.url_root + image_path(current_article.data.thumbnail)
+    twitter_card = 'summary_large_image'
+  end
+
+  # Override per article
+  if !current_article.nil?
+    title = "#{current_article.title} : #{app.config.blog_title}"
+    description = strip_tags(current_article.summary)
+    current_article.tags.each do |tag|
+      keywords += ",#{tag}"
+    end
+    og_type = 'article'
+  end
 %>
 
 <meta charset="utf-8" />
@@ -18,25 +29,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="<%= keywords %>">
 <title><%= title %></title>
-<meta name="description" content="<%=description%>">
+<meta name="description" content="<%= description %>">
+
+<!-- twitter card -->
+<meta name="twitter:card" content="<%= twitter_card %>" />
+<meta name="twitter:creator" content="@ikuwow" />
 
 <!-- ogp -->
 <meta property="og:title" content="<%= title %>">
-<% if current_article.nil? %>
-    <meta property="og:type" content="article">
-<% else %>
-    <meta property="og:type" content="blog">
-<% end %>
+<meta property="og:type" content="<%= og_type %>">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="<%= "#{app.config.blog_title} : #{app.config.blog_subtitle}" %>">
-<meta property="og:image" content="<%= app.config.url_root + image_path('/img/ikuwow_200x200.png')%>">
+<meta property="og:site_name" content="<%= app.config.blog_title %>">
+<meta property="og:image" content="<%= thumbnail %>">
+<meta property="og:description" content="<%= description %>">
 <meta property="article:publisher" content="ikuwow">
-
-<!-- twitter card -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@ikuwow" />
-<meta name="twitter:image" content="<%= app.config.url_root + image_path('/img/ikuwow.jpg')%>" />
-<meta name="twitter:title" content="<%=title%>" />
-<meta name="twitter:description" content="<%=description%>" />
 
 <meta name="p:domain_verify" content="1c046679ed7f50edcc527bdaea3ec02c"/>

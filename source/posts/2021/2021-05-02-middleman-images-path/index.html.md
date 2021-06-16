@@ -3,6 +3,7 @@ title: Middlemanで記事ごとに階層を作り画像とパスを揃えるよ�
 # title: middleman-images-path
 date: 2021-05-02 11:42 JST
 tags: Middleman
+thumbnail: image-20210502115638834.png
 ---
 
 Middleman Blogの今の設定だと、全画像を共通の一つの階層に入れて管理しており、記事の.mdファイルと同じ階層に置きつつ.mdも同じ階層にしたいのでそうした。ついでにTyporaでスムーズに記事を挿入するための設定もメモ。
