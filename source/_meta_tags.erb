@@ -28,7 +28,7 @@
 <meta property="og:title" content="<%= title %>">
 <meta property="og:type" content="<%= current_article.nil? ? 'website' : 'article' %>">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="<%= title %>">
+<meta property="og:site_name" content="<%= app.config.blog_title %>">
 <meta property="og:image" content="<%= app.config.url_root + image_path('/img/ikuwow_200x200.png')%>">
 <meta property="og:description" content="<%= description %>">
 <meta property="article:publisher" content="ikuwow">
