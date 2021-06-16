@@ -80,6 +80,11 @@
     text-decoration: none;
   }
 
+  .content-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
   @include whenDesktop {
     padding: 2em 3em 0;
     margin-left: 25%;
