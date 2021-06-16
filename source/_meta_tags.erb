@@ -20,23 +20,17 @@
 <title><%= title %></title>
 <meta name="description" content="<%=description%>">
 
+<!-- twitter card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@ikuwow" />
+
 <!-- ogp -->
 <meta property="og:title" content="<%= title %>">
-<% if current_article.nil? %>
-    <meta property="og:type" content="article">
-<% else %>
-    <meta property="og:type" content="blog">
-<% end %>
+<meta property="og:type" content="<%= current_article.nil? ? 'article' : 'blog' %>">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="<%= "#{app.config.blog_title} : #{app.config.blog_subtitle}" %>">
 <meta property="og:image" content="<%= app.config.url_root + image_path('/img/ikuwow_200x200.png')%>">
+<meta property="og:description" content="<%= description %>">
 <meta property="article:publisher" content="ikuwow">
-
-<!-- twitter card -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@ikuwow" />
-<meta name="twitter:image" content="<%= app.config.url_root + image_path('/img/ikuwow.jpg')%>" />
-<meta name="twitter:title" content="<%=title%>" />
-<meta name="twitter:description" content="<%=description%>" />
 
 <meta name="p:domain_verify" content="1c046679ed7f50edcc527bdaea3ec02c"/>
