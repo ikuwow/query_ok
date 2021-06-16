@@ -82,3 +82,5 @@ activate :twitter_oembed do |twitter|
   twitter.omit_script = true
   twitter.cache_dir = '.cache/twitter_oembed'
 end
+
+activate :meta_tags
