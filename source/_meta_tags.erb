@@ -1,13 +1,18 @@
 <%
+  # Defaults
   title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
   keywords = "ブログ,ikuwow,ゐくを"
   description = app.config.blog_subtitle
+  thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
 
   # Override
   if !current_article.nil?
     title = "#{current_article.title} : #{app.config.blog_title}"
     current_article.tags.each do |tag|
       keywords += ",#{tag}"
+    end
+    if !current_article.data.thumbnail.nil?
+      thumbnail = app.config.url_root + image_path(current_article.data.thumbnail)
     end
   end
 %>
@@ -28,7 +33,7 @@
 <meta property="og:type" content="<%= current_article.nil? ? 'website' : 'article' %>">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="<%= app.config.blog_title %>">
-<meta property="og:image" content="<%= app.config.url_root + image_path('/img/ikuwow_200x200.png')%>">
+<meta property="og:image" content="<%= thumbnail %>">
 <meta property="og:description" content="<%= description %>">
 <meta property="article:publisher" content="ikuwow">
 
