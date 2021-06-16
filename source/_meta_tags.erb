@@ -5,15 +5,20 @@
   description = app.config.blog_subtitle
   thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
   og_type = 'website'
+  twitter_card = 'summary'
 
-  # Override
+  # Override per page
+  if !current_page.data.thumbnail.nil?
+    thumbnail = app.config.url_root + image_path(current_article.data.thumbnail)
+    twitter_card = 'summary_large_image'
+  end
+
+  # Override per article
   if !current_article.nil?
     title = "#{current_article.title} : #{app.config.blog_title}"
+    description = strip_tags(current_article.summary)
     current_article.tags.each do |tag|
       keywords += ",#{tag}"
-    end
-    if !current_article.data.thumbnail.nil?
-      thumbnail = app.config.url_root + image_path(current_article.data.thumbnail)
     end
     og_type = 'article'
   end
@@ -27,7 +32,7 @@
 <meta name="description" content="<%= description %>">
 
 <!-- twitter card -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="<%= twitter_card %>" />
 <meta name="twitter:creator" content="@ikuwow" />
 
 <!-- ogp -->
