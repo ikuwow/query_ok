@@ -24,6 +24,18 @@
   }
 }
 
+.brand-logo {
+  width: 150px;
+  height: 150px;
+  text-aligh: right;
+
+  .brand-logo-img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+
 .brand-title {
   margin: 0;
 
