@@ -1,4 +1,4 @@
-<% articles.each do |article| %>
+<% page_articles.each do |article| %>
     <section class="post">
         <header class="post-header">
             <h2 class="post-title">
@@ -21,4 +21,9 @@
             <%= link_to '続きを読む', article, :class => "pure-button btn-read-more" %>
         </div>
     </section>
+<% end %>
+
+<% if paginate && num_pages > 1 %>
+  <%= link_to 'Previous page', prev_page.url if !prev_page.nil? %>
+  <%= link_to 'Next page', next_page.url if !next_page.nil? %>
 <% end %>

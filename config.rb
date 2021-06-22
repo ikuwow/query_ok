@@ -16,6 +16,10 @@ activate :blog do |blog|
   blog.default_extension = '.md'
   blog.tag_template = 'tag.html'
   blog.calendar_template = 'calendar.html'
+
+  blog.paginate = true
+  blog.page_link = 'p{num}'
+  blog.per_page = 5
 end
 
 page '/feed.xml', layout: false
