@@ -1,11 +1,15 @@
 <%= Rouge::Themes::Base16::Solarized.mode(:dark).render(:scope => '.highlight') %>
 
 .highlight {
-  padding: 10px;
   border-radius: 3px;
-  overflow: scroll;
 }
 
+.highlight pre.highlight {
+  overflow: scroll;
+  padding: 16px;
+}
+
+/* inline styles */
 p code,
 ul code{
   background-color: #f7f7f7;
