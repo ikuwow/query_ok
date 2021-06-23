@@ -24,6 +24,17 @@
   }
 }
 
+.brand-logo {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+
+  @include whenDesktop {
+    height: 100px;
+    width: 100px;
+  }
+}
+
 .brand-title {
   margin: 0;
 
