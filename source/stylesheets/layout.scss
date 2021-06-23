@@ -44,34 +44,6 @@
   font-size: 1.2em;
 }
 
-.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  .nav-item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-
-    .nav-item-link {
-      background: transparent;
-      border: 2px solid rgb(176, 202, 219);
-      color: #fff;
-      margin-top: 1em;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-size: 85%;
-
-      &:hover,
-      &:focus {
-        border: 2px solid rgb(61, 146, 201);
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 .content {
   padding: 1em 1em 0;
 
