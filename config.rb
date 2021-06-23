@@ -16,6 +16,9 @@ activate :blog do |blog|
   blog.default_extension = '.md'
   blog.tag_template = 'tag.html'
   blog.calendar_template = 'calendar.html'
+  blog.year_link = '/archive/{year}.html'
+  blog.month_link = '/archive/{year}/{month}.html'
+  blog.day_link = '/archive/{year}/{month}/{day}.html'
 end
 
 page '/feed.xml', layout: false
