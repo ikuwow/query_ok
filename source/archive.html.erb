@@ -1,0 +1,7 @@
+<h1>Archive</h1>
+
+<ul>
+  <% blog.articles.group_by { |a| a.date.year }.each do |year, articles| %>
+    <li><%= link_to "#{year} (#{articles.count})", blog_year_path(year) %></li>
+  <% end %>
+</ul>
