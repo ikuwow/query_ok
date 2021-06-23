@@ -9,7 +9,7 @@
         <p class="post-meta">
         <time>Posted at <%= article.date.strftime('%b %e %Y') %></time>
         <% article.tags.each do |tag| %>
-            <%= link_to '<i class="fa fa-tag post-category-icon"></i>'+tag, tag_path(tag), :class => "post-category"%>
+            <%= link_to '<i class="fa fa-tag post-tag-icon"></i>'+tag, tag_path(tag), :class => "post-tag"%>
         <% end %>
 
         </p>
