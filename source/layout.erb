@@ -24,16 +24,6 @@
             <%= image_tag '/img/ikuwow_200x200.png', class: 'brand-logo' %>
             <h1 class="brand-title"><%= link_to app.config.blog_title, "/", { class: "brand-title-link" } %></h1>
             <h2 class="brand-tagline"><%= app.config.blog_subtitle %></h2>
-            <div class="tag-cloud">
-                <ul>
-                <% blog_tags = Hash[blog.tags.sort_by { |tag, articles| [-articles.size, tag] }] %>
-                <% blog_tags = blog_tags.delete_if { |tag, articles| articles.size <= 1}  %>
-                <% blog_tags.each do |tag, articles| %>
-                    <li><%= link_to "#{tag}(#{articles.size})", tag_path(tag) %></li>
-                <% end %>
-                    <li class="tag-cloud-more"><%= link_to 'more...', '/tags/' %></li>
-                </ul>
-            </div>
         </div>
     </div>
 

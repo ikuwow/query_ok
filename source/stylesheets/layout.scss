@@ -74,26 +74,6 @@
   }
 }
 
-.tag-cloud {
-  display: none;
-
-  ul {
-    list-style: none;
-
-    li a {
-      color: white;
-    }
-  }
-
-  .tag-cloud-more a {
-    color: rgb(176, 202, 219);
-  }
-
-  @include whenDesktop {
-    display: block;
-  }
-}
-
 .btn-read-more {
   float: right;
 
