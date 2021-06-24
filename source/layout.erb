@@ -24,6 +24,19 @@
             <%= image_tag '/img/ikuwow_200x200.png', class: 'brand-logo' %>
             <h1 class="brand-title"><%= link_to app.config.blog_title, "/", { class: "brand-title-link" } %></h1>
             <h2 class="brand-tagline"><%= app.config.blog_subtitle %></h2>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <%= link_to 'Home', '/', class: 'pure-button nav-item-link' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Archive', '/archive', class: 'pure-button nav-item-link' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Tags', '/tags', class: 'pure-button nav-item-link' %>
+                </li>
+              </ul>
+            </nav>
         </div>
     </div>
 
