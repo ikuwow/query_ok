@@ -26,8 +26,10 @@
 
 .brand-logo {
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 64px;
+  width: 64px;
+  display: block;
+  margin: 0 auto;
 
   @include whenDesktop {
     height: 100px;
@@ -137,7 +139,7 @@
 .header {
   text-align: center;
   top: auto;
-  margin: 2em auto;
+  margin: 1.5em auto;
 
   @include whenDesktop {
     margin: 80% 1em 0;
