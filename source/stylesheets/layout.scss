@@ -112,6 +112,30 @@
   }
 }
 
+.about {
+  text-align: center;
+
+  @include whenDesktop {
+    text-align: left;
+  }
+
+  &-column {
+    &-image {
+      margin: 0 auto;
+      max-width: 160px;
+
+      @include whenDesktop {
+        margin-right: 2em;
+        max-width: 300px;
+      }
+    }
+  }
+
+  &-subhead {
+    margin-top: 0;
+  }
+}
+
 .btn-read-more {
   float: right;
 
