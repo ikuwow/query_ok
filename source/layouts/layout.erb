@@ -24,7 +24,10 @@
             <%= image_tag '/img/ikuwow_200x200.webp', class: 'brand-logo' %>
             <h1 class="brand-title"><%= link_to app.config.blog_title, "/", { class: "brand-title-link" } %></h1>
             <h2 class="brand-tagline"><%= app.config.blog_subtitle %></h2>
+
             <nav class="nav">
+              <label class="nav-mobile-open" for="nav-mobile-open"><i class="fas fa-bars"></i></label>
+              <input id="nav-mobile-open" type="checkbox">
               <ul class="nav-list">
                 <li class="nav-item">
                   <%= link_to 'Home', '/', class: 'pure-button nav-item-link' %>
