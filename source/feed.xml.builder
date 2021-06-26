@@ -15,7 +15,7 @@ xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
       xml.title article.title
       xml.link 'href' => URI.join(site_url, article.url)
       xml.published article.date.to_time.iso8601
-      xml.updated File.mtime(article.source_file).iso8601
+      # xml.updated File.mtime(article.source_file).iso8601 # TODO: record and display article updated time
       xml.author { xml.name '@ikuwow' }
       xml.content article.body, 'type' => 'html'
     end
