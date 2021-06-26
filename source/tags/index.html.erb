@@ -1,9 +1,9 @@
 <h1>Tags</h1>
 
-<% blog_tags = Hash[blog.tags.sort_by { |tag, _articles| [-_articles.size, tag] }] %>
+<% blog_tags = Hash[blog.tags.sort_by { |tag, articles| [-articles.size, tag] }] %>
 
 <ul>
   <% blog_tags.each do |tag, articles| %>
-    <li><%= partial 'tag', locals: {tag: tag} %><%= " (#{articles.size})" %></li>
+    <li><%= partial 'tag', locals: { tag: tag } %><%= " (#{articles.size})" %></li>
   <% end %>
 </ul>
