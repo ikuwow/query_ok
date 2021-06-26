@@ -5,7 +5,7 @@ xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
   site_url = app.config.url_root
   xml.title app.config.blog_title
   xml.subtitle app.config.blog_subtitle
-  xml.link 'href' => URI.join(site_url, current_page.path), 'rel' => 'self', 'type' => "application/atom+xml"
+  xml.link 'href' => URI.join(site_url, current_page.path), 'rel' => 'self', 'type' => 'application/atom+xml'
   xml.link 'href' => URI.join(site_url, blog.options.prefix.to_s), 'rel' => 'alternate', 'type' => 'text/html'
   xml.updated(blog.articles.first.date.to_time.iso8601) unless blog.articles.empty?
   xml.author { xml.name '@ikuwow' }
