@@ -5,10 +5,7 @@
 <ul>
   <% blog_tags.each do |tag, articles| %>
     <li>
-      <%= link_to '<i class="fa fa-tag post-tag-icon"></i>' + "#{tag} (#{articles.size})",
-                  tag_path(tag),
-                  :class => "post-tag"
-      %>
+      <%= partial 'tag', locals: {tag: tag} %><%= " (#{articles.size})" %>
     </li>
   <% end %>
 </ul>
