@@ -193,19 +193,20 @@
     font-size: 90%;
     margin: 8px 0;
     line-height: 1.6;
+  }
+}
 
-    .post-tag {
-      margin: 0 0.1em;
-      padding: 0.3em 1em;
-      color: #fff;
-      background: #5aba59;
-      font-size: 80%;
-      text-decoration: none;
+.post-tag {
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+  color: #fff;
+  background: #5aba59;
+  font-size: 80%;
+  line-height: 1.6;
 
-      &:hover {
-        opacity: 0.8;
-      }
-    }
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
   }
 }
 
