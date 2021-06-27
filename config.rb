@@ -15,10 +15,12 @@ activate :blog do |blog|
   blog.summary_length = 200
   blog.default_extension = '.md'
   blog.tag_template = 'tags/template.html'
-  blog.calendar_template = 'archive/calendar.html'
+  blog.year_template = 'archive/calendar.html'
   blog.year_link = '/archive/{year}.html'
-  blog.month_link = '/archive/{year}/{month}.html'
-  blog.day_link = '/archive/{year}/{month}/{day}.html'
+  # blog.month_template = nil
+  # blog.month_link = '/archive/{year}/{month}.html'
+  # blog.day_template = nil
+  # blog.day_link = '/archive/{year}/{month}/{day}.html'
 end
 
 page '/feed.xml', layout: false
