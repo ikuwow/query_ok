@@ -2,7 +2,6 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  bail: true,
   entry: {
     critical: './source/critical.js',
     main: './source/entry.js',
