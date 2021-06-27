@@ -15,6 +15,16 @@
         <%= yield %>
     </div>
 
+    <div id="article-comment">
+      <script src="https://utteranc.es/client.js"
+        repo="ikuwow/queryok_comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+
     <!-- next and previous -->
     <div class="next-previous-article">
     <% article_next = current_article.article_next %>
