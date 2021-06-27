@@ -8,6 +8,7 @@ ikuwow's blog.
 
 * Middleman
 * Pure CSS Framework
+* [utterances](https://utteranc.es) ([comment repo](https://github.com/ikuwow/queryok_comments))
 
 ## How to Deploy
 
