@@ -17,10 +17,7 @@ activate :blog do |blog|
   blog.tag_template = 'tags/template.html'
   blog.year_template = 'archive/calendar.html'
   blog.year_link = '/archive/{year}.html'
-  # blog.month_template = nil
-  # blog.month_link = '/archive/{year}/{month}.html'
-  # blog.day_template = nil
-  # blog.day_link = '/archive/{year}/{month}/{day}.html'
+  # Month/Day calendar (archive) pages are disabled
 end
 
 page '/feed.xml', layout: false
