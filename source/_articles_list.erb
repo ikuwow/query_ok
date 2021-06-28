@@ -7,7 +7,7 @@
         </header>
 
         <p class="post-meta">
-        <time>Posted at <%= article.date.strftime('%b %e %Y') %></time>
+        <time><%= article.date.strftime('%Y/%m/%d %H:%m') %></time>
         <% article.tags.each do |tag| %>
           <%= partial 'tag', locals: {tag: tag} %>
         <% end %>
