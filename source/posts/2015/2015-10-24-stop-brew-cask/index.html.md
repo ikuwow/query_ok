@@ -11,7 +11,7 @@ tags: Mac
 現在homebrew-caskには自動アップデート機能のあるアプリをうまいことhandleする機能が備わっていて、
 問題がなくなったので完全にhomebrew-caskを使い倒す方向にシフトしました。
 
-=> [dotfiles類をbrew bundleを使ってきれいにするのにやったこと](/entry/dotfiles-refined-with-brewfile/)
+=> [dotfiles類をbrew bundleを使って整えるためにやったこと](/entry/dotfiles-refined-with-brewfile/)
 
 ---
 
@@ -96,7 +96,7 @@ Caskでのアップデートは、brew cask updateというコマンドがある
 実際にアップデートするには`brew cask install`を改めて打って上書きインストールをする必要がある。
 上で言うCaskfile運用の場合は、Caskfileをもう一回実行する。
 
-どうやらちゃんとすべてをCask経由でアップデートした時も複数のバージョンが同時に存在してしまうようである。
+どうやらちゃんとすべてをCask経由でアップデートした時も複数のバージョンが同時に存在してしまうようだ。
 
 こうなるとSpotlight検索時にCaskで入れているアプリは最新バージョンが選択されているかを毎回目視で確認して、最新のものを選択してSpotlightのサジェストを矯正する。
 Dockアイコンを削除して、起動した最新バージョンのDockを固定する。

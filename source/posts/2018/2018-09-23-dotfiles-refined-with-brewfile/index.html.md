@@ -1,6 +1,6 @@
 ---
 # title: dotfiles-refined-with-brewfile
-title: dotfiles類をbrew bundleを使ってきれいにするのにやったこと
+title: dotfiles類をbrew bundleを使って整えるためにやったこと
 date: 2018-09-23 13:36 JST
 tags:
 ---
