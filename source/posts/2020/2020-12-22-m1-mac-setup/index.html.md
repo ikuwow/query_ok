@@ -10,7 +10,7 @@ https://twitter.com/ikuwow/status/1340280004563804161
 
 ## 買った理由
 
-今のMacBook Pro 13 inch 2017はスペックを盛らず妥協して購入していて、最近何かと挙動がカクついてきたところだったので買い換えを決意。eGPUが使えなかったりアプリによってはまだ動かなかったりするのがハードルだが、何かあっても仕事用MacBook Proも母艦Mac miniもあるので、Intelは捨ててApple Siliconに手を出したのだった。
+今のMacBook Pro 13 inch 2017はスペックを盛らず妥協して購入していて、最近何かと挙動がカクついてきたところだったので買い換えを決意。eGPUが使えなかったりアプリによってはまだ動かなかったりするのがハードルだが、何かあっても他に仕事用MacBook Proと母艦Mac miniがあるので、Intelは捨ててApple Siliconに手を出したのだった。
 
 ファンクションキーが嫌いなのでAirでなくProを選択。Touch Barに特に感情があるわけではない。
 
@@ -22,7 +22,7 @@ https://twitter.com/ikuwow/status/1340280004563804161
 
 https://github.com/ikuwow/dotfiles
 
-右往左往したが最終的にはこんな感じ。一緒にM1対応に関係なくそもそも欠けていたいた部分を直すのもやった。
+右往左往したが最終的にはこんな感じ。M1対応に関係なくそもそも欠けていたいた部分を直すのもやった。
 
 https://github.com/ikuwow/dotfiles/pull/20
 
