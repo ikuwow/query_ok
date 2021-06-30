@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+ruby '2.6.6'
+
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
 source 'https://rubygems.org'
