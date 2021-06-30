@@ -5,6 +5,8 @@
         "max": 150
       }
     },
-    "preset-jtf-style": true
+    "preset-jtf-style": {
+      "4.3.7.山かっこ<>": false
+    }
   }
 }
