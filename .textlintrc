@@ -4,6 +4,7 @@
       "sentence-length": {
         "max": 150
       }
-    }
+    },
+    "preset-jtf-style": true
   }
 }
