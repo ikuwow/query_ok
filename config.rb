@@ -11,6 +11,7 @@ set :blog_subtitle, 'ikuwow\'s tech/life blog'
 activate :blog do |blog|
   blog.permalink = 'entry/{title}.html'
   blog.sources = 'posts/{year}/{year}-{month}-{day}-{title}/index.html'
+  blog.new_article_template = File.expand_path('article_template.tt', File.dirname(__FILE__))
   blog.layout = 'layouts/article_layout'
   blog.summary_length = 200
   blog.default_extension = '.md'
