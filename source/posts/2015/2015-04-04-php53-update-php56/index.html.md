@@ -94,7 +94,7 @@ end
 今回は5.3から5.6というかなり間をすっ飛ばしたアップデートの仕方をするので、
 アプリケーション側で確認すべきことは多い。
 
-5.3 => 5.4、5.4 => 5.5、5.5 => 5.6のそれぞれについての後方互換性のない変更(incompatible changes)を確認する必要がある。
+5.3 => 5.4、5.4 => 5.5、5.5 => 5.6のそれぞれについての後方互換性のない変更（incompatible changes）を確認する必要がある。
 
 * http://php.net/manual/ja/migration54.php
 * http://php.net/manual/ja/migration55.php

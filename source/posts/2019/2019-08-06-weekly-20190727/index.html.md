@@ -7,7 +7,7 @@ tags: Weekly
 
 https://twitter.com/ikuwow/status/1155005361423671297
 
-.bash_profileに書く `eval $(thefuck --alias)` が昔かなり遅かったけど、今はキャッシュされるようになったのか二回目以降非常に早くなったのでまた使い始めた。fuck癖が抜けているので思い出していく。
+.bash_profileに書く `eval $(thefuck --alias)` が昔かなり遅かったけど、今はキャッシュされるようになったのか2回目以降非常に早くなったのでまた使い始めた。fuck癖が抜けているので思い出していく。
 
 https://twitter.com/ikuwow/status/1155796368939556865
 

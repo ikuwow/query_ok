@@ -25,12 +25,12 @@ vagrant plugin install vagrant-aws
 Vagrant用に新しくIAMでユーザーを作成するのをオススメ。
 ここではvagrantというユーザー名でEC2に対するFullAccess権限を与えました。
 
-取得するキーは以下の２つ。
+取得するキーは以下の2つ。
 
 * Access Key ID
 * Secret Access Key
 
-この２つを保存しておくこと。
+この2つを保存しておくこと。
 
 ### Vagrantfile書く
 

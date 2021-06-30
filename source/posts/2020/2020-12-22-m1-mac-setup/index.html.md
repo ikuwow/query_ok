@@ -41,7 +41,7 @@ Please create a new installation in /opt/homebrew using one of the
 
 brewのインストールなどは `arch` コマンドで明示的にアーキテクチャを指定して実行し、判定は `uname -m` でやればよろしい。
 
-その後はiTermのデフォルトシェルを今まで通り `/usr/local/bin/bash` （Intel版brewで入れたbash）に通したら、完全に今までのIntel環境で作ってきたターミナル環境が完成した。
+その後はiTermのデフォルトシェルを今まで通り `/usr/local/bin/bash`（Intel版brewで入れたbash）に通したら、完全に今までのIntel環境で作ってきたターミナル環境が完成した。
 
 M1向けの修正に限らず、Macを買うたびに大がかりな修正が必要になってるので、bootstrapをCI回すなどしたい。1,2年に1度のMacのセットアップのためにそこまでする？という感じではあるが単に楽しいので。
 

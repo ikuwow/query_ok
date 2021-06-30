@@ -45,7 +45,7 @@ https://github.com/Homebrew/legacy-homebrew/issues/30815
 `brew bundle dump`すれば今brewでインストールされているものをBrewfileとして出力してくれるなど導入も容易。
 
 後述のhomebrew caskやmasにも対応していて、これ使っておけばいい感がすごい。
-dotfilesをリファクタしようと思ったきっかけの一つ。
+dotfilesをリファクタしようと思ったきっかけの1つ。
 
 ### anyenv類をすべて使わなくした
 

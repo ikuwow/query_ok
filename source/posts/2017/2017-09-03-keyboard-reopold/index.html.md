@@ -23,13 +23,13 @@ Happy Hacking Keyboard Professional 2(以下HHKB Pro2）が有名で、
 
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000EXZ0VC/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/31mbFhuOQvL._SL75_.jpg" width="75" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000EXZ0VC/ikuwow-22/" rel="nofollow" target="_blank">PFU Happy Hacking Keyboard Professional2 墨 英語配列 静電容量無接点 USBキーボード Nキーロールオーバー UNIX配列 WINDOWS/MAC両対応 ブラック PD-KB400B</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">PFU</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
-一つは、矢印キーがない。
+1つは、矢印キーがない。
 基本的にFnキーを押しながら使うキーの扱い。
 
 コード書く際には全く困らないが、 MacのMission ControlのショートカットControl + 矢印キーで
 ウインドウを切り替えるときに押すキーが多くて面倒だった。
 
-もう一つは、`\` `|`キーと、`` ` `` `~`キーの位置。
+もう1つは、`\` `|`キーと、`` ` `` `~`キーの位置。
 `\` `|`キーはBackspaceとの兼ね合いで場所が変更されていて、Macのデフォルトのキーボードと異なる。
 `` ` `` `~` は特に違いが大きくて、右小指で押す位置に移動していて、ESCが代わりに陣取っている。
 
