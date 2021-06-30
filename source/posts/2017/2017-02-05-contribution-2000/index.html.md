@@ -26,7 +26,7 @@ tags: GitHub, キャリア
   * 上の画像の右上でprivateも含めるかどうかの設定ができます。
 * 時間がない日に特に意味のないクソみたいなコミットやissueを立てるのをやめたかった
   * コメントを直すだけや、本当は別で管理しているタスクリストをissueに書いたりしてた。
-  * 一回だけコミットの日付を操作してしまったときもあった気がする
+  * 1回だけコミットの日付を操作してしまったときもあった気がする
 
 > More contributions on your profile  
 > https://github.com/blog/2173-more-contributions-on-your-profile
