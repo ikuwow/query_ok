@@ -12,12 +12,14 @@
   <div class="post">
   <h1 class="post-title"><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
   <p class="post-meta">
-      <time><%= current_article.date.strftime('%Y/%m/%d %H:%m') %></time>
-      <% if !current_article.nil? %>
+    <time>
+      Posted at <%= current_article.date.strftime('%Y/%m/%d %H:%m') %>
+    </time>
+    <% if !current_article.nil? %>
       <% current_article.tags.each do |tag| %>
         <%= partial 'tag', locals: {tag: tag} %>
       <% end %>
-      <% end %>
+    <% end %>
   </p>
 
   <div id="article-body">
