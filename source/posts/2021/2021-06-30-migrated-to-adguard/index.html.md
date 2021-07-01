@@ -1,6 +1,6 @@
 ---
 
-# title: migrated-to-middleman
+# title: migrated-to-adguard
 title: 広告ブロックの仕組みをAdGuardに一本化した
 date: 2021-06-30 15:32 JST
 tags:
