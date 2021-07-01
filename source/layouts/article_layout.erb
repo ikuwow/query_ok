@@ -1,42 +1,51 @@
+<% content_for :assets_critical do %>
+  <%= partial 'twitter_widget_fetch' %>
+<% end %>
+
+<% content_for :assets_lazy do %>
+  <%= partial 'amazon_mobile_popover' %>
+  <%= stylesheet_link_tag 'highlight' %>
+<% end %>
+
 <% wrap_layout :layout do %>
 
-    <div class="post">
-    <h1 class="post-title"><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
-    <p class="post-meta">
-        <time><%= current_article.date.strftime('%Y/%m/%d %H:%m') %></time>
-        <% if !current_article.nil? %>
-        <% current_article.tags.each do |tag| %>
-          <%= partial 'tag', locals: {tag: tag} %>
-        <% end %>
-        <% end %>
-    </p>
+  <div class="post">
+  <h1 class="post-title"><%= link_to(current_article.title, current_article.url) unless current_article.nil? %></h1>
+  <p class="post-meta">
+      <time><%= current_article.date.strftime('%Y/%m/%d %H:%m') %></time>
+      <% if !current_article.nil? %>
+      <% current_article.tags.each do |tag| %>
+        <%= partial 'tag', locals: {tag: tag} %>
+      <% end %>
+      <% end %>
+  </p>
 
-    <div id="article-body">
-        <%= yield %>
-    </div>
+  <div id="article-body">
+      <%= yield %>
+  </div>
 
-    <div id="article-comment">
-      <script src="https://utteranc.es/client.js"
-        repo="ikuwow/queryok_comments"
-        issue-term="pathname"
-        theme="boxy-light"
-        crossorigin="anonymous"
-        async>
-      </script>
-    </div>
+  <div id="article-comment">
+    <script src="https://utteranc.es/client.js"
+      repo="ikuwow/queryok_comments"
+      issue-term="pathname"
+      theme="boxy-light"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
 
-    <!-- next and previous -->
-    <div class="next-previous-article">
-    <% article_next = current_article.article_next %>
-    <% if article_next %>
-        <%= link_to "← 次の記事", article_next.url, :class => "next-article-link" %>
-    <% end %>
+  <!-- next and previous -->
+  <div class="next-previous-article">
+  <% article_next = current_article.article_next %>
+  <% if article_next %>
+      <%= link_to "← 次の記事", article_next.url, :class => "next-article-link" %>
+  <% end %>
 
-    <% article_previous = current_article.article_previous %>
-    <% if article_previous %>
-        <%= link_to "前の記事 →", article_previous.url, :class => "previous-article-link"  %>
-    <% end %>
-    </div>
-    </div>
+  <% article_previous = current_article.article_previous %>
+  <% if article_previous %>
+      <%= link_to "前の記事 →", article_previous.url, :class => "previous-article-link"  %>
+  <% end %>
+  </div>
+  </div>
 
 <% end %>

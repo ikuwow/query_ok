@@ -8,8 +8,8 @@
   <%= javascript_include_tag "bundle-critical" %>
   <%= javascript_include_tag "bundle-main", async: "async" %>
   <%= partial 'ga_tracking_code' %>
-  <%= partial 'twitter_widget_fetch' %>
   <link rel="canonical" href="<%= app.config.url_root + current_page.url %>">
+  <%= yield_content :assets_critical %>
 </head>
 
 <body>
@@ -68,9 +68,8 @@
 
 </div><!-- #layout -->
 
-<%= partial 'bottom_css' %>
-
-<%= partial 'globaljs' %>
+<!-- lazy assets -->
+<%= yield_content :assets_lazy %>
 
 </body>
 </html>
