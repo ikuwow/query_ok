@@ -2,6 +2,11 @@
   <%= partial 'twitter_widget_fetch' %>
 <% end %>
 
+<% content_for :assets_lazy do %>
+  <%= partial 'globaljs' %>
+  <%= partial 'bottom_css' %>
+<% end %>
+
 <% wrap_layout :layout do %>
 
   <div class="post">
@@ -43,9 +48,4 @@
   </div>
   </div>
 
-<% end %>
-
-<% content_for :assets_lazy do %>
-  <%= partial 'globaljs' %>
-  <%= partial 'bottom_css' %>
 <% end %>
