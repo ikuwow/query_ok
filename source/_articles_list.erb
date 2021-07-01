@@ -9,6 +9,9 @@
         <p class="post-meta">
           <time>
             Posted at <%= article.date.strftime('%Y/%m/%d %H:%m') %>
+            <% if !article.data.updated_at.nil? %>
+              Updated at <%= DateTime.parse(article.data.updated_at).strftime('%Y/%m/%d %H:%m') %>
+            <% end %>
           </time>
           <% article.tags.each do |tag| %>
             <%= partial 'tag', locals: {tag: tag} %>

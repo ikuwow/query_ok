@@ -2,6 +2,7 @@
 title: 自動化厨の自分がhomebrew-caskを使わなくなった理由
 # title: stop-brew-cask
 date: 2015-10-24 15:38 JST
+updated_at: 2018-10-06 16:48 JST
 tags: Mac
 ---
 

@@ -14,6 +14,9 @@
   <p class="post-meta">
     <time>
       Posted at <%= current_article.date.strftime('%Y/%m/%d %H:%m') %>
+      <% if !current_article.data.updated_at.nil? %>
+        Updated at <%= DateTime.parse(current_article.data.updated_at).strftime('%Y/%m/%d %H:%m') %>
+      <% end %>
     </time>
     <% if !current_article.nil? %>
       <% current_article.tags.each do |tag| %>
