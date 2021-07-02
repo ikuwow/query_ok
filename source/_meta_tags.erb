@@ -1,5 +1,5 @@
 <%
-  title = content_for?(:page_title) ? yield_content(:page_title) : "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+  title = content_for?(:page_title) ? "#{yield_content(:page_title)} : #{app.config.blog_title}" : "#{app.config.blog_title} : #{app.config.blog_subtitle}"
   description = content_for?(:page_description) ? yield_content(:page_description)  : app.config.blog_subtitle
   og_type = content_for?(:og_type) ? yield_content(:og_type) : 'website'
 
