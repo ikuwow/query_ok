@@ -1,6 +1,6 @@
 <%
-  # Defaults
-  title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+  title = content_for?(:meta_title) ? yield_content(:meta_title) : "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+
   keywords = "ブログ,ikuwow,ゐくを"
   description = app.config.blog_subtitle
   thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
@@ -15,7 +15,6 @@
 
   # Override per article
   if !current_article.nil?
-    title = "#{current_article.title} : #{app.config.blog_title}"
     description = strip_tags(current_article.summary)
     current_article.tags.each do |tag|
       keywords += ",#{tag}"
