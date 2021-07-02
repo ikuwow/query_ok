@@ -1,4 +1,4 @@
-<% content_for (:meta_title) { "#{current_article.title} : #{app.config.blog_title}" } %>
+<% content_for (:page_title) { "#{current_article.title} : #{app.config.blog_title}" } %>
 
 <% content_for :assets_critical do %>
   <%= partial 'twitter_widget_fetch' %>
