@@ -1,33 +1,21 @@
 <%
-  # Defaults
-  title = "#{app.config.blog_title} : #{app.config.blog_subtitle}"
-  keywords = "ブログ,ikuwow,ゐくを"
-  description = app.config.blog_subtitle
+  title = content_for?(:page_title) ? "#{yield_content(:page_title)} : #{app.config.blog_title}" : "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+  description = content_for?(:page_description) ? yield_content(:page_description)  : app.config.blog_subtitle
+  og_type = content_for?(:og_type) ? yield_content(:og_type) : 'website'
+
   thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
-  og_type = 'website'
   twitter_card = 'summary'
 
   # Override per page
   if !current_page.data.thumbnail.nil?
-    thumbnail = app.config.url_root + image_path(current_article.data.thumbnail)
+    thumbnail = app.config.url_root + image_path(current_page.data.thumbnail)
     twitter_card = 'summary_large_image'
-  end
-
-  # Override per article
-  if !current_article.nil?
-    title = "#{current_article.title} : #{app.config.blog_title}"
-    description = strip_tags(current_article.summary)
-    current_article.tags.each do |tag|
-      keywords += ",#{tag}"
-    end
-    og_type = 'article'
   end
 %>
 
 <meta charset="utf-8" />
 <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="<%= keywords %>">
 <title><%= title %></title>
 <meta name="description" content="<%= description %>">
 
