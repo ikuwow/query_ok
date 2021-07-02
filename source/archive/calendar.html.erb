@@ -2,11 +2,9 @@
 pageable: true
 ---
 
-<%
-   title = "Archive of #{year}"
-   content_for(:page_title) { title }
-   content_for(:page_description) { title }
-%>
+<% title = "Archive of #{year}" %>
+<% content_for(:page_title) { title } %>
+<% content_for(:page_description) { title } %>
 
 <h1><%= title %></h1>
 

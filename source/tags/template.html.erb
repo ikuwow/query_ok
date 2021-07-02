@@ -3,11 +3,9 @@ pageable: true
 per_page: 12
 ---
 
-<%
-  title = "タグ「#{tagname}」のついた記事"
-  content_for(:page_title) { title }
-  content_for(:page_description) { title }
-%>
+<% title = "タグ「#{tagname}」のついた記事" %>
+<% content_for(:page_title) { title } %>
+<% content_for(:page_description) { title } %>
 
 <h1><%= title %></h1>
 
