@@ -1,7 +1,7 @@
 <%
   title = content_for?(:page_title) ? yield_content(:page_title) : "#{app.config.blog_title} : #{app.config.blog_subtitle}"
+  description = content_for?(:page_description) ? yield_content(:page_description)  : app.config.blog_subtitle
 
-  description = app.config.blog_subtitle
   thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
   og_type = 'website'
   twitter_card = 'summary'
@@ -14,7 +14,6 @@
 
   # Override per article
   if !current_article.nil?
-    description = strip_tags(current_article.summary)
     og_type = 'article'
   end
 %>
