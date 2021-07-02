@@ -1,4 +1,10 @@
-<h1>Tags</h1>
+<%
+  title = 'タグ一覧'
+  content_for(:page_title) { title }
+  content_for(:page_description) { title }
+%>
+
+<h1><%= title %></h1>
 
 <% blog_tags = Hash[blog.tags.sort_by { |tag, articles| [-articles.size, tag] }] %>
 
