@@ -6,7 +6,7 @@ ruby '2.6.6'
 # the following line to use 'https'
 source 'https://rubygems.org'
 
-gem 'middleman', '4.3.10'
+gem 'middleman', '4.4.0'
 gem 'middleman-blog'
 gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
@@ -20,6 +20,6 @@ gem 'redcarpet'
 # For feed.xml.builder
 gem 'builder'
 
-gem 'erb_lint', '~> 0.0.37', require: false
+gem 'erb_lint', require: false
 gem 'mdl', require: false
 gem 'rubocop', require: false
