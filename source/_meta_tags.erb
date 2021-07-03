@@ -3,7 +3,7 @@
   description = content_for?(:page_description) ? yield_content(:page_description)  : app.config.blog_subtitle
   og_type = content_for?(:og_type) ? yield_content(:og_type) : 'website'
 
-  thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.jpg')
+  thumbnail = app.config.url_root + image_path('/img/ikuwow_200x200.png')
   twitter_card = 'summary'
 
   # Override per page
