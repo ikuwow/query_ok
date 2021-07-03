@@ -6,7 +6,7 @@ ruby '2.6.6'
 # the following line to use 'https'
 source 'https://rubygems.org'
 
-gem 'middleman', '4.3.10'
+gem 'middleman', '4.3.11'
 gem 'middleman-blog'
 gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
