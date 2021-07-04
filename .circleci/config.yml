@@ -70,7 +70,7 @@ jobs:
           command: npm run lint
           when: always
       - run:
-          command: npx stylelint "**/*.css" "**/*.scss"
+          command: npm run stylelint
           when: always
       - run:
           command: npx textlint source/posts/

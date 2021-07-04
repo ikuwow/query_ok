@@ -9,6 +9,7 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "stylelint": "stylelint **/*.css **/*.scss",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --config webpack.dev.js --watch"
   },
