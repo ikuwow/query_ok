@@ -142,8 +142,13 @@
 
     li {
       margin: 0 auto;
-      a {
+
+      .sidebar-social-icons-link {
         color: #ccc;
+
+        &:hover {
+          filter: brightness(90%);
+        }
       }
     }
   }
