@@ -15,6 +15,10 @@ module.exports = {
       {
         test: /\.(c|sa|sc)ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(eot|woff|woff2|ttf|svg)$/,
+        type: 'asset/resource'
       }
     ]
   },
