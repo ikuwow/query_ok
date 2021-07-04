@@ -123,6 +123,32 @@
   }
 }
 
+.sidebar-social-icons {
+  display: none;
+  color: white;
+  margin: 8px auto;
+  font-size: 1.5em;
+  max-width: 160px;
+
+  @include whenDesktop {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 auto;
+      a {
+        color: #ccc;
+      }
+    }
+  }
+}
+
 .content {
   padding: 1em 1em 0;
 
