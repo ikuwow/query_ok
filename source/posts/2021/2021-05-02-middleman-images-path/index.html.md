@@ -70,7 +70,7 @@ Middlemanでここまでの設定ができると、[Typora](https://typora.io)�
 
 Typoraで画像の `Copy images to current folder` を設定する。
 
-![image-20210502115638834](image-20210502115638834.png)
+![image-20210502115638834](image-20210502115638834.webp)
 
 あとは適当に画像をペーストしたら自動的に同じ階層にファイルが作られて便利。
 静的ページ生成ツールでもTyporaでMarkdownが書けるようになり、とても便利になった。

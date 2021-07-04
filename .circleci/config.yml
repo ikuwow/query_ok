@@ -75,6 +75,16 @@ jobs:
       - run:
           command: npx textlint source/posts/
           when: always
+      - run:
+          name: Check image format
+          command: |
+            invalid_images="$(find source/posts/ -regex '.+.\(jpe?g\|png\)$')"
+            if [ -n "$invalid_images" ]; then
+              echo "$invalid_images"
+              echo ".jpe?g .png files are not allowed. Please use .webp."
+              exit 1
+            fi
+          when: always
   build:
     executor:
       name: default
