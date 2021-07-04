@@ -67,10 +67,10 @@ jobs:
           command: bundle exec mdl source/
           when: always
       - run:
-          command: npm run lint
+          command: npm run eslint
           when: always
       - run:
-          command: npx stylelint "**/*.css" "**/*.scss"
+          command: npm run stylelint
           when: always
       - run:
           command: npx textlint source/posts/
