@@ -65,43 +65,51 @@
   font-size: 1.2em;
 }
 
-.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: none;
+.nav {
 
   @include whenDesktop {
-    display: block;
+    margin: 1em 0;
   }
 
-  .nav-item {
-    display: block;
-    zoom: 1;
-    width: 120px;
-    margin: 0 auto;
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
 
-    .nav-item-link {
-      background: transparent;
-      border: 2px solid rgb(176, 202, 219);
-      color: #fff;
-      margin-top: 1em;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-size: 85%;
-      width: 100%;
+    @include whenDesktop {
+      display: block;
+    }
 
-      &:hover,
-      &:focus {
-        border: 2px solid rgb(61, 146, 201);
-        text-decoration: none;
+    .nav-item {
+      display: block;
+      zoom: 1;
+      width: 120px;
+      margin: 0 auto 1em;
+
+      .nav-item-link {
+        background: transparent;
+        border: 2px solid rgb(176, 202, 219);
+        color: #fff;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 85%;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+          border: 2px solid rgb(61, 146, 201);
+          text-decoration: none;
+        }
       }
     }
   }
 }
 
 .nav-mobile-open {
-  font-size: 1.5em;
+  display: block;
+  margin-bottom: 0.2em;
+  font-size: 2em;
 
   @include whenDesktop {
     display: none;
@@ -186,7 +194,7 @@
 .header {
   text-align: center;
   top: auto;
-  margin: 1.5em auto;
+  margin: 1.5em auto 0;
 
   @include whenDesktop {
     margin: 80% 1em 0;
