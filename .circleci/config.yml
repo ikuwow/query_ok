@@ -61,7 +61,7 @@ jobs:
           command: bundle exec rubocop
           when: always
       - run:
-          command: bundle exec erblint source/
+          command: bundle exec erblint source/**/*.erb
           when: always
       - run:
           command: bundle exec mdl source/
