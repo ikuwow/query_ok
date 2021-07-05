@@ -42,7 +42,6 @@
   <div class="next-previous-article">
   <% article_next = current_article.article_next %>
   <% if article_next %>
-      <%= link_to "← Next", article_next.url, :class => "next-article-link" %>
       <%= link_to '← Next', article_next.url, class: 'next-article-link' %>
   <% end %>
 
