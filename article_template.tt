@@ -3,6 +3,7 @@
 # title: <%= @title %>
 title:
 date: <%= @date.strftime('%F %R %Z') %>
+category:
 tags: <%= @tags.join(",") %>
 thumbnail:
 

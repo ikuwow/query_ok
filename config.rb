@@ -19,6 +19,13 @@ activate :blog do |blog|
   blog.year_template = 'archive/calendar.html'
   blog.year_link = '/archive/{year}.html'
   # Month/Day calendar (archive) pages are disabled
+
+  blog.custom_collections = {
+    category: {
+      link: '/categories/{category}.html',
+      template: '/categories/template.html'
+    }
+  }
 end
 
 page '/feed.xml', layout: false

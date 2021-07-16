@@ -2,6 +2,7 @@
 title: Middlemanで記事ごとに階層を作り画像とパスを揃えるようにした
 # title: middleman-images-path
 date: 2021-05-02 11:42 JST
+category: Tech
 tags: Middleman
 thumbnail: image-20210502115638834.png
 ---
