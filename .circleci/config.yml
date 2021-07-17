@@ -137,6 +137,7 @@ workflows:
       - build
       - lint
       - deploy:
+          context: slack-notification
           filters:
             branches:
               only:
