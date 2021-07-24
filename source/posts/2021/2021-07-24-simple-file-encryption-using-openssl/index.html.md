@@ -48,7 +48,7 @@ Verifying - enter aes-256-cbc encryption password: # もう一度
 ### パスワードをファイルから読み込む場合
 
 ```bash
-$ openssl aes-256-cbc -e -in rawtext.txt -out encrypted.txt -pass file:./password.txt
+openssl aes-256-cbc -e -in rawtext.txt -out encrypted.txt -pass file:./password.txt
 ```
 
 ## 復号
@@ -63,7 +63,7 @@ enter aes-256-cbc decryption password: # パスワードを入力
 ### パスワードをファイルから読み込む場合
 
 ```bash
-$ openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt -pass file:./password.txt
+openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt -pass file:./password.txt
 ```
 
 ## 簡単な説明
