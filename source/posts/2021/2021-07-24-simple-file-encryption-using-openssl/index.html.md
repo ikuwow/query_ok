@@ -78,7 +78,8 @@ $ openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt -pass file:./passw
 
 Chefのencrypted data bagみたいに、公開したくない情報をgithubへ上げるときに使えそう。password.txtを.gitignoreするのを忘れずに。個人的にはdotfilesリポジトリに`~/.ssh/config`を入れるのに使用しようかと思っている。
 
-### オマケ
+## オマケ
+
 「パスワード」と「パスフレーズ」の違い。この記事を書いていたら気になったので。
 https://technet.microsoft.com/ja-jp/library/dd362846.aspx
 
