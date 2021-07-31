@@ -7,26 +7,25 @@ tags: 本,ブクログ,読書メーター,作った
 thumbnail:
 ---
 
-![image-20210731172516437](image-20210731172516437.png)
+読書メーターの「読んだ本」の一覧をCSVで出力するCLIツールを作った。
 
-読書メーターの「読んだ本」の一覧をCSVで出力するCLIツールを作りました。
+[bookmeter\_exporter](https://ikuwow.github.io/bookmeter_exporter/)
 
-[bookmeter_exporter](https://ikuwow.github.io/bookmeter_exporter/)
+一応gemにもした。
 
-gemにもしました
+[bookmeter\_exporter | RubyGems.org | your community gem host](https://rubygems.org/gems/bookmeter_exporter)
 
-[bookmeter_exporter | RubyGems.org | your community gem host](https://rubygems.org/gems/bookmeter_exporter)
-
-Chrome Driverで読書メーターにログインしてゴリゴリ情報を取ってくる君です。
+Chrome Driverで読書メーターにログインしてゴリゴリ情報を取ってくる君。
 `gem install bookmeter_exporter` でどうぞ。
 
 ## なんで作ったの
+
 読書メーターの中身をブクログに移行したいと思ったのがきっかけ。
 ブクログはフォーマット整えればCSVでインポートが可能だったが、
 読書メーターさんはAPIやエクスポート機能がない。
 さすがに500件程度を画面ポチポチコピペするのは大変。
 
-（提携サービス向けAPIはあるみたい）
+（提携サービス向けAPIはあるみたい）  
 https://blog.bookmeter.com/post/172130570662/提携サービス向け機能レビューapiにつきまして
 
 インターネットの海を漂っていると、過去にもいろんな人が読書メーターのデータをスクレイピングで取得しようとしている形跡があった。
@@ -53,13 +52,14 @@ https://blog.bookmeter.com/post/172130570662/提携サービス向け機能レ�
 
 そして調べていて気づいたのが、読書メーターは読んだ本が似てる人を見つけるなどコミュニティ的な要素が強いが、
 ブクログは読書を記録して自分だけの本棚を作るという点を第一にしていて、自分は後者の方が目的にあっていそう。
-読書メーターよりユーザー数も多くて今後に期待が持てるので、完全移行することにした。アマゾンリンクに Associate IDが付けられるところなんかも地味にうれしい。
+読書メーターよりユーザー数も多くて今後に期待が持てるので、完全移行することにした。
+アマゾンへのリンクにAssociate IDが付けられるところなんかも地味にうれしい。
 
 とりあえず雑にカテゴリを分けずにぶち込んでいるので、本棚の整理しながらこれからの読書ログを積み上げていこうと思う。
 
 ただブクログでユーザID `ikuwow` が取れなかったので別IDを取得・・・。
 過去の自分がikuwowで登録した後に退会したんだと思う。
-退会者のIDが使えないというサービスも多いから使わなくなったアカウントはあんまり消さない方がイイネ(^q^)
+退会者のIDが使えないというサービスも多いから使わなくなったアカウントはあんまり消さない方がイイネ。
 
 ## 作ったときのメモ
 gemという形で公開して作るのが初めてだったのでメモ。
@@ -71,12 +71,10 @@ gem的にはこちらを見ればよろしい。
 [Bundler: How to create a Ruby gem with Bundler](https://bundler.io/guides/creating_gem.html)
 とりあえず作りたくなったら `bundle gem` するといろいろ整えてくれるので便利。
 
-RubyでCLIを作るならthorが鉄板。引数もオプションもいい感じに使えるようになる。
-[Thor - Home](http://whatisthor.com)
+RubyでCLIを作るなら[Thor](http://whatisthor.com)が鉄板。引数やオプションがいい感じに使える。
 
-CLIのテストはarubaがよさそう。これはRubyに限らずCLIに対してなら使える。
+CLIのテストは[Aruba](https://github.com/cucumber/aruba)がよさそう。これはRubyに限らずCLIに対してなら使える。
 そもそもテスト書いてないので使ってないけれども・・・。
-[GitHub - cucumber/aruba: Test command-line applications with Cucumber-Ruby, RSpec or Minitest. The most up to date documentation can be found on Cucumber.Pro (https://app.cucumber.pro/projects/aruba)](https://github.com/cucumber/aruba)
 某ネットワーク機器の会社名と同じでググラビリティが低い。
 
 .gemspecに必要なことを書いたら `rake release` で初回リリースされる。gitにタグも打ってpushもしてくれる。その後README.mdに[GitHub Actionsのバッジ](https://docs.github.com/ja/actions/managing-workflow-runs/adding-a-workflow-status-badge)とgemのバッジを付けて、repoのGitHub Pagesを作ればそれっぽくなる。
