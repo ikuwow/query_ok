@@ -3,11 +3,11 @@
 # title: bookmeter-exporter-and-booklog
 title: 読書メーターをエクスポートするツールを作ってブクログへ移行した
 date: 2021-07-31 17:20 JST
-tags: 本,ブクログ,読書メーター
+tags: 本,ブクログ,読書メーター,作った
 thumbnail:
 ---
 
-![image-20210731172516437](/Users/degawaikuo/Library/Application Support/typora-user-images/image-20210731172516437.png)
+![image-20210731172516437](image-20210731172516437.png)
 
 読書メーターの「読んだ本」の一覧をCSVで出力するCLIツールを作りました。
 
