@@ -42,6 +42,6 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "css-loader": "^6.2.0",
     "purecss": "^2.0.6",
-    "style-loader": "^3.0.0"
+    "style-loader": "^3.2.1"
   }
 }
