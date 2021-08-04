@@ -2,7 +2,7 @@
 
 # title: todo-until-august-31
 title: 2021/8/31までにやりたいこと
-date: 2021-08-03 21:50 JST
+date: 2021-08-04 15:30 JST
 tags:
 thumbnail:
 
