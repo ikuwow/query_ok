@@ -8,7 +8,7 @@ thumbnail:
 
 ---
 
-この記事は2016年1月6日Qiitaに投稿した以下の記事を転記したものです。
+この記事は、2016年01月06日にQiitaで投稿した以下の記事を転記したものです。
 
 > ピュアなJSでAPIリクエストをするメモ（jsonとjsonp）
 > https://qiita.com/ikuwow/items/ed5f3c9ee0bd6147b7f3
