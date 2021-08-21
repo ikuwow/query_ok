@@ -121,6 +121,7 @@ $ diskutil eraseDisk JHFS+ SecretDisk2 GPT /dev/disk3s1
 A volume was specified instead of a whole disk: /dev/disk3s1
 Specify a whole disk, or instead use diskutil eraseVolume to erase a volume on a specific partition
 ```
+
 うーん
 
 他のもいじって試していたら
