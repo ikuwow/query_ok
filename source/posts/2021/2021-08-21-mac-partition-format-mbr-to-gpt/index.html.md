@@ -22,11 +22,11 @@ Macはディスクを中のデータを消さずに暗号化できるようで�
 
 先日外付けHDDを入手したのでそれを暗号化ファイルシステムに変えようとしたが、右クリックメニューにもないし、DiskUtilityのフォーマット欄にも出てこない。
 
-![ 2017-09-29 at 20.05.39.png](https://qiita-image-store.s3.amazonaws.com/0/28666/9d688f74-f028-a5b9-30b0-5b0d59c2fd27.png)
+![ 2017-09-29 at 20.05.39.png](1.png)
 
 ついでにパーティションも切れない。↓のようにグレーアウトする。
 
-![ 2017-09-29 at 19.51.49.png](https://qiita-image-store.s3.amazonaws.com/0/28666/e09f9256-1369-852b-59de-f72b1df54132.png)
+![ 2017-09-29 at 19.51.49.png](2.png)
 
 どうやらパーティション方式がMBRになっていたようだ。
 これをGPTに変えると問題なくできるらしいのでやってみた。
@@ -82,7 +82,7 @@ Example: diskutil eraseDisk JHFS+ UntitledUFS disk3
 
 これで以下のように暗号化に対応する。
 
-![ 2017-09-29 at 20.12.24.png](https://qiita-image-store.s3.amazonaws.com/0/28666/3bf57e4a-f769-12b1-fed0-46ddcfd17bcd.png)
+![ 2017-09-29 at 20.12.24.png](3.png)
 
 
 ## 右往左往していたログ
