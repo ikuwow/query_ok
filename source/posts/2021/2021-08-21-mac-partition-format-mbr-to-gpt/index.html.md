@@ -37,11 +37,11 @@ Macはディスクを中のデータを消さずに暗号化できるようで�
 
 MBR(Master Boot Record)は古い形式で、2TBまでしか容量を認識できず、パーティション数も4つまで。
 
-GPT(GUID Partition Table)はMacで標準で使われている？形式。
+GPT(GUID Partition Table)はMacにおいて標準で使われている？形式。
 起動ディスクにするにもGPTである必要があるみたい。
 https://support.apple.com/ja-jp/HT202796
 
-特に違いを意識せずにMac使うならGPTにしておくべきと感じた。
+特に違いを意識せずにMacを使いたいならGPTにしておくべきと感じた。
 
 ## 結論
 
