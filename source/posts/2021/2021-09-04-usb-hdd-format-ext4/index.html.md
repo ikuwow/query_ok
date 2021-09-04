@@ -8,7 +8,14 @@ thumbnail:
 
 ---
 
-### 現在の状況を確認し、パーティションを削除
+この記事は、2013年08月27日にQiitaで投稿した以下の記事を転記したものです。
+
+> USB外付けHDDをext4にフォーマットする手順  
+> https://qiita.com/ikuwow/items/c5832fd823e869825c80
+
+---
+
+## 現在の状況を確認し、パーティションを削除
 
 dfコマンドで、現在マウントされているディスクの状態を見る。-hオプションは、通常KB単位で表示される容量をMBやGBで表示してくれるオプション（human readable）。
 
@@ -91,7 +98,8 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ioctl() を呼び出してパーティションテーブルを再読込みします。
 ディスクを同期しています。
 ```
-### 新たにパーティションを作成し、ext4でフォーマットする
+## 新たにパーティションを作成し、ext4でフォーマットする
+
 もう一度`fdisk /dev/sdb`で、`n`コマンドで新たなパーティションを作成。パーティション番号、最初シリンダ（笑）、Lastシリンダを入力。まあ初期値でよい。
 
 ```bash:
@@ -165,7 +173,7 @@ This filesystem will be automatically checked every 30 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 ```
 
-### マウントする
+## マウントする
 `/mnt/backup_exHDD`ディレクトリを作成して、そこにマウント。ディレクトリ名はもちろん任意。
 
 ```bash:
