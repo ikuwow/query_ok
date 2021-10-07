@@ -9,7 +9,7 @@ executors:
   default:
     working_directory: ~/project
     docker:
-      - image: circleci/ruby:2.6.6-node
+      - image: cimg/ruby:2.6.6-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
 
@@ -83,6 +83,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - run:
+          name: Install imagemagick for favicon_maker
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y imagemagick
       - bundle_install
       - npm_install
       - restore_cache:
