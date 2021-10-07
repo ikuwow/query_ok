@@ -83,6 +83,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - run:
+          name: Install imagemagick for favicon_maker
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y imagemagick
       - bundle_install
       - npm_install
       - restore_cache:
