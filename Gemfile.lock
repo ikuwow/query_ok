@@ -253,7 +253,7 @@ DEPENDENCIES
   rubocop
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 2.6.8p205
 
 BUNDLED WITH
-   2.2.2
+   2.2.30
