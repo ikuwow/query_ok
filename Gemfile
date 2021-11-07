@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ruby '2.6.6'
+ruby '2.6.8'
 
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
