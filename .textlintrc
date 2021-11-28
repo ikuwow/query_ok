@@ -1,8 +1,14 @@
 {
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-japanese": {
       "sentence-length": {
         "max": 150
+      },
+      "no-doubled-joshi": {
+        "allow": ["も", "や", "に"]
       }
     },
     "preset-jtf-style": {
