@@ -28,7 +28,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.6.0",
     "sass": "^1.45.2",
-    "sass-loader": "^12.3.0",
+    "sass-loader": "^12.4.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "textlint": "^12.1.0",
