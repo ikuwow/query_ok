@@ -82,7 +82,6 @@ activate :external_pipeline,
          latency: 1
 
 activate :twitter_oembed do |twitter|
-  twitter.convert_regex = %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/(\d+)$}
   twitter.omit_script = true
   twitter.use_cache   = false
 end
