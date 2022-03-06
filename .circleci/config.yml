@@ -92,13 +92,13 @@ jobs:
       - npm_install
       - restore_cache:
           keys:
-            - articles-{{ .Branch }}-{{ .Revision }}
-            - articles-{{ .Branch }}
+            - articles-v1-{{ .Branch }}-{{ .Revision }}
+            - articles-v1-{{ .Branch }}
       - run:
           name: Build static pages
           command: bundle exec middleman build
       - save_cache:
-          key: articles-{{ .Branch }}-{{ .Revision }}
+          key: articles-v1-{{ .Branch }}-{{ .Revision }}
           paths:
             - build
       - persist_to_workspace:
