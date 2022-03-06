@@ -83,5 +83,5 @@ activate :external_pipeline,
 
 activate :twitter_oembed do |twitter|
   twitter.omit_script = true
-  twitter.cache_dir = '.cache/twitter_oembed'
+  twitter.use_cache   = false
 end
