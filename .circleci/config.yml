@@ -29,12 +29,12 @@ commands:
             bundle config set --local clean true
       - restore_cache:
           keys:
-            - bundler-v3-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - bundler-v3-{{ .Branch }}
-            - bundler-v3-master
+            - bundler-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - bundler-v4-{{ .Branch }}
+            - bundler-v4-master
       - run: bundle install
       - save_cache:
-          key: bundler-v3-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: bundler-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
   npm_install:
