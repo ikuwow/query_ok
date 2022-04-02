@@ -40,7 +40,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.0.0",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "css-loader": "^6.7.1",
     "purecss": "^2.0.6",
     "style-loader": "^3.3.1"
