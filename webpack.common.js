@@ -1,5 +1,4 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -8,7 +7,8 @@ module.exports = {
   },
   output: {
     filename: 'bundle-[name].js',
-    path: path.resolve(__dirname, '.tmp/dist')
+    path: path.resolve(__dirname, '.tmp/dist'),
+    clean: true,
   },
   module: {
     rules: [
@@ -21,8 +21,5 @@ module.exports = {
         type: 'asset/resource'
       }
     ]
-  },
-  plugins: [
-    new CleanWebpackPlugin()
-  ]
+  }
 }
