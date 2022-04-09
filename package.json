@@ -25,7 +25,6 @@
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
     "@webpack-cli/init": "^1.1.3",
-    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.12.0",
     "sass": "^1.49.11",
     "sass-loader": "^12.6.0",
