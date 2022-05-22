@@ -119,7 +119,8 @@ jobs:
       - aws-cli/install
       - deploy:
           name: deploy to s3
-          command: bundle exec middleman s3_sync
+          command: |
+            aws s3 sync --delete build s3://queryok.ikuwow.com/
       - deploy:
           name: Invalidate Cloudfront Caches
           command: |
