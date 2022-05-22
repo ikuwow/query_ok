@@ -14,7 +14,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    ansi (1.5.0)
     ast (2.4.2)
     backports (3.21.0)
     better_html (1.0.16)
@@ -50,30 +49,12 @@ GEM
     erubi (1.10.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
-    excon (0.71.0)
     execjs (2.8.1)
     fast_blank (1.0.0)
     fastimage (2.2.4)
     favicon_maker (1.3.1)
       docile (~> 1.1)
     ffi (1.15.3)
-    fog-aws (3.5.0)
-      fog-core (~> 2.1)
-      fog-json (~> 1.1)
-      fog-xml (~> 0.1)
-      ipaddress (~> 0.8)
-    fog-core (2.1.2)
-      builder
-      excon (~> 0.58)
-      formatador (~> 0.2)
-      mime-types
-    fog-json (1.2.0)
-      fog-core
-      multi_json (~> 1.10)
-    fog-xml (0.1.3)
-      fog-core
-      nokogiri (>= 1.5.11, < 2.0.0)
-    formatador (0.2.5)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
@@ -85,7 +66,6 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    ipaddress (0.8.3)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -96,7 +76,6 @@ GEM
     loofah (2.17.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    map (6.6.0)
     mdl (0.11.0)
       kramdown (~> 2.3)
       kramdown-parser-gfm (~> 1.1)
@@ -149,23 +128,11 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
-    middleman-s3_sync (4.0.3)
-      ansi (~> 1.5.0)
-      fog-aws (>= 0.1.1)
-      map
-      middleman-cli
-      middleman-core (>= 4.0.0)
-      parallel
-      ruby-progressbar
-      unf
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
     middleman-twitter-oembed (0.1.1)
       middleman (>= 3.2)
-    mime-types (3.3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     mixlib-cli (2.1.8)
@@ -173,7 +140,6 @@ GEM
       tomlrb
     mixlib-shellout (3.2.2)
       chef-utils
-    multi_json (1.13.1)
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
@@ -229,9 +195,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.6)
     unicode-display_width (2.1.0)
 
 PLATFORMS
@@ -246,7 +209,6 @@ DEPENDENCIES
   middleman-favicon-maker
   middleman-livereload
   middleman-minify-html
-  middleman-s3_sync
   middleman-syntax
   middleman-twitter-oembed
   redcarpet
@@ -256,4 +218,4 @@ RUBY VERSION
    ruby 2.6.10p210
 
 BUNDLED WITH
-   2.3.13
+   2.3.14
