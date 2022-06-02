@@ -25,7 +25,7 @@
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
     "eslint": "^8.16.0",
-    "sass": "^1.51.0",
+    "sass": "^1.52.1",
     "sass-loader": "^12.6.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
