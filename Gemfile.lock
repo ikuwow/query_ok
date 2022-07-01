@@ -66,6 +66,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    json (2.6.2)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -170,7 +171,8 @@ GEM
     regexp_parser (2.5.0)
     rexml (3.2.5)
     rouge (3.5.1)
-    rubocop (1.30.0)
+    rubocop (1.31.1)
+      json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -195,7 +197,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.2.0)
 
 PLATFORMS
   ruby
