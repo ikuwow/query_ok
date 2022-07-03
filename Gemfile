@@ -19,6 +19,6 @@ gem 'redcarpet'
 # For feed.xml.builder
 gem 'builder'
 
-gem 'erb_lint', '~> 0.1.1', require: false
+gem 'erb_lint', '~> 0.1.3', require: false
 gem 'mdl', require: false
 gem 'rubocop', require: false
