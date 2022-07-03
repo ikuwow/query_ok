@@ -29,7 +29,7 @@
     "sass-loader": "^13.0.0",
     "stylelint": "^14.9.1",
     "stylelint-config-standard": "^26.0.0",
-    "textlint": "^12.1.1",
+    "textlint": "^12.2.1",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-japanese": "^7.0.0",
     "textlint-rule-preset-jtf-style": "^2.3.13",
