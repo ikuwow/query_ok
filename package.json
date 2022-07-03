@@ -32,7 +32,7 @@
     "textlint": "^12.1.1",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-japanese": "^7.0.0",
-    "textlint-rule-preset-jtf-style": "^2.3.12",
+    "textlint-rule-preset-jtf-style": "^2.3.13",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-merge": "^5.8.0"
