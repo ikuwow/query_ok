@@ -141,7 +141,7 @@ GEM
       tomlrb
     mixlib-shellout (3.2.2)
       chef-utils
-    nokogiri (1.13.6)
+    nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     padrino-helpers (0.13.3.4)
