@@ -27,7 +27,7 @@
     "eslint": "^8.31.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
-    "stylelint": "^14.15.0",
+    "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
     "textlint": "^12.3.1",
     "textlint-filter-rule-comments": "^1.2.2",
