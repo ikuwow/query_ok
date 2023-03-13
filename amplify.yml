@@ -1,0 +1,26 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yum install -y xz # Nokogiri
+        - yum install -y ImageMagick # favicon-maker
+        - gem update bundler
+        - |
+            bundle config set --local frozen true
+            bundle config set --local path vendor/bundle
+            bundle config set --local clean true
+        - bundle install
+        - npm ci
+    build:
+      commands:
+        - bundle exec middleman build
+  artifacts:
+    baseDirectory: /build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - vendor/bundle/**/*
+      - build/**/*
