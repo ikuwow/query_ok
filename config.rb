@@ -67,14 +67,6 @@ set :markdown,
     autolink: true,
     strikethrough: true
 
-activate :s3_sync do |s3_sync|
-  s3_sync.region = 'ap-northeast-1'
-  s3_sync.index_document = 'index.html'
-  s3_sync.error_document = '404/index.html'
-  s3_sync.prefer_gzip = false
-end
-default_caching_policy max_age: (60 * 60 * 24 * 365)
-
 activate :external_pipeline,
          name: :webpack,
          command: build? ? 'npm run build' : 'npm run watch',
@@ -82,6 +74,7 @@ activate :external_pipeline,
          latency: 1
 
 activate :twitter_oembed do |twitter|
+  twitter.convert_regex = %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/(\d+)$}
   twitter.omit_script = true
-  twitter.cache_dir = '.cache/twitter_oembed'
+  twitter.use_cache   = false
 end

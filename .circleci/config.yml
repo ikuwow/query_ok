@@ -3,12 +3,13 @@ version: 2.1
 
 orbs:
   aws-cli: circleci/aws-cli@1.3.2
+  slack: circleci/slack@4.4.2
 
 executors:
   default:
     working_directory: ~/project
     docker:
-      - image: circleci/ruby:2.6.6-node
+      - image: cimg/ruby:2.7.6-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
 
@@ -28,24 +29,24 @@ commands:
             bundle config set --local clean true
       - restore_cache:
           keys:
-            - bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - bundler-{{ .Branch }}
-            - bundler-master
+            - bundler-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - bundler-v4-{{ .Branch }}
+            - bundler-v4-master
       - run: bundle install
       - save_cache:
-          key: bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: bundler-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
   npm_install:
     steps:
       - restore_cache:
           keys:
-            - npm-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - npm-v2-{{ .Branch }}
-            - npm-v2-master
+            - npm-v3-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-v3-{{ .Branch }}
+            - npm-v3-master
       - run: npm install
       - save_cache:
-          key: npm-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-v3-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
 
@@ -61,16 +62,16 @@ jobs:
           command: bundle exec rubocop
           when: always
       - run:
-          command: bundle exec erblint source/
+          command: bundle exec erblint source/**/*.erb
           when: always
       - run:
           command: bundle exec mdl source/
           when: always
       - run:
-          command: npm run lint
+          command: npm run eslint
           when: always
       - run:
-          command: npx stylelint "**/*.css" "**/*.scss"
+          command: npm run stylelint
           when: always
       - run:
           command: npx textlint source/posts/
@@ -82,17 +83,22 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - run:
+          name: Install imagemagick for favicon_maker
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y imagemagick
       - bundle_install
       - npm_install
       - restore_cache:
           keys:
-            - articles-{{ .Branch }}-{{ .Revision }}
-            - articles-{{ .Branch }}
+            - articles-v1-{{ .Branch }}-{{ .Revision }}
+            - articles-v1-{{ .Branch }}
       - run:
           name: Build static pages
           command: bundle exec middleman build
       - save_cache:
-          key: articles-{{ .Branch }}-{{ .Revision }}
+          key: articles-v1-{{ .Branch }}-{{ .Revision }}
           paths:
             - build
       - persist_to_workspace:
@@ -113,7 +119,8 @@ jobs:
       - aws-cli/install
       - deploy:
           name: deploy to s3
-          command: bundle exec middleman s3_sync
+          command: |
+            aws s3 sync --delete build s3://queryok.ikuwow.com/
       - deploy:
           name: Invalidate Cloudfront Caches
           command: |
@@ -122,6 +129,7 @@ jobs:
               --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
               --paths "/*"
 
+
 workflows:
   version: 2
   build_and_deploy:
@@ -129,6 +137,7 @@ workflows:
       - build
       - lint
       - deploy:
+          context: slack-notification
           filters:
             branches:
               only:
@@ -136,3 +145,10 @@ workflows:
           requires:
             - build
             - lint
+          post-steps:
+            - slack/notify:
+                event: fail
+                template: basic_fail_1
+            - slack/notify:
+                event: pass
+                template: success_tagged_deploy_1

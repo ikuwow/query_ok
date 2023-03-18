@@ -1,4 +1,4 @@
-@mixin whenDesktop() {
+@mixin when-desktop() {
   @media (min-width: 48em) {
     @content;
   }

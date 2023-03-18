@@ -1,4 +1,4 @@
-<% title = 'タグ一覧' %>
+<% title = 'Tags' %>
 <% content_for(:page_title) { title } %>
 <% content_for(:page_description) { title } %>
 
@@ -6,7 +6,7 @@
 
 <% blog_tags = Hash[blog.tags.sort_by { |tag, articles| [-articles.size, tag] }] %>
 
-<ul>
+<ul class="tag-list">
   <% blog_tags.each do |tag, articles| %>
     <li><%= partial 'tag', locals: { tag: tag } %><%= " (#{articles.size})" %></li>
   <% end %>

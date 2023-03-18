@@ -1,7 +1,7 @@
 ---
 title: 転職してました。
 date: 2017-12-21 23:18 JST
-tags:
+tags: career
 ---
 
 この記事は[退職者 Advent Calendar 2017](https://adventar.org/calendars/2158)の21日目の記事です。

@@ -38,7 +38,7 @@
   display: block;
   margin: 0 auto;
 
-  @include whenDesktop {
+  @include when-desktop {
     height: 100px;
     width: 100px;
   }
@@ -61,40 +61,94 @@
 .brand-tagline {
   margin: 0;
   font-weight: 300;
-  color: rgb(176, 202, 219);
+  color: rgb(176 202 219);
   font-size: 1.2em;
 }
 
-.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.nav {
+  @include when-desktop {
+    margin: 1em 0;
+  }
+
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+
+    @include when-desktop {
+      display: block;
+    }
+
+    .nav-item {
+      display: block;
+      zoom: 1;
+      width: 120px;
+      margin: 0 auto 1em;
+
+      .nav-item-link {
+        background: transparent;
+        border: 2px solid rgb(176 202 219);
+        color: #fff;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 85%;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+          border: 2px solid rgb(61 146 201);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.nav-mobile-open {
+  display: block;
+  margin-bottom: 0.2em;
+  font-size: 2em;
+
+  @include when-desktop {
+    display: none;
+  }
+}
+
+#nav-mobile-open {
   display: none;
 
-  @include whenDesktop {
+  &:checked ~ .nav-list {
+    display: block;
+  }
+}
+
+.sidebar-social-icons {
+  display: none;
+  color: white;
+  margin: 8px auto 32px;
+  font-size: 1.5em;
+  max-width: 160px;
+
+  @include when-desktop {
     display: block;
   }
 
-  .nav-item {
-    display: block;
-    zoom: 1;
-    width: 120px;
-    margin: 0 auto;
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    .nav-item-link {
-      background: transparent;
-      border: 2px solid rgb(176, 202, 219);
-      color: #fff;
-      margin-top: 1em;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-size: 85%;
-      width: 100%;
+    li {
+      margin: 0 auto;
 
-      &:hover,
-      &:focus {
-        border: 2px solid rgb(61, 146, 201);
-        text-decoration: none;
+      .sidebar-social-icons-link {
+        color: #ccc;
+
+        &:hover {
+          filter: brightness(90%);
+        }
       }
     }
   }
@@ -113,7 +167,7 @@
     margin: 0 auto;
   }
 
-  @include whenDesktop {
+  @include when-desktop {
     padding: 2em 3em 0;
     margin-left: 25%;
   }
@@ -122,7 +176,7 @@
 .about {
   text-align: center;
 
-  @include whenDesktop {
+  @include when-desktop {
     text-align: left;
   }
 
@@ -131,7 +185,7 @@
       margin: 0 auto;
       max-width: 160px;
 
-      @include whenDesktop {
+      @include when-desktop {
         margin-right: 2em;
         max-width: 300px;
       }
@@ -170,18 +224,18 @@
 .header {
   text-align: center;
   top: auto;
-  margin: 1.5em auto;
+  margin: 1.5em auto 0;
 
-  @include whenDesktop {
+  @include when-desktop {
     margin: 80% 1em 0;
   }
 }
 
 .sidebar {
-  background: rgb(61, 79, 93);
+  background: rgb(61 79 93);
   color: #fff;
 
-  @include whenDesktop {
+  @include when-desktop {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -208,7 +262,7 @@
     color: #222;
     margin-bottom: 0.2em;
 
-    @include whenDesktop {
+    @include when-desktop {
       font-size: 2em;
     }
   }
@@ -223,7 +277,7 @@
     color: #999;
     font-size: 90%;
     margin: 8px 0;
-    line-height: 1.6;
+    line-height: 1.8;
   }
 }
 
@@ -234,11 +288,17 @@
   background: #5aba59;
   font-size: 80%;
   line-height: 1.6;
+  white-space: nowrap;
 
   &:hover {
     opacity: 0.8;
     text-decoration: none;
   }
+}
+
+.tag-list {
+  line-height: 2em;
+  list-style: none;
 }
 
 .footer {

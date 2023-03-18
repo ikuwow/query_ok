@@ -7,6 +7,7 @@ title="$1"
 git fetch
 git switch -c "article/$title" "remotes/origin/HEAD"
 
+bundle install
 bundle exec middleman article "$title"
 
 git add source/posts
