@@ -134,14 +134,14 @@ GEM
       rouge (~> 3.2)
     middleman-twitter-oembed (0.1.1)
       middleman (>= 3.2)
-    mini_portile2 (2.8.0)
+    mini_portile2 (2.8.1)
     minitest (5.16.3)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
       tomlrb
     mixlib-shellout (3.2.2)
       chef-utils
-    nokogiri (1.13.10)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     padrino-helpers (0.13.3.4)
@@ -154,7 +154,7 @@ GEM
     parser (3.2.2.0)
       ast (~> 2.4.1)
     public_suffix (5.0.0)
-    racc (1.6.1)
+    racc (1.6.2)
     rack (2.2.6.4)
     rack-livereload (0.3.17)
       rack
