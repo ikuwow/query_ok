@@ -25,7 +25,8 @@ GEM
       parser (>= 2.4)
       smart_properties
     builder (3.2.4)
-    chef-utils (16.9.20)
+    chef-utils (18.2.7)
+      concurrent-ruby
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -67,7 +68,7 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
-    kramdown (2.3.1)
+    kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -77,7 +78,7 @@ GEM
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mdl (0.11.0)
+    mdl (0.12.0)
       kramdown (~> 2.3)
       kramdown-parser-gfm (~> 1.1)
       mixlib-cli (~> 2.1, >= 2.1.1)
@@ -137,9 +138,9 @@ GEM
     mini_portile2 (2.8.1)
     minitest (5.16.3)
     mixlib-cli (2.1.8)
-    mixlib-config (3.0.9)
+    mixlib-config (3.0.27)
       tomlrb
-    mixlib-shellout (3.2.2)
+    mixlib-shellout (3.2.7)
       chef-utils
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
@@ -192,7 +193,7 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.11)
-    tomlrb (2.0.1)
+    tomlrb (2.0.3)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
