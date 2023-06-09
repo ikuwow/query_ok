@@ -13,9 +13,7 @@ ikuwow's blog.
 ## How to Deploy
 
 ```
-cp .s3_sync.default .s3_sync
-vim .s3_sync
-bundle exec middleman s3_sync
+aws s3 sync --delete build s3://queryok.ikuwow.com/
 ```
 
 ## License

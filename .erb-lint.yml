@@ -18,7 +18,5 @@ linters:
         Enabled: false
       Naming/FileName:
         Enabled: false
-      Style/FrozenStringLiteralComment:
-        Enabled: false
       Lint/UselessAssignment:
         Enabled: false

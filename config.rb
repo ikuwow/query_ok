@@ -67,14 +67,6 @@ set :markdown,
     autolink: true,
     strikethrough: true
 
-activate :s3_sync do |s3_sync|
-  s3_sync.region = 'ap-northeast-1'
-  s3_sync.index_document = 'index.html'
-  s3_sync.error_document = '404/index.html'
-  s3_sync.prefer_gzip = false
-end
-default_caching_policy max_age: (60 * 60 * 24 * 365)
-
 activate :external_pipeline,
          name: :webpack,
          command: build? ? 'npm run build' : 'npm run watch',

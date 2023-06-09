@@ -9,9 +9,11 @@ executors:
   default:
     working_directory: ~/project
     docker:
-      - image: cimg/ruby:2.6.10-node
+      - image: cimg/ruby:2.7.6-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
+      BUNDLE_CACHE_VERSION: v5
+      NPM_CACHE_VERSION: v4
 
 commands:
   bundle_install:
@@ -29,24 +31,24 @@ commands:
             bundle config set --local clean true
       - restore_cache:
           keys:
-            - bundler-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - bundler-v4-{{ .Branch }}
-            - bundler-v4-master
+            - bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-{{ .Branch }}
+            - bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-master
       - run: bundle install
       - save_cache:
-          key: bundler-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
   npm_install:
     steps:
       - restore_cache:
           keys:
-            - npm-v3-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - npm-v3-{{ .Branch }}
-            - npm-v3-master
+            - npm-{{ .Environment.NPM_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-{{ .Environment.NPM_CACHE_VERSION }}-{{ .Branch }}
+            - npm-{{ .Environment.NPM_CACHE_VERSION }}-master
       - run: npm install
       - save_cache:
-          key: npm-v3-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-{{ .Environment.NPM_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
 
@@ -119,7 +121,8 @@ jobs:
       - aws-cli/install
       - deploy:
           name: deploy to s3
-          command: bundle exec middleman s3_sync
+          command: |
+            aws s3 sync --delete build s3://queryok.ikuwow.com/
       - deploy:
           name: Invalidate Cloudfront Caches
           command: |
