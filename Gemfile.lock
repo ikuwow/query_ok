@@ -1,27 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionview (5.2.8.1)
-      activesupport (= 5.2.8.1)
+    actionview (6.1.7.3)
+      activesupport (= 6.1.7.3)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activesupport (5.2.8.1)
+      rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activesupport (6.1.7.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     backports (3.24.1)
-    better_html (1.0.16)
-      actionview (>= 4.0)
-      activesupport (>= 4.0)
+    better_html (2.0.1)
+      actionview (>= 6.0)
+      activesupport (>= 6.0)
       ast (~> 2.0)
       erubi (~> 1.4)
-      html_tokenizer (~> 0.0.6)
       parser (>= 2.4)
       smart_properties
     builder (3.2.4)
@@ -37,10 +37,9 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    erb_lint (0.1.3)
+    erb_lint (0.4.0)
       activesupport
-      better_html (~> 1.0.7)
-      html_tokenizer
+      better_html (>= 2.0.1)
       parser (>= 2.7.1.4)
       rainbow
       rubocop
@@ -60,10 +59,9 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.6.0)
-    html_tokenizer (0.0.7)
     htmlcompressor (0.2.0)
     http_parser.rb (0.8.0)
-    i18n (0.9.5)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
     kramdown (2.4.0)
@@ -75,23 +73,23 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     memoist (0.16.2)
-    middleman (4.3.11)
+    middleman (4.4.0)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
       kramdown (>= 2.3.0)
-      middleman-cli (= 4.3.11)
-      middleman-core (= 4.3.11)
+      middleman-cli (= 4.4.0)
+      middleman-core (= 4.4.0)
     middleman-blog (4.0.3)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
-    middleman-cli (4.3.11)
+    middleman-cli (4.4.0)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.3.11)
-      activesupport (>= 4.2, < 6.0)
-      addressable (~> 2.3)
+    middleman-core (4.4.0)
+      activesupport (>= 6.1, < 7.0)
+      addressable (~> 2.4)
       backports (~> 3.6)
-      bundler
+      bundler (~> 2.0)
       contracts (~> 0.13.0)
       dotenv
       erubis
@@ -100,16 +98,18 @@ GEM
       fastimage (~> 2.0)
       hamster (~> 3.0)
       hashie (~> 3.4)
-      i18n (~> 0.9.0)
+      i18n (~> 1.6.0)
       listen (~> 3.0.0)
       memoist (~> 0.14)
-      padrino-helpers (~> 0.13.0)
+      padrino-helpers (~> 0.15.0)
       parallel
       rack (>= 1.4.5, < 3)
       sassc (~> 2.0)
       servolux
       tilt (~> 2.0.9)
+      toml
       uglifier (~> 3.0)
+      webrick
     middleman-favicon-maker (4.1.0)
       favicon_maker (~> 1.3, >= 1.3.1)
       middleman-core (~> 4.0)
@@ -130,16 +130,16 @@ GEM
     nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    padrino-helpers (0.13.3.4)
-      i18n (~> 0.6, >= 0.6.7)
-      padrino-support (= 0.13.3.4)
+    padrino-helpers (0.15.3)
+      i18n (>= 0.6.7, < 2)
+      padrino-support (= 0.15.3)
       tilt (>= 1.4.1, < 3)
-    padrino-support (0.13.3.4)
-      activesupport (>= 3.1)
+    padrino-support (0.15.3)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
+    parslet (2.0.0)
     public_suffix (5.0.1)
     racc (1.7.1)
     rack (2.2.7)
@@ -178,13 +178,16 @@ GEM
     smart_properties (1.17.0)
     temple (0.10.2)
     thor (1.2.2)
-    thread_safe (0.3.6)
     tilt (2.0.11)
-    tzinfo (1.2.11)
-      thread_safe (~> 0.1)
+    toml (0.3.0)
+      parslet (>= 1.8.0, < 3.0.0)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.4.2)
+    webrick (1.8.1)
+    zeitwerk (2.6.8)
 
 PLATFORMS
   ruby
@@ -193,7 +196,7 @@ DEPENDENCIES
   builder
   erb_lint
   haml (< 6.0.0)
-  middleman (= 4.3.11)
+  middleman (= 4.4.0)
   middleman-blog
   middleman-favicon-maker
   middleman-livereload
@@ -207,4 +210,4 @@ RUBY VERSION
    ruby 2.7.6p219
 
 BUNDLED WITH
-   2.3.18
+   2.4.8
