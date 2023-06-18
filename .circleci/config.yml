@@ -67,7 +67,7 @@ jobs:
           command: bundle exec erblint source/**/*.erb
           when: always
       - run:
-          command: bundle exec mdl source/
+          command: npm run markdownlint
           when: always
       - run:
           command: npm run eslint
