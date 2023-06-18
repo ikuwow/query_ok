@@ -10,6 +10,7 @@
   "scripts": {
     "eslint": "eslint .",
     "stylelint": "stylelint **/*.css **/*.scss",
+    "markdownlint": "markdownlint-cli2 source/**/*.md",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --config webpack.dev.js --watch"
   },
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
     "eslint": "^8.41.0",
+    "markdownlint-cli2": "^0.8.1",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.1",
     "stylelint": "^14.16.1",

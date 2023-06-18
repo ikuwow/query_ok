@@ -20,5 +20,4 @@ gem 'redcarpet'
 gem 'builder'
 
 gem 'erb_lint', '~> 0.1.3', require: false
-gem 'mdl', require: false
 gem 'rubocop', require: false
