@@ -12,11 +12,13 @@ executors:
       - image: cimg/ruby:2.7.6-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
-      BUNDLE_CACHE_VERSION: v5
-      NPM_CACHE_VERSION: v4
 
 commands:
   bundle_install:
+    parameters:
+      bundle_cache_version:
+        type: string
+        default: v6
     steps:
       - run:
           name: Update bundler to latest
@@ -31,24 +33,28 @@ commands:
             bundle config set --local clean true
       - restore_cache:
           keys:
-            - bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-{{ .Branch }}
-            - bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-master
+            - bundler-<< parameters.bundle_cache_version >>-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - bundler-<< parameters.bundle_cache_version >>-{{ .Branch }}
+            - bundler-<< parameters.bundle_cache_version >>-master
       - run: bundle install
       - save_cache:
-          key: bundler-{{ .Environment.BUNDLE_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: bundler-<< parameters.bundle_cache_version >>-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
   npm_install:
+    parameters:
+      npm_cache_version:
+        type: string
+        default: v4
     steps:
       - restore_cache:
           keys:
-            - npm-{{ .Environment.NPM_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - npm-{{ .Environment.NPM_CACHE_VERSION }}-{{ .Branch }}
-            - npm-{{ .Environment.NPM_CACHE_VERSION }}-master
+            - npm-<< parameters.npm_cache_version >>-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-<< parameters.npm_cache_version >>-{{ .Branch }}
+            - npm-<< parameters.npm_cache_version >>-master
       - run: npm install
       - save_cache:
-          key: npm-{{ .Environment.NPM_CACHE_VERSION }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-<< parameters.npm_cache_version >>-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
 
