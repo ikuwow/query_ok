@@ -10,6 +10,7 @@
   "scripts": {
     "eslint": "eslint .",
     "stylelint": "stylelint **/*.css **/*.scss",
+    "markdownlint": "markdownlint-cli2 source/**/*.md",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --config webpack.dev.js --watch"
   },
