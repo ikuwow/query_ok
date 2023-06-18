@@ -75,19 +75,19 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     memoist (0.16.2)
-    middleman (4.3.10)
+    middleman (4.3.11)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
       kramdown (>= 2.3.0)
-      middleman-cli (= 4.3.10)
-      middleman-core (= 4.3.10)
+      middleman-cli (= 4.3.11)
+      middleman-core (= 4.3.11)
     middleman-blog (4.0.3)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
-    middleman-cli (4.3.10)
+    middleman-cli (4.3.11)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.3.10)
+    middleman-core (4.3.11)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
       backports (~> 3.6)
@@ -193,7 +193,7 @@ DEPENDENCIES
   builder
   erb_lint
   haml (< 6.0.0)
-  middleman (= 4.3.10)
+  middleman (= 4.3.11)
   middleman-blog
   middleman-favicon-maker
   middleman-livereload
