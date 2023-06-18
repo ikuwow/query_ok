@@ -14,6 +14,8 @@ gem 'middleman-minify-html'
 gem 'middleman-syntax'
 gem 'middleman-twitter-oembed'
 
+gem 'haml', '< 6.0.0'
+
 gem 'redcarpet'
 
 # For feed.xml.builder
