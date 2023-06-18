@@ -1,18 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionview (6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actionview (7.0.5)
+      activesupport (= 7.0.5)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    activesupport (6.1.7.3)
+    activesupport (7.0.5)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
@@ -30,7 +29,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.2.2)
-    contracts (0.13.0)
+    contracts (0.16.1)
     crass (1.0.6)
     docile (1.4.0)
     dotenv (2.8.1)
@@ -66,31 +65,31 @@ GEM
     json (2.6.3)
     kramdown (2.4.0)
       rexml
-    listen (3.0.8)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    listen (3.8.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     memoist (0.16.2)
-    middleman (4.4.0)
+    middleman (4.5.0)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
       kramdown (>= 2.3.0)
-      middleman-cli (= 4.4.0)
-      middleman-core (= 4.4.0)
+      middleman-cli (= 4.5.0)
+      middleman-core (= 4.5.0)
     middleman-blog (4.0.3)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
-    middleman-cli (4.4.0)
+    middleman-cli (4.5.0)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.4.0)
-      activesupport (>= 6.1, < 7.0)
+    middleman-core (4.5.0)
+      activesupport (>= 6.1, < 7.1)
       addressable (~> 2.4)
       backports (~> 3.6)
       bundler (~> 2.0)
-      contracts (~> 0.13.0)
+      contracts (~> 0.13)
       dotenv
       erubis
       execjs (~> 2.0)
@@ -99,7 +98,7 @@ GEM
       hamster (~> 3.0)
       hashie (~> 3.4)
       i18n (~> 1.6.0)
-      listen (~> 3.0.0)
+      listen (~> 3.0)
       memoist (~> 0.14)
       padrino-helpers (~> 0.15.0)
       parallel
@@ -187,7 +186,6 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.4.2)
     webrick (1.8.1)
-    zeitwerk (2.6.8)
 
 PLATFORMS
   ruby
@@ -196,7 +194,7 @@ DEPENDENCIES
   builder
   erb_lint
   haml (< 6.0.0)
-  middleman (= 4.4.0)
+  middleman (= 4.5.0)
   middleman-blog
   middleman-favicon-maker
   middleman-livereload
