@@ -8,6 +8,6 @@
 
 <ul class="tag-list">
   <% blog_tags.each do |tag, articles| %>
-    <li><%= partial 'tag', locals: { tag: tag } %><%= " (#{articles.size})" %></li>
+    <li><%= partial 'tag', locals: { tag: } %><%= " (#{articles.size})" %></li>
   <% end %>
 </ul>
