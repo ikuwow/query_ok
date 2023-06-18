@@ -99,6 +99,10 @@ jobs:
       - run:
           name: Build static pages
           command: bundle exec middleman build
+      - run:
+          name: Build static pages with verbose output
+          when: on_fail
+          command: bundle exec middleman build --verbose
       - save_cache:
           key: articles-v1-{{ .Branch }}-{{ .Revision }}
           paths:
