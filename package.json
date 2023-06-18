@@ -5,7 +5,7 @@
   "description": "Query OK. [![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok) ===========================",
   "main": "index.js",
   "engine": {
-    "node": "~16.15.0"
+    "node": "~18.15.0"
   },
   "scripts": {
     "eslint": "eslint .",
