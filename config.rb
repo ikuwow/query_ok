@@ -78,7 +78,14 @@ class TwitterOembed < Middleman::Extension
     super
 
     app.before_render do |body|
-      body + 'Hi! This is a test output from extention.'
+      convert(body)
+    end
+  end
+
+  def convert(body)
+    regex = %r{https?://twitter.com/[a-zA-Z0-9_]+/status/(\d+)}
+    body.gsub(regex) do
+      'This is replaced by extension.'
     end
   end
 end
