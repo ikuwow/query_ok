@@ -13,6 +13,8 @@ gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-syntax'
 
+gem 'ruby-oembed'
+
 # middleman-syntax won't work with haml6
 # See: https://github.com/middleman/middleman-syntax/issues/80
 gem 'haml', '< 6.0.0'
