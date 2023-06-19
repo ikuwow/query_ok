@@ -73,7 +73,7 @@ activate :external_pipeline,
          source: '.tmp/dist',
          latency: 1
 
-class OEmbedExtension < Middleman::Extension
+class OEmbedConverter < Middleman::Extension
   require 'oembed'
 
   def initialize(app, options_hash = nil, &block)
@@ -100,6 +100,6 @@ class OEmbedExtension < Middleman::Extension
     OEmbed::Providers.get(url).html
   end
 end
-Middleman::Extensions.register(:oembed, OEmbedExtension)
+Middleman::Extensions.register(:oembed_converter, OEmbedConverter)
 
-activate :oembed
+activate :oembed_converter
