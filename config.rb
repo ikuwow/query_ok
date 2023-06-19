@@ -73,9 +73,16 @@ activate :external_pipeline,
          source: '.tmp/dist',
          latency: 1
 
-class TwitterOembed < Middleman::Extension
+class OEmbedExtension < Middleman::Extension
+  require 'oembed'
+
   def initialize(app, options_hash = nil, &block)
     super
+
+    # Currently only Twitter is supported
+    @target_regex = %r{https?://twitter.com/[a-zA-Z0-9_]+/status/\d+}
+
+    OEmbed::Providers.register_all
 
     app.before_render do |body|
       convert(body)
@@ -83,12 +90,16 @@ class TwitterOembed < Middleman::Extension
   end
 
   def convert(body)
-    regex = %r{https?://twitter.com/[a-zA-Z0-9_]+/status/(\d+)}
-    body.gsub(regex) do
-      'This is replaced by extension.'
+    body.gsub!(@target_regex) do |url|
+      get_oembed_response(url)
     end
   end
-end
-Middleman::Extensions.register(:twitter_oembed, TwitterOembed)
 
-activate :twitter_oembed
+  def get_oembed_response (url)
+    # TODO: Cache response
+    OEmbed::Providers.get(url).html
+  end
+end
+Middleman::Extensions.register(:oembed, OEmbedExtension)
+
+activate :oembed
