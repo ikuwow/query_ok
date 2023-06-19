@@ -72,3 +72,16 @@ activate :external_pipeline,
          command: build? ? 'npm run build' : 'npm run watch',
          source: '.tmp/dist',
          latency: 1
+
+class TwitterOembed < Middleman::Extension
+  def initialize(app, options_hash = nil, &block)
+    super
+
+    app.before_render do |body|
+      body + 'Hi! This is a test output from extention.'
+    end
+  end
+end
+Middleman::Extensions.register(:twitter_oembed, TwitterOembed)
+
+activate :twitter_oembed
