@@ -24,7 +24,6 @@ class OEmbedConverter < Middleman::Extension
     OEmbed::Providers.register_all
 
     app.before_render do |body, path|
-      puts "Before rendering #{path}"
       convert(body) if path.end_with?('.md', '.markdown', '.mkd')
     end
   end
@@ -32,7 +31,6 @@ class OEmbedConverter < Middleman::Extension
   def convert(body)
     @target_services.each do |service|
       body.gsub!(service[:regex]) do |url|
-        puts "matched url: #{url}"
         get_oembed_response(url, service[:query])
       end
     end
@@ -45,13 +43,11 @@ class OEmbedConverter < Middleman::Extension
     cache_file = File.join(@cache_dir, Digest::SHA256.hexdigest(url))
 
     if File.exist?(cache_file)
-      puts 'Read cache'
       return Marshal.load(File.binread(cache_file))
     end
 
     html = OEmbed::Providers.get(url, query).html
 
-    puts 'Write cache'
     FileUtils.mkdir_p(@cache_dir)
     File.binwrite(cache_file, Marshal.dump(html))
 
