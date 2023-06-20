@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-ruby '2.7.6'
+ruby '3.2.2'
 
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
 source 'https://rubygems.org'
 
-gem 'middleman', '4.4.0'
+gem 'middleman', '4.5.0'
 gem 'middleman-blog'
 gem 'middleman-favicon-maker'
 gem 'middleman-livereload'

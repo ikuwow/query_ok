@@ -8,8 +8,7 @@
   <%= javascript_include_tag 'bundle-critical' %>
   <%= javascript_include_tag 'bundle-main', async: 'async' %>
   <%= partial 'ga_tracking_code' %>
-  <%# app.config.url_root + ERB::Util.url_encode(current_page.url) %>
-  <%# <link rel="canonical" href=""> %>
+  <link rel="canonical" href="<%= app.config.url_root + current_page.url %>">
   <%= yield_content :assets_critical %>
 </head>
 
