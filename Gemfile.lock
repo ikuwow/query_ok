@@ -29,7 +29,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.2.2)
-    contracts (0.16.1)
+    contracts (0.17)
     crass (1.0.6)
     docile (1.4.0)
     dotenv (2.8.1)
