@@ -16,9 +16,7 @@ class OEmbedConverter < Middleman::Extension
 
     app.before_render do |body, path|
       puts "Before rendering #{path}"
-      if path.end_with?('.md', '.markdown', '.mkd')
-        convert(body)
-      end
+      convert(body) if path.end_with?('.md', '.markdown', '.mkd')
     end
   end
 
