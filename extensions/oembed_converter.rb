@@ -4,13 +4,16 @@ require 'oembed'
 
 # OEmbedConverter: Convert OEmbed URLs to HTML
 class OEmbedConverter < Middleman::Extension
+
+  option :cache_dir, '.cache/oembed_converter/'
+
   def initialize(app, options_hash = nil, &block)
     super
 
     # Currently only Twitter is supported
     # yushakobo is ignored
     @target_regex = %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$}
-    @cache_dir = File.join(app.root, '.cache/oembed_converter/')
+    @cache_dir = File.join(app.root, options.cache_dir)
 
     OEmbed::Providers.register_all
 

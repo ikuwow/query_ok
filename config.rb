@@ -75,4 +75,6 @@ activate :external_pipeline,
 
 require 'extensions/oembed_converter'
 Middleman::Extensions.register(:oembed_converter, OEmbedConverter)
-activate :oembed_converter
+activate :oembed_converter do |converter|
+  converter.cache_dir = '.cache/oembed_converter_v2/'
+end
