@@ -8,19 +8,19 @@ class OEmbedConverter < Middleman::Extension
     super
 
     # Currently only Twitter is supported
-    @target_regex = %r{https?://twitter.com/[a-zA-Z0-9_]+/status/\d+}
+    @target_regex = %r{^https?://twitter.com/[a-zA-Z0-9_]+/status/\d+$}
     @cache_dir = File.join(app.root, '.cache/oembed_converter/')
 
     OEmbed::Providers.register_all
 
     app.before_render do |body|
-      p 'Convert!'
       convert(body)
     end
   end
 
   def convert(body)
     body.gsub!(@target_regex) do |url|
+      puts "matched url: #{url}"
       get_oembed_response(url)
     end
   end
@@ -31,13 +31,13 @@ class OEmbedConverter < Middleman::Extension
     cache_file = File.join(@cache_dir, Digest::SHA256.hexdigest(url))
 
     if File.exist?(cache_file)
-      p 'Read cache'
+      puts 'Read cache'
       return Marshal.load(File.binread(cache_file))
     end
 
-    html = OEmbed::Providers.get(url).html
+    html = OEmbed::Providers.get(url, { omit_script: '1' }).html
 
-    p 'Write cache'
+    puts 'Write cache'
     FileUtils.mkdir_p(@cache_dir)
     File.binwrite(cache_file, Marshal.dump(html))
 
