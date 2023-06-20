@@ -14,8 +14,10 @@ class OEmbedConverter < Middleman::Extension
 
     OEmbed::Providers.register_all
 
-    app.before_render do |body|
-      convert(body)
+    app.before_render do |body, path|
+      if path.end_with?('.md', '.markdown', '.mkd')
+        convert(body)
+      end
     end
   end
 
