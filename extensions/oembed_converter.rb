@@ -6,7 +6,7 @@ require 'oembed'
 class OEmbedConverter < Middleman::Extension
   option :cache_dir, '.cache/oembed_converter/'
 
-  def initialize(app, options_hash = nil, &block)
+  def initialize(app, options_hash = nil, &)
     super
 
     # Currently only Twitter is supported
