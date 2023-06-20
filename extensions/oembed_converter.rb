@@ -11,8 +11,14 @@ class OEmbedConverter < Middleman::Extension
     super
 
     # Currently only Twitter is supported
-    # yushakobo is ignored
-    @target_regex = %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$}
+    @target_services = [
+      {
+        name: 'twitter',
+        # yushakobo is ignored
+        regex: %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$},
+        query: { omit_script: '1' }
+      }
+    ]
     @cache_dir = File.join(app.root, options.cache_dir)
 
     OEmbed::Providers.register_all
@@ -24,15 +30,18 @@ class OEmbedConverter < Middleman::Extension
   end
 
   def convert(body)
-    body.gsub!(@target_regex) do |url|
-      puts "matched url: #{url}"
-      get_oembed_response(url)
+    @target_services.each do |service|
+      body.gsub!(service[:regex]) do |url|
+        puts "matched url: #{url}"
+        get_oembed_response(url, service[:query])
+      end
     end
+    body
   end
 
   private
 
-  def get_oembed_response(url)
+  def get_oembed_response(url, query = {})
     cache_file = File.join(@cache_dir, Digest::SHA256.hexdigest(url))
 
     if File.exist?(cache_file)
@@ -40,7 +49,7 @@ class OEmbedConverter < Middleman::Extension
       return Marshal.load(File.binread(cache_file))
     end
 
-    html = OEmbed::Providers.get(url, { omit_script: '1' }).html
+    html = OEmbed::Providers.get(url, query).html
 
     puts 'Write cache'
     FileUtils.mkdir_p(@cache_dir)
