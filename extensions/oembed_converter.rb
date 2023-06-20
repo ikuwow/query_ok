@@ -14,6 +14,7 @@ class OEmbedConverter < Middleman::Extension
     OEmbed::Providers.register_all
 
     app.before_render do |body|
+      p 'Convert!'
       convert(body)
     end
   end
@@ -27,16 +28,13 @@ class OEmbedConverter < Middleman::Extension
   private
 
   def get_oembed_response(url)
-    cache_filename = Digest::SHA256.hexdigest(url)
-    cache_file = File.join(@cache_dir, cache_filename)
+    cache_file = File.join(@cache_dir, Digest::SHA256.hexdigest(url))
 
-    p 'Read cache'
     if File.exist?(cache_file)
       p 'Read cache'
       return Marshal.load(File.binread(cache_file))
     end
 
-    p 'GET request'
     html = OEmbed::Providers.get(url).html
 
     p 'Write cache'
