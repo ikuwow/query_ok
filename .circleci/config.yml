@@ -117,6 +117,7 @@ jobs:
           key: articles-<< parameters.article_cache_version >>-{{ .Branch }}-{{ .Revision }}
           paths:
             - build
+            - .cache
       - persist_to_workspace:
           root: ~/project
           paths:
