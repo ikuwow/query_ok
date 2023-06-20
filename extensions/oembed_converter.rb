@@ -4,21 +4,12 @@ require 'oembed'
 
 # OEmbedConverter: Convert OEmbed URLs to HTML
 class OEmbedConverter < Middleman::Extension
-
   option :cache_dir, '.cache/oembed_converter/'
 
   def initialize(app, options_hash = nil, &block)
     super
 
     # Currently only Twitter is supported
-    @target_services = [
-      {
-        name: 'twitter',
-        # yushakobo is ignored
-        regex: %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$},
-        query: { omit_script: '1' }
-      }
-    ]
     @cache_dir = File.join(app.root, options.cache_dir)
 
     OEmbed::Providers.register_all
@@ -29,7 +20,7 @@ class OEmbedConverter < Middleman::Extension
   end
 
   def convert(body)
-    @target_services.each do |service|
+    target_services.each do |service|
       body.gsub!(service[:regex]) do |url|
         get_oembed_response(url, service[:query])
       end
@@ -39,12 +30,21 @@ class OEmbedConverter < Middleman::Extension
 
   private
 
+  def target_services
+    [
+      {
+        name: 'twitter',
+        # yushakobo is ignored
+        regex: %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$},
+        query: { omit_script: '1' }
+      }
+    ]
+  end
+
   def get_oembed_response(url, query = {})
     cache_file = File.join(@cache_dir, Digest::SHA256.hexdigest(url))
 
-    if File.exist?(cache_file)
-      return Marshal.load(File.binread(cache_file))
-    end
+    return Marshal.load(File.binread(cache_file)) if File.exist?(cache_file)
 
     html = OEmbed::Providers.get(url, query).html
 
