@@ -123,8 +123,6 @@ GEM
     middleman-syntax (3.3.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
-    middleman-twitter-oembed (0.1.1)
-      middleman (>= 3.2)
     mini_portile2 (2.8.2)
     minitest (5.18.1)
     nokogiri (1.15.2)
@@ -171,6 +169,7 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
+    ruby-oembed (0.16.1)
     ruby-progressbar (1.13.0)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -202,12 +201,12 @@ DEPENDENCIES
   middleman-livereload
   middleman-minify-html
   middleman-syntax
-  middleman-twitter-oembed
   redcarpet
   rubocop
+  ruby-oembed
 
 RUBY VERSION
    ruby 2.7.6p219
 
 BUNDLED WITH
-   2.4.8
+   2.3.18

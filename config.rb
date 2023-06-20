@@ -73,8 +73,8 @@ activate :external_pipeline,
          source: '.tmp/dist',
          latency: 1
 
-activate :twitter_oembed do |twitter|
-  twitter.convert_regex = %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/(\d+)$}
-  twitter.omit_script = true
-  twitter.use_cache   = false
+require 'extensions/oembed_converter'
+Middleman::Extensions.register(:oembed_converter, OEmbedConverter)
+activate :oembed_converter do |converter|
+  converter.cache_dir = '.cache/oembed_converter_v2/'
 end
