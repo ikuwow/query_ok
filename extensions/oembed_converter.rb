@@ -8,7 +8,8 @@ class OEmbedConverter < Middleman::Extension
     super
 
     # Currently only Twitter is supported
-    @target_regex = %r{^https?://twitter.com/[a-zA-Z0-9_]+/status/\d+$}
+    # yushakobo is ignored
+    @target_regex = %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$}
     @cache_dir = File.join(app.root, '.cache/oembed_converter/')
 
     OEmbed::Providers.register_all
