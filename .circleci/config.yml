@@ -106,6 +106,7 @@ jobs:
           keys:
             - articles-<< parameters.article_cache_version >>-{{ .Branch }}-{{ .Revision }}
             - articles-<< parameters.article_cache_version >>-{{ .Branch }}
+            - articles-<< parameters.article_cache_version >>-master
       - run:
           name: Build static pages
           command: bundle exec middleman build
