@@ -1,6 +1,5 @@
 // vim: set filetype=jsonc :
 {
-  "MD003": false,
   "MD007": false,
   "MD009": false,
   "MD010": false,
