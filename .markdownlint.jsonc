@@ -1,6 +1,8 @@
 // vim: set filetype=jsonc :
 {
+  // Hard tabs
   "MD010": { "code_blocks": false },
+
   "MD022": false,
   "MD024": false,
   "MD026": false,
