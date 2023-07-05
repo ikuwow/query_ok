@@ -51,14 +51,14 @@ openssl aes-256-cbc -e -in rawtext.txt -out encrypted.txt -pass file:./password.
 
 ## 復号
 
-### パスワードを標準入力から取得する場合
+### パスワードを標準入力から取得する場合 (復号)
 
 ```bash
 $ openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt
 enter aes-256-cbc decryption password: # パスワードを入力
 ```
 
-### パスワードをファイルから読み込む場合
+### パスワードをファイルから読み込む場合 (復号)
 
 ```bash
 openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt -pass file:./password.txt
