@@ -11,6 +11,6 @@
 
   // no-bare-urls
   "MD034": false,
-  "MD037": false,
+
   "MD040": false
 }
