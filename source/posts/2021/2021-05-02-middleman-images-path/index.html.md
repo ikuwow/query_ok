@@ -12,7 +12,7 @@ Middleman Blogの今の設定だと、全画像を共通の1つの階層に入�
 
 以前までのこれを、
 
-```
+```console
 source
 └posts
   └2021-01-01-title.html.md
@@ -22,7 +22,7 @@ source
 
 日付部分で記事との対応を取っていて冗長。.mdで画像のパスを指定するのも面倒なのでこうした
 
-```
+```console
 source
 └posts
   └2021-01-01-title

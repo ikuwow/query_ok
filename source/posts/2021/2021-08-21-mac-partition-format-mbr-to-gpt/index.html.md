@@ -48,7 +48,7 @@ https://support.apple.com/ja-jp/HT202796
 `diskutil eraseDisk`を使う。
 当たり前ですが**ディスク上のすべてのデータが消去される**のでディスクを間違わないように注意。
 
-```
+```console
 $ diskutil eraseDisk JHFS+ SecretDisk GPT /dev/disk3
 Started erase on disk3
 Unmounting disk
@@ -67,7 +67,7 @@ GPTが今回のフォーマット。
 
 オプションの詳細はマニュアルを参照
 
-```
+```console
 $ diskutil eraseDisk
 Usage:  diskutil eraseDisk format name [APM[Format]|MBR[Format]|GPT[Format]]
         MountPoint|DiskIdentifier|DeviceNode
@@ -90,7 +90,7 @@ Example: diskutil eraseDisk JHFS+ UntitledUFS disk3
 
 ---
 
-```
+```console
 $ diskutil info "Secret Disk" | grep Device\ Node
    Device Node:              /dev/disk3s1
 ```
@@ -99,13 +99,13 @@ $ diskutil info "Secret Disk" | grep Device\ Node
 
 Mac OS Extended Journaled (JHFS+)
 
-```
+```console
 diskutil eraseDisk JHFS+ SecretDisk2 /dev/disk3s1 GPT
 ```
 
 あれ
 
-```
+```console
 $ diskutil eraseDisk JHFS+ SecretDisk2 /dev/disk3s1 GPT
 Unknown partition scheme: /dev/disk3s1
 IkuosMacmini:imgs2pdf degawaikuo$ diskutil eraseDisk JHFS+ SecretDisk2 /dev/disk3s1
@@ -115,7 +115,7 @@ Specify a whole disk, or instead use diskutil eraseVolume to erase a volume on a
 
 こうか
 
-```
+```console
 $ diskutil eraseDisk JHFS+ SecretDisk2 GPT /dev/disk3s1
 A volume was specified instead of a whole disk: /dev/disk3s1
 Specify a whole disk, or instead use diskutil eraseVolume to erase a volume on a specific partition
@@ -125,14 +125,14 @@ Specify a whole disk, or instead use diskutil eraseVolume to erase a volume on a
 
 他のもいじって試していたら
 
-```
+```console
 $ diskutil partitionDisk /Volumes/SecretDisk2 2 GPT JHFS+ JHFS+
 /Volumes/SecretDisk2 does not appear to be a whole disk
 ```
 
 指定が間違っているだけっぽいな。`/dev/disk3`か。
 
-```
+```console
 diskutil eraseDisk JHFS+ SecretDisk2 GPT /dev/disk3
 ```
 

@@ -115,7 +115,7 @@ dotfiles以下だけdotなしにするのをやめた。
 
 ワンライナーでスタートアップが行えるようなbootstrap.shを作った。
 
-```
+```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/ikuwow/dotfiles/master/bootstrap.sh)"
 ```
 

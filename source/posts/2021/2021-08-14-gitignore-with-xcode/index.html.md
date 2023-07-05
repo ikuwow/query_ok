@@ -22,7 +22,7 @@ http://gitignore.io という指定したIDEなどのgitignoreを出力してく
 
 最終的に以下のようにして、エラーがでなくなることを確認した。
 
-```
+```gitignore
 # Xcode (from gitignore.io)
 build/
 *.pbxuser

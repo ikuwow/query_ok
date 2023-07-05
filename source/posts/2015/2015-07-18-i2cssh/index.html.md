@@ -23,7 +23,7 @@ iTermを使いたい。そんな中探していたのがi2cssh。
 
 インストールはgemで行う。
 
-```
+```bash
 gem install i2cssh
 ```
 
@@ -46,7 +46,7 @@ Host host3
    Port 12345
 ```
 
-```
+```bash
 i2cssh host1 host2 host3
 ```
 

@@ -22,7 +22,7 @@ tags: Middleman
 
 さっそく立ち上がらない。
 
-```
+```console
 $ bundle exec middleman
 /Users/username/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bundler-1.11.2/lib/bundler/runtime.rb:80:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'middleman-inliner'. (Bundler::GemRequireError)
 	from /Users/username/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bundler-1.11.2/lib/bundler/runtime.rb:76:in `block (2 levels) in require'
@@ -45,7 +45,7 @@ $ bundle exec middleman
 
 そしたら次のエラー。
 
-```
+```console
 $ bundle exec middleman
 /Users/username/workspace/query_ok/vendor/bundle/ruby/2.2.0/gems/middleman-core-4.1.7/lib/middleman-core/extensions.rb:96:in `load': Tried to activate old-style extension: deploy. They are no longer supported. (RuntimeError)
 	from /Users/username/workspace/query_ok/vendor/bundle/ruby/2.2.0/gems/middleman-core-4.1.7/lib/middleman-core/extensions.rb:127:in `block in load_settings'
@@ -66,7 +66,7 @@ $ bundle exec middleman
 
 無事ビルトインサーバーが動いた。
 
-```
+```console
 $ bundle exec middleman
 == The Middleman is loading
 == Blog Sources: posts/{year}-{month}-{day}-{title}.html (:prefix + :sources)
@@ -78,7 +78,7 @@ $ bundle exec middleman
 
 ただ今度はsitemap.xmlを作成するときにエラーが。
 
-```
+```console
 $ bundle exec middleman
 /Users/username/workspace/query_ok/vendor/bundle/ruby/2.2.0/gems/middleman-sitemap-0.0.13/lib/middleman-sitemap/extension.rb:94:in `block in encode': undefined method `escape_html' for #<Middleman::Application:0x70297247099460> (NoMethodError)
 	from /Users/username/workspace/query_ok/vendor/bundle/ruby/2.2.0/gems/middleman-sitemap-0.0.13/lib/middleman-sitemap/extension.rb:94:in `map'

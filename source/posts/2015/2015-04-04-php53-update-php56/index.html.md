@@ -133,7 +133,7 @@ echo foo($a);
 影響の大きい変更ではあるもののSyntax Errorなので、
 以下のように全ファイルに文法チェックを行えば動作を確認しなくても修正ポイントが発見できる。
 
-```
+```bash
 find /path/to/app -name *.php -exec php -l {} \;
 ```
 

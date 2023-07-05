@@ -32,7 +32,7 @@ https://docs.brew.sh/Installation
 
 ワンライナーのスクリプトはまだARM版インストールに対応しておらず怒られる。
 
-```
+```console
 Error: Cannot install in Homebrew on ARM processor in Intel default prefix (/usr/local)!
 Please create a new installation in /opt/homebrew using one of the
 "Alternative Installs" from:

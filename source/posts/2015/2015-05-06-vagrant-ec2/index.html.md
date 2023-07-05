@@ -16,7 +16,7 @@ published: false
 まずはvagrant-awsをインストールする。詳細はこちらから。
 https://github.com/mitchellh/vagrant-aws
 
-```
+```bash
 vagrant plugin install vagrant-aws
 ```
 
@@ -40,7 +40,7 @@ dummyのboxが必要なようで、これを"dummy"という名前にアサイ�
 
 usernameはきちんと決めないといけない。
 
-```
+```console
 ==> default: Warning! The AWS provider doesn't support any of the Vagrant
 ==> default: high-level network configurations (`config.vm.network`). They
 ==> default: will be silently ignored.
@@ -55,7 +55,7 @@ usernameはきちんと決めないといけない。
 
 ### エラー対策
 
-```
+```console
 The following SSH command responded with a non-zero exit status.
 Vagrant assumes that this means the command failed!
 
@@ -72,7 +72,7 @@ sudo: sorry, you must have a tty to run sudo
 
 以上の様なエラーが起きた時は、以下のように/etc/sudoers中のrequirettyをコメントアウトすると治る。
 
-```
+```console
 # これをコメントアウトする
 # Defaults    requiretty
 ```

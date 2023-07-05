@@ -29,7 +29,7 @@ middleman-syntaxというプラグインを使えばシンタックスハイラ�
 
 ディレクトリ構成は以下のようになっている。公式ドキュメントから引用。
 
-```
+```console
 mymiddlemansite/
 +-- .gitignore
 +-- Gemfile

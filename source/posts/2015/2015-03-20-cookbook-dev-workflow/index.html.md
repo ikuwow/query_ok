@@ -244,7 +244,7 @@ https://supermarket.chef.io/cookbooks/selinux
 dependsという項目に依存cookbookを書く。
 ついでにmaintainerなどの必要事項を書き足しておく。
 
-```
+```ruby
 name             'base-settings'
 depends          'selinux', '~> 0.9.0'
 maintainer       'ikuwow'
@@ -257,7 +257,7 @@ version          '0.1.0'
 
 またBerksfileを作成して以下のようにする。`berks init`で様々作成できるがこれは使わない。
 
-```
+```ruby
 source "https://supermarket.chef.io"
 
 metadata
@@ -373,7 +373,7 @@ https://supermarket.chef.io/cookbooks/openssh
 
 依存クックブックを解決するために`metadata.rb`に追加。
 
-```
+```ruby
 name             'base-settings'
 depends          'selinux', '~> 0.9.0'
 depends          'openssh', '~> 1.3.4'
