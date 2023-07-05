@@ -9,7 +9,6 @@ tags: UNIX, LT
 
 <script async class="speakerdeck-embed" data-id="48fd45c2f6594e818a8376de97aef46f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-
 2001年発売の本だがそんなに古くない。なぜならもうUNIXは40年以上続いているから。
 
 2年ほど前にAmazonで出会ってジャケ買いしてからずっと崇め奉ってきた本。

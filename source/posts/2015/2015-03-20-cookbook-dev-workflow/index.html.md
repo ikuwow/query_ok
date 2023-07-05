@@ -18,7 +18,6 @@ Chefはchefdkでインストールしてあるものとする。
 
 ## Cookbookの作成
 
-
 新しいCookbookを作る場合は以下のコマンドで作る。
 
 ```bash
@@ -153,8 +152,7 @@ recipeもテストコードはなにも書いていないので何も実行さ�
 
 ここまででtest-kitchenの最低限の設定は完了。この辺りで`git commit`しておくとよい。
 
-
-##  レシピを書いてテストコードを回す
+## レシピを書いてテストコードを回す
 
 設定がだいたい終わったので、早速テストコードとrecipeを書く。
 テストコードはserverspecで書くので、
@@ -228,7 +226,6 @@ $ kitchen test --destroy=never -c
 無事にレシピを適用できテストも通過した。
 神経質な人は`kitchen login default-centos-66`でsshログインして手動で確認すればよい。
 
-
 ## 依存cookbookの解決
 
 supermarket.chef.ioにあるコミュニティクックブックはぜひ積極的に使いましょう。
@@ -247,7 +244,7 @@ https://supermarket.chef.io/cookbooks/selinux
 dependsという項目に依存cookbookを書く。
 ついでにmaintainerなどの必要事項を書き足しておく。
 
-```
+```ruby
 name             'base-settings'
 depends          'selinux', '~> 0.9.0'
 maintainer       'ikuwow'
@@ -260,7 +257,7 @@ version          '0.1.0'
 
 またBerksfileを作成して以下のようにする。`berks init`で様々作成できるがこれは使わない。
 
-```
+```ruby
 source "https://supermarket.chef.io"
 
 metadata
@@ -360,10 +357,8 @@ describe selinux do
 end
 ```
 
-
 `git commit`する前に`Berksfile.lock`はバージョン管理しないことが推奨されるので、
 .gitignoreに追加しておいたほうがよい。
-
 
 ## attributesの使い方
 
@@ -378,7 +373,7 @@ https://supermarket.chef.io/cookbooks/openssh
 
 依存クックブックを解決するために`metadata.rb`に追加。
 
-```
+```ruby
 name             'base-settings'
 depends          'selinux', '~> 0.9.0'
 depends          'openssh', '~> 1.3.4'
@@ -412,7 +407,6 @@ kitchen test --destroy=never -c
 nodesやenvironmentsにはjsonで書くがこちらはyamlなので注意。
 
 https://github.com/opscode-cookbooks/openssh/blob/master/attributes/default.rb
-
 
 `.kitchen.yaml`
 
@@ -471,7 +465,6 @@ $ kitchen converge
 ```
 
 /etc/ssh/sshd\_configに二行追加されて、restartがnotifyされて無事適用された。
-
 
 ## data bagsの使い方
 
@@ -582,7 +575,6 @@ kitchen converge && kitchen verify
 ```
 
 これで`iku`ユーザーと`wow`ユーザーが作成される。
-
 
 ## まとめ
 

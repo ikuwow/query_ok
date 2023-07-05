@@ -29,7 +29,7 @@ middleman-syntaxというプラグインを使えばシンタックスハイラ�
 
 ディレクトリ構成は以下のようになっている。公式ドキュメントから引用。
 
-```
+```console
 mymiddlemansite/
 +-- .gitignore
 +-- Gemfile
@@ -67,7 +67,6 @@ GitHub Pagesと合わせて`git push origin master`でデプロイするよう�
 どうやらMiddlemanは日本だけでなく海外でもそこまで知名度は高くないようで、
 これからの発展に期待。
 
-
 Middlemanはもっと普及すべき！
 
 ## Pure.css
@@ -87,7 +86,6 @@ Pureの方は最近もどんどん開発が進んでいる。記事執筆現在�
 軽くてとってもよいかんじ。
 
 ## 記事を書くスタイル
-
 
 * いつものテキストエディタで、
 * Markdownで、

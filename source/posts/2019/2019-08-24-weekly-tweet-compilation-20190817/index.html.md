@@ -8,7 +8,6 @@ tags: Weekly
 
 https://twitter.com/ikuwow/status/1162717132561321985
 
-
 コマンドの長さに応じて自動的に通知を出す仕組みがあると更によさそうなのでそのうちやる。
 zshだと楽そうだがシェルスクリプターとしてはやはり引き続きbashで行きたいのでこの方法で頑張る。
 https://bearmini.hatenablog.com/entry/2016/02/16/222057

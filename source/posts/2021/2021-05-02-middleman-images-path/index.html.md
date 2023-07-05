@@ -12,7 +12,7 @@ Middleman Blogの今の設定だと、全画像を共通の1つの階層に入�
 
 以前までのこれを、
 
-```
+```console
 source
 └posts
   └2021-01-01-title.html.md
@@ -22,14 +22,13 @@ source
 
 日付部分で記事との対応を取っていて冗長。.mdで画像のパスを指定するのも面倒なのでこうした
 
-```
+```console
 source
 └posts
   └2021-01-01-title
     └index.html.md
     └someimage.png
 ```
-
 
 ## Middlemanの設定
 
@@ -47,7 +46,6 @@ end
 PR https://github.com/ikuwow/query_ok/pull/231
 
 参考 https://webfood.info/middleman-blog-how-to-manage-images-with-article/
-
 
 ```bash
 $ bundle exec middleman article foobar

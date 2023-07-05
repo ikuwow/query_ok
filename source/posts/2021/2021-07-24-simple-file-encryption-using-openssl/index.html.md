@@ -24,7 +24,6 @@ opensslのサブコマンドのマニュアルの見方がわからず参照し�
 
 ## 準備
 
-
 準備するものは以下の2つ。
 
 * 暗号化したい対象のテキストファイル `rawtext.txt`
@@ -33,7 +32,6 @@ opensslのサブコマンドのマニュアルの見方がわからず参照し�
 ちなみにパスワードは1行目にずらずらっと書く必要があるようです。
 
 これらから暗号化ファイル`encrypted.txt`を出力して、それを`decrypted.txt`に復号します。これが`rawtext.txt`と一致するはず。
-
 
 ## 暗号化
 
@@ -53,14 +51,14 @@ openssl aes-256-cbc -e -in rawtext.txt -out encrypted.txt -pass file:./password.
 
 ## 復号
 
-### パスワードを標準入力から取得する場合
+### パスワードを標準入力から取得する場合 (復号)
 
 ```bash
 $ openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt
 enter aes-256-cbc decryption password: # パスワードを入力
 ```
 
-### パスワードをファイルから読み込む場合
+### パスワードをファイルから読み込む場合 (復号)
 
 ```bash
 openssl aes-256-cbc -d -in encrypted.txt -out decrypted.txt -pass file:./password.txt
@@ -82,4 +80,3 @@ Chefのencrypted data bagみたいに、公開したくない情報をgithubへ�
 
 「パスワード」と「パスフレーズ」の違い。この記事を書いていたら気になったので。
 https://technet.microsoft.com/ja-jp/library/dd362846.aspx
-

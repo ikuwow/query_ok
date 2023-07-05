@@ -74,7 +74,6 @@ gem的にはこちらを見ればだいたいわかる。
 
 [Bundler: How to create a Ruby gem with Bundler](https://bundler.io/guides/creating_gem.html)
 
-
 RubyでCLIを作るなら[Thor](http://whatisthor.com)が鉄板。引数やオプションがいい感じに使える。
 
 CLIのテストは[Aruba](https://github.com/cucumber/aruba)がよさそう。これはRubyに限らずCLIに対してなら使える。

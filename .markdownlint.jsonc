@@ -1,20 +1,14 @@
 // vim: set filetype=jsonc :
 {
-  "MD003": false,
-  "MD007": false,
-  "MD009": false,
-  "MD010": false,
-  "MD012": false,
-  "MD019": false,
-  "MD022": false,
-  "MD024": false,
-  "MD026": false,
-  "MD028": false,
-  "MD029": false,
+  // Hard tabs
+  "MD010": { "code_blocks": false },
+
+  // line-length
   "MD013": false,
-  "MD032": false,
+
+  // no-inline-html
   "MD033": false,
-  "MD034": false,
-  "MD037": false,
-  "MD040": false
+
+  // no-bare-urls
+  "MD034": false
 }

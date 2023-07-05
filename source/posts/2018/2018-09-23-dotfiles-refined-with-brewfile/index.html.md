@@ -30,7 +30,6 @@ Macだとhomebrewなどで必要なパッケージを入れる処理を別途書
 
 ### homebrew-bundleを使い始めた
 
-
 > 📦 Bundler for non-Ruby dependencies from Homebrew  
 > https://github.com/Homebrew/homebrew-bundle
 
@@ -116,7 +115,7 @@ dotfiles以下だけdotなしにするのをやめた。
 
 ワンライナーでスタートアップが行えるようなbootstrap.shを作った。
 
-```
+```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/ikuwow/dotfiles/master/bootstrap.sh)"
 ```
 

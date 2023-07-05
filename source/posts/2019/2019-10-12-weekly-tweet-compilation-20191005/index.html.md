@@ -12,7 +12,6 @@ https://twitter.com/ikuwow/status/1180319750519312384
 
 https://twitter.com/ikuwow/status/1180755792925839361
 
-
 https://twitter.com/ikuwow/status/1180760527737217024
 
 https://twitter.com/ikuwow/status/1180766266606252032

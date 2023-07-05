@@ -15,7 +15,6 @@ thumbnail:
 
 ---
 
-
 開発デバイスごとに落ちる箇所が変わるという謎現象に見舞われ、.gitignoreファイルを見なおしてみた。
 
 http://github.com/github/gitignore というGitHub公式のリポジトリがあり、そこに各言語やIDEのためのgitignoreの書き方が載っているので、ここに従う。
@@ -23,7 +22,7 @@ http://gitignore.io という指定したIDEなどのgitignoreを出力してく
 
 最終的に以下のようにして、エラーがでなくなることを確認した。
 
-```
+```gitignore
 # Xcode (from gitignore.io)
 build/
 *.pbxuser

@@ -19,7 +19,6 @@ https://twitter.com/ikuwow/status/1168399843867258880
 
 Webpackのチュートリアルを一通りやり終えて「完全に理解した」状態にはなった。
 
-
 https://twitter.com/ikuwow/status/1168428354015383553
 
 これは普通にconfig.rbでignoreしてやったら普通にできた。
