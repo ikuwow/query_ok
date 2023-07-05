@@ -30,7 +30,6 @@ source
     └someimage.png
 ```
 
-
 ## Middlemanの設定
 
 結局config.rbをこうするだけでできた。もちろんURLは変わらず。
@@ -47,7 +46,6 @@ end
 PR https://github.com/ikuwow/query_ok/pull/231
 
 参考 https://webfood.info/middleman-blog-how-to-manage-images-with-article/
-
 
 ```bash
 $ bundle exec middleman article foobar

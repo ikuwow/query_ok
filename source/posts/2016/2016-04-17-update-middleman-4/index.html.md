@@ -16,7 +16,6 @@ tags: Middleman
 > Middleman: v4 へのアップグレード  
 > https://middlemanapp.com/jp/basics/upgrade-v4/
 
-
 ## 手順
 
 まず`Gemfile`のバージョン指定を全部外して`bundle update`。依存しているものも含め全てが最新にアップデートされる。Middlemanは4.1.7になった。

@@ -36,10 +36,7 @@ Vagrant用に新しくIAMでユーザーを作成するのをオススメ。
 
 dummyのboxが必要なようで、これを"dummy"という名前にアサインする。
 
-
-
 コードは以下のとおり
-
 
 usernameはきちんと決めないといけない。
 
@@ -83,7 +80,6 @@ sudo: sorry, you must have a tty to run sudo
 新しくマシンを立ち上げるたびにこれをするのはさすがに面倒なので、
 AMIを作ってしまうというのを非常におすすめする。
 
-
 ## vagrant-digitalocean
 
 DigitalOceanはSSDのVPSのみを作れるサービス。
@@ -92,6 +88,5 @@ UIや設定項目はすごくシンプルで、価格も結構安い。
 ### API keyの取得
 
 一度しか保存できるタイミングがないので必ず保存して安全な場所に管理しておくこと。
-
 
 ### vagrantfileを書く

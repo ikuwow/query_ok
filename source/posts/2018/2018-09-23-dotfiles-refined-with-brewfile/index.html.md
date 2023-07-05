@@ -30,7 +30,6 @@ Macだとhomebrewなどで必要なパッケージを入れる処理を別途書
 
 ### homebrew-bundleを使い始めた
 
-
 > 📦 Bundler for non-Ruby dependencies from Homebrew  
 > https://github.com/Homebrew/homebrew-bundle
 

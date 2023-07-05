@@ -20,6 +20,5 @@ Text before url: https://twitter.com/ikuwow/status/1670067015103705090
 
 https://twitter.com/ikuwow/status/1670067015103705090 # Text after url
 
-
 spaces
   https://twitter.com/ikuwow/status/1670067015103705090

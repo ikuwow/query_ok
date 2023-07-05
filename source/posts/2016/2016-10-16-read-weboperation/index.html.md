@@ -10,7 +10,6 @@ O'Reillyのウェブオペレーションという本を読んだ。
 <!-- ウェブオペレーション -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114934/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/51-ThZ6FRfL._SL75_.jpg" width="59" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114934/ikuwow-22/" rel="nofollow" target="_blank">ウェブオペレーション ―サイト運用管理の実践テクニック (THEORY/IN/PRACTICE)</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">オライリージャパン</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
-
 サイト運用管理の実践テクニックということで、様々な人が書いた
 ウェブサイトやアプリケーションの管理や運用で四苦八苦したコラム集のような本。
 それぞれに教訓があってかなりいろんなものが得られる。
@@ -37,7 +36,6 @@ Webサービスにおけるリレーショナルデータベースには何が�
 トランザクションと言っても`BEGIN;`から始まって`ROLLBACK;`か`COMMIT;`で終わるアレではなく、
 単に「データの読み書き」のことを言っているらしい。
 多くのアプリケーションは読み込み対書き込みが9:1など読み込み処理のほうが多い。
-
 
 ### 3. シンプルなデータ・シンプルなクエリ
 

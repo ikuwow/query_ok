@@ -15,7 +15,6 @@ thumbnail:
 
 ---
 
-
 開発デバイスごとに落ちる箇所が変わるという謎現象に見舞われ、.gitignoreファイルを見なおしてみた。
 
 http://github.com/github/gitignore というGitHub公式のリポジトリがあり、そこに各言語やIDEのためのgitignoreの書き方が載っているので、ここに従う。

@@ -24,7 +24,6 @@ opensslのサブコマンドのマニュアルの見方がわからず参照し�
 
 ## 準備
 
-
 準備するものは以下の2つ。
 
 * 暗号化したい対象のテキストファイル `rawtext.txt`
@@ -33,7 +32,6 @@ opensslのサブコマンドのマニュアルの見方がわからず参照し�
 ちなみにパスワードは1行目にずらずらっと書く必要があるようです。
 
 これらから暗号化ファイル`encrypted.txt`を出力して、それを`decrypted.txt`に復号します。これが`rawtext.txt`と一致するはず。
-
 
 ## 暗号化
 
@@ -82,4 +80,3 @@ Chefのencrypted data bagみたいに、公開したくない情報をgithubへ�
 
 「パスワード」と「パスフレーズ」の違い。この記事を書いていたら気になったので。
 https://technet.microsoft.com/ja-jp/library/dd362846.aspx
-

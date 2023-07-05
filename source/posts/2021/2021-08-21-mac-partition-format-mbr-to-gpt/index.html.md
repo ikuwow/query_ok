@@ -84,7 +84,6 @@ Example: diskutil eraseDisk JHFS+ UntitledUFS disk3
 
 ![ 2017-09-29 at 20.12.24.png](3.png)
 
-
 ## 右往左往していたログ
 
 マウントポイント指定でうまく行かず、間違ったDeviceNodeIDを指定していて詰まっていた。
@@ -142,4 +141,3 @@ diskutil eraseDisk JHFS+ SecretDisk2 GPT /dev/disk3
 ## 参考
 
 http://osxdaily.com/2016/08/30/erase-disk-command-line-mac/
-

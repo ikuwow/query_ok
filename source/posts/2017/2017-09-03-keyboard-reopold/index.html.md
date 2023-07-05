@@ -41,7 +41,6 @@ Happy Hacking Keyboard Professional 2(以下HHKB Pro2）が有名で、
 
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00PINUFDQ/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/41g6bCKZ%2B4L._SL75_.jpg" width="75" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00PINUFDQ/ikuwow-22/" rel="nofollow" target="_blank">LEOPOLD 静電容量無接点スイッチ採用コンパクトキーボード 英語ASCII配列66キー ブラック FC660C/EG</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">LEOPOLD</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
-
 キーボードの選ぶ条件にしていたのが以下の通り。
 一応このFC660Cは全て満たしていた。
 
@@ -50,7 +49,6 @@ Happy Hacking Keyboard Professional 2(以下HHKB Pro2）が有名で、
 * テンキーなし（横幅狭くてコンパクト）
 * Macで使いやすい（あまり設定を変えすぎないように）
 * 上に上げたHHKB Pro2の問題を解決するもの
-
 
 パッケージ
 
@@ -99,7 +97,6 @@ Modifier Keysで行う変更に関しては自分の中ではセーフ。
 
 また`` ` `` `~`はESCキーと同じ位置にあって、Fn+QでESCと切り替えられるかたち。
 コードを書く際は常に前者にしているが、何か現れてキャンセルしたいときはキーボードの左上をとりあえず押しておくという癖が抜けずにすこし間違う。
-
 
 ---
 

@@ -18,7 +18,6 @@ Chefはchefdkでインストールしてあるものとする。
 
 ## Cookbookの作成
 
-
 新しいCookbookを作る場合は以下のコマンドで作る。
 
 ```bash
@@ -153,7 +152,6 @@ recipeもテストコードはなにも書いていないので何も実行さ�
 
 ここまででtest-kitchenの最低限の設定は完了。この辺りで`git commit`しておくとよい。
 
-
 ##  レシピを書いてテストコードを回す
 
 設定がだいたい終わったので、早速テストコードとrecipeを書く。
@@ -227,7 +225,6 @@ $ kitchen test --destroy=never -c
 
 無事にレシピを適用できテストも通過した。
 神経質な人は`kitchen login default-centos-66`でsshログインして手動で確認すればよい。
-
 
 ## 依存cookbookの解決
 
@@ -360,10 +357,8 @@ describe selinux do
 end
 ```
 
-
 `git commit`する前に`Berksfile.lock`はバージョン管理しないことが推奨されるので、
 .gitignoreに追加しておいたほうがよい。
-
 
 ## attributesの使い方
 
@@ -412,7 +407,6 @@ kitchen test --destroy=never -c
 nodesやenvironmentsにはjsonで書くがこちらはyamlなので注意。
 
 https://github.com/opscode-cookbooks/openssh/blob/master/attributes/default.rb
-
 
 `.kitchen.yaml`
 
@@ -471,7 +465,6 @@ $ kitchen converge
 ```
 
 /etc/ssh/sshd\_configに二行追加されて、restartがnotifyされて無事適用された。
-
 
 ## data bagsの使い方
 
@@ -582,7 +575,6 @@ kitchen converge && kitchen verify
 ```
 
 これで`iku`ユーザーと`wow`ユーザーが作成される。
-
 
 ## まとめ
 

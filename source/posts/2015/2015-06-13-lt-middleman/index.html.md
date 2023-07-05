@@ -11,7 +11,6 @@ tags: Middleman, LT
 
 <script async class="speakerdeck-embed" data-id="18a1f3f17c3d49b794330544c6f3dc95" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-
 ## 初めてのLT
 
 ふとしたきっかけで「LTでてみなよ！」と言われてぶっこんでみたのがきっかけ。
@@ -25,9 +24,7 @@ react.jsのよさについてわかりやすく説明していただいた。
 あとからHTMLだけ見た時にどのJSがそのDOMを操作しているのかが見えないから本当にやりづらい。
 コードを書く量が多少増えても、コードを読むコストをぐっと下げようというポリシーが好き。
 
-
 社内にいてばかりだとどうしても考えが偏るから、ちゃんと勉強会いっていろんな人と話すの大事。
 いろんな人と話せて本当に勉強になりました。teratailステッカーも配れたし大満足。
-
 
 ちなみにMiddlemanでどんなふうにブログを作ったかは[以前の記事](/entry/blog-with-middleman/)を参照。
