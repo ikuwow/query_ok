@@ -106,7 +106,7 @@ https://twitter.com/ikuwow/status/1027593697544663042
 
 > LPI-JapanがLinuxの新資格「LinuC」を立ち上げ、LPICは継続
 > https://tech.nikkeibp.co.jp/it/atcl/news/17/020503101/
-
+>
 > 「Linuxは各国でシェアの高いLinuxディストリビューションが異なるなど、スキルの地域性が高い」
 
 LPICは基本的にはディストリビューションを問わない試験内容を目指していたはずだけど🤔

@@ -101,18 +101,18 @@ dotfilesやブログみたいな些細な事でもいいので、
 
 > 毎日コードを書くこと - Lento con forza  
 > http://kouki.hatenadiary.com/entry/2014/05/10/223250
-
+>
 > 毎日コードを書くこと - snowlongの日記  
 > http://snowlong.hatenablog.com/entry/2014/04/18/毎日コードを書くこと
-
+>
 > 毎日コードを書くこと - ami_GS's diary  
 > http://ami-gs.hatenablog.com/entry/2014/04/23/212205
-
+>
 > 毎朝5時に起きてコードを書くソフトウェアエンジニア - Higepon’s blog  
 > http://d.hatena.ne.jp/higepon/20140623/1403498563
-
+>
 > For X Developers: 「プログラミング上達がはやいヤツの特徴10個」を9ヶ月間実践してわかったこと  
 > http://yutarotanaka.com/blog/10features-for-progress-in-programming/
-
+>
 > 毎日コードを書くことと、それにまつわること  
 > http://ksoichiro.blogspot.jp/2015/07/blog-post.html
