@@ -175,6 +175,7 @@ This filesystem will be automatically checked every 30 mounts or
 ```
 
 ## マウントする
+
 `/mnt/backup_exHDD`ディレクトリを作成して、そこにマウント。ディレクトリ名はもちろん任意。
 
 ```bash:
