@@ -3,7 +3,9 @@
   // Hard tabs
   "MD010": { "code_blocks": false },
 
+  // line-length
   "MD013": false,
+
   "MD032": false,
   "MD033": false,
   "MD034": false,
