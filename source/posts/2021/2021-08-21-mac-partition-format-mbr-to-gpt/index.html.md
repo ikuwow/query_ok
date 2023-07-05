@@ -98,7 +98,7 @@ $ diskutil info "Secret Disk" | grep Device\ Node
 
 今回はSecret Diskを消したいので`/dev/disk3s1`。
 
-Mac OS Extended Journaled (JHFS+) 
+Mac OS Extended Journaled (JHFS+)
 
 ```
 diskutil eraseDisk JHFS+ SecretDisk2 /dev/disk3s1 GPT
