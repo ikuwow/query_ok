@@ -29,7 +29,7 @@
     "markdownlint-cli2": "^0.9.2",
     "sass": "^1.64.2",
     "sass-loader": "^13.3.1",
-    "stylelint": "^15.10.2",
+    "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^10.0.0",
     "textlint": "^13.3.3",
