@@ -21,6 +21,7 @@ tags:
 Happy Hacking Keyboard Professional 2(以下HHKB Pro2）が有名で、
 オフィスで使っていたが問題を感じていた。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000EXZ0VC/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/31mbFhuOQvL._SL75_.jpg" width="75" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000EXZ0VC/ikuwow-22/" rel="nofollow" target="_blank">PFU Happy Hacking Keyboard Professional2 墨 英語配列 静電容量無接点 USBキーボード Nキーロールオーバー UNIX配列 WINDOWS/MAC両対応 ブラック PD-KB400B</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">PFU</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 1つは、矢印キーがない。
@@ -39,6 +40,7 @@ Happy Hacking Keyboard Professional 2(以下HHKB Pro2）が有名で、
 
 そこで見つけたのがこのLEOPOLD FC660C。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00PINUFDQ/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/41g6bCKZ%2B4L._SL75_.jpg" width="75" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00PINUFDQ/ikuwow-22/" rel="nofollow" target="_blank">LEOPOLD 静電容量無接点スイッチ採用コンパクトキーボード 英語ASCII配列66キー ブラック FC660C/EG</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">LEOPOLD</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 キーボードの選ぶ条件にしていたのが以下の通り。
