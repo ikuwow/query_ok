@@ -152,6 +152,7 @@ Macを使うことは人権と同等とみなされている価値観がそこ�
 仕事中ずっと本を読んでいる時間があったりします。
 最近はユーザーストーリーマッピングを読みました。とても学びが多いのでオススメです。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873117321/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/51MlUN5G99L._SL75_.jpg" width="53" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873117321/ikuwow-22/" rel="nofollow" target="_blank">ユーザーストーリーマッピング</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">Jeff Patton</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 ## 仕事以外だとどうなの
@@ -174,6 +175,7 @@ Macを使うことは人権と同等とみなされている価値観がそこ�
 ブッダはものすごく現実主義でとてもためになるのでおすすめ。
 いつの間にかKindle版が発売されていたので書い直そうか検討中です。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4003330110/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/51J49A38T8L._SL75_.jpg" width="52" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4003330110/ikuwow-22/" rel="nofollow" target="_blank">ブッダのことば―スッタニパータ (岩波文庫)</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">岩波書店</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 あと11/17に発売されたポケットモンスターウルトラムーンをプレイしていて、図鑑は完成し、今はレーティングバトルを楽しんでいます。

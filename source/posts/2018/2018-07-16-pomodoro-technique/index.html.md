@@ -8,11 +8,13 @@ tags:
 ポモドーロテクニックというものを前から知ってはいたが、
 強めの課題意識ができたのと、ちゃんとしたやたことがなかったので一次情報をあたって実際に実践してみた。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048689525/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/51ByQvQe1%2BL._SL75_.jpg" width="52" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048689525/ikuwow-22/" rel="nofollow" target="_blank">アジャイルな時間管理術 ポモドーロテクニック入門</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">Staffan Noeteberg</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 日本語版が絶版だったので定価より高い入手になってしまった。
 翻訳があまりよろしくないというレビューも多かったしKindle版もないので原著を読んでもいいかもしれない。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/1934356506/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/51P8HuDM4-L._SL75_.jpg" width="63" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/1934356506/ikuwow-22/" rel="nofollow" target="_blank">Pomodoro Technique Illustrated: The Easy Way to Do More in Less Time (Pragmatic Life)</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">Staffan Noteberg</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 ## Pomodoroテクニックとはなにか

@@ -7,6 +7,7 @@ tags:
 
 年始に読んだのでメモ。
 
+<!-- markdownlint-disable MD045 -->
 <div class="babylink-box" style="overflow: hidden; font-size: small; zoom: 1; margin: 15px 0; text-align: left;"><div class="babylink-image" style="float: left; margin: 0px 15px 10px 0px; width: 75px; height: 75px; text-align: center;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873117917/ikuwow-22/" rel="nofollow" target="_blank"><img style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none;" src="https://images-fe.ssl-images-amazon.com/images/I/51Ybz%2B6kIsL._SL75_.jpg" width="59" height="75" /></a></div><div class="babylink-info" style="overflow: hidden; zoom: 1; line-height: 120%;"><div class="babylink-title" style="margin-bottom: 2px; line-height: 120%;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873117917/ikuwow-22/" rel="nofollow" target="_blank">SRE サイトリライアビリティエンジニアリング ―Googleの信頼性を支えるエンジニアリングチーム</a></div><div class="babylink-manufacturer" style="margin-bottom: 5px;">オライリージャパン</div></div><div class="booklink-footer" style="clear: left"></div></div>
 
 Googleの提唱するSREという概念（役割？）について説明された本。
