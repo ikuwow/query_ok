@@ -171,7 +171,7 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.31.1)
       parser (>= 3.3.0.4)
-    ruby-oembed (0.16.1)
+    ruby-oembed (0.17.0)
     ruby-progressbar (1.13.0)
     sassc (2.4.0)
       ffi (~> 1.9)
