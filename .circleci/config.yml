@@ -9,7 +9,7 @@ executors:
   default:
     working_directory: ~/project
     docker:
-      - image: cimg/ruby:3.2.2-node
+      - image: cimg/ruby:3.3-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
 
@@ -18,7 +18,7 @@ commands:
     parameters:
       bundle_cache_version:
         type: string
-        default: v6
+        default: v7
     steps:
       - run:
           name: Update bundler to latest
@@ -45,7 +45,7 @@ commands:
     parameters:
       npm_cache_version:
         type: string
-        default: v4
+        default: v5
     steps:
       - restore_cache:
           keys:
