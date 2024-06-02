@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ruby '3.3.1'
+ruby file: ".tool-versions"
 
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
