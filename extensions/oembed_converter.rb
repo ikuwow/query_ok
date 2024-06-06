@@ -12,7 +12,12 @@ class OEmbedConverter < Middleman::Extension
     # Currently only Twitter is supported
     @cache_dir = File.join(app.root, options.cache_dir)
 
-    OEmbed::Providers.register_all
+    # Create custom provider for Twitter/X until the following PR is merged
+    # https://github.com/ruby-oembed/ruby-oembed/pull/97
+    twitter_provider = OEmbed::Provider.new("https://publish.twitter.com/oembed", format: :json)
+    twitter_provider << "https://*.twitter.com/*/status/*"
+    twitter_provider << "https://*.x.com/*/status/*"
+    OEmbed::Providers.register(twitter_provider)
 
     app.before_render do |body, path|
       convert(body) if path.end_with?('.md', '.markdown', '.mkd')
@@ -35,7 +40,7 @@ class OEmbedConverter < Middleman::Extension
       {
         name: 'twitter',
         # yushakobo is ignored
-        regex: %r{^https?://twitter.com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$},
+        regex: %r{^https?://(twitter|x).com/(?!yushakobo)[a-zA-Z0-9_]+/status/\d+$},
         query: { omit_script: '1' }
       }
     ]
