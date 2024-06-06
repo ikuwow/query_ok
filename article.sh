@@ -2,6 +2,11 @@
 
 set -eu
 
+if [ -z "${1:-}" ]; then
+  echo "Usage: $0 <title>"
+  exit 1
+fi
+
 title="$1"
 
 git fetch
