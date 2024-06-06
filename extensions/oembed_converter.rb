@@ -14,9 +14,9 @@ class OEmbedConverter < Middleman::Extension
 
     # Create custom provider for Twitter/X until the following PR is merged
     # https://github.com/ruby-oembed/ruby-oembed/pull/97
-    twitter_provider = OEmbed::Provider.new("https://publish.twitter.com/oembed", format: :json)
-    twitter_provider << "https://*.twitter.com/*/status/*"
-    twitter_provider << "https://*.x.com/*/status/*"
+    twitter_provider = OEmbed::Provider.new('https://publish.twitter.com/oembed', format: :json)
+    twitter_provider << 'https://*.twitter.com/*/status/*'
+    twitter_provider << 'https://*.x.com/*/status/*'
     OEmbed::Providers.register(twitter_provider)
 
     app.before_render do |body, path|
