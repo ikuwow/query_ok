@@ -24,3 +24,6 @@ https://twitter.com/ikuwow/status/1670067015103705090 # Text after url
 
 spaces
   https://twitter.com/ikuwow/status/1670067015103705090
+
+nonexistent account
+https://twitter.com/yushakobo/status/1400366557415444481
