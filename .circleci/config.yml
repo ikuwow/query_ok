@@ -82,7 +82,7 @@ jobs:
           command: npm run stylelint
           when: always
       - run:
-          command: npx textlint source/posts/
+          command: npm run textlint
           when: always
   build:
     executor:
