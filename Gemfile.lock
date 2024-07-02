@@ -23,7 +23,7 @@ GEM
       erubi (~> 1.4)
       parser (>= 2.4)
       smart_properties
-    builder (3.2.4)
+    builder (3.3.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
