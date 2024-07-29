@@ -15,9 +15,9 @@ https://x.com/ikuwow/status/1816033410789568686
 
 590点で合格。正答率は以下の通り。
 
-* Full Virtualization 正答率75%
-* Container Virtualization 正答率72%
-* VM Deployment and Provisioning 正答率90%
+* Full Virtualization: 正答率75%
+* Container Virtualization: 正答率72%
+* VM Deployment and Provisioning: 正答率90%
 
 65-70%の得点で合格らしいがなんと8割近く得点できしっかりと合格ラインに乗れた。
 ずっと取ろう取ろうと思っていたLevel3を、しかもかなりの短期間に詰め込んで勉強したのでかなり達成感がある。
@@ -30,7 +30,7 @@ LPIC Level 2を取得したのが2018年の夏（参考: [LPIC level 2に2週間
 LPIC-3はLPIC-2がないと認定されない（受験はできるがLPIC-2の取得まで認定が保留にされる）ので、
 期限が切れる前に同じLPIC 201/202の試験に合格するか、上位のLevel3の試験に合格しなければならない。
 
-ただその時は[LPIのメンバーシップ](https://www.lpi.org/ja/member/)に申し込んだらなんと優位性の期限がさらに1年延長されることがわかり、
+ただその時は[LPIのメンバーシップ](https://www.lpi.org/ja/member/)に申し込むとなんと優位性の期限が1年延長されることがわかり、
 申し込んでお金の力で先延ばしにしたのであった。
 
 そんなこんなで1年が経過し2024/07/24の期限が近づいてきて、
@@ -41,7 +41,7 @@ LPIC-3はいくつか試験項目があるが、今までの経験や知識が�
 
 * 試験概要 https://www.lpi.org/ja/our-certifications/lpic-3-305-overview/
 * 試験範囲 https://www.lpi.org/ja/exam-305-objectives/
-  * 課題351: Full Virtualization (完全仮想化)
+  * 課題351: Full Virtualization (完全仮想化）
   * 課題352: コンテナ仮想化
   * 課題353: VMのデプロイとプロビジョニング
 

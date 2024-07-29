@@ -12,6 +12,7 @@
     "stylelint": "stylelint **/*.css **/*.scss",
     "markdownlint": "markdownlint-cli2 source/**/*.md",
     "textlint": "textlint source/posts/",
+    "textlint-fix": "textlint --fix source/posts/",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --config webpack.dev.js --watch"
   },
