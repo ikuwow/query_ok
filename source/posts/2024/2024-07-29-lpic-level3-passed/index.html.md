@@ -7,9 +7,9 @@ thumbnail:
 
 ---
 
-LPIC-3 305 「仮想化とコンテナ化」に合格した。
+LPIC-3 305「仮想化とコンテナ化」に合格した。
 
-まともに勉強した日数はなんと直前の4日間！ 試験資格の切れる当日に受験してギリギリ滑り込んだ形。
+まともに勉強した日数はなんと直前の4日間！　試験資格の切れる当日に受験してギリギリ滑り込んだ形。
 
 https://x.com/ikuwow/status/1816033410789568686
 
@@ -58,6 +58,7 @@ Dockerの比重は大きいがLXCもやるし、XenやKVM/QEMUを使った完全
 LPIC 305はまだ公式のテキストが出ていない（少なくとも日本語では）ので、ある程度試験範囲が被っている旧バージョンの304試験の黒本を使うことにした。
 （実は2023年の時点で購入していた）
 
+<!-- markdownlint-disable-next-line no-alt-text -->
 <div class="booklog_html"><table><tr><td class="booklog_html_image"><a href="https://www.amazon.co.jp/dp/4844380540?tag=hashiki88-22&linkCode=ogi&th=1&psc=1" target="_blank"><img src="https://m.media-amazon.com/images/I/51nloW4BtnL._SL160_.jpg" width="106" height="150" style="border:0;border-radius:0;" /></a></td><td class="booklog_html_info" style="padding-left:20px;"><div class="booklog_html_title" style="margin-bottom:10px;font-size:14px;font-weight:bold;"><a href="https://www.amazon.co.jp/dp/4844380540?tag=hashiki88-22&linkCode=ogi&th=1&psc=1" target="_blank">徹底攻略 LPIC Level3 304 教科書+問題集[Version 2.0]対応</a></div><div style="margin-bottom:10px;"><div class="booklog_html_author" style="margin-bottom:15px;font-size:12px;;line-height:1.2em">著者 : <a href="https://booklog.jp/author/%E7%B1%B3%E5%B1%B1%E5%AD%A6" target="_blank">米山学</a></div><div class="booklog_html_manufacturer" style="margin-bottom:5px;font-size:12px;;line-height:1.2em">インプレス</div><div class="booklog_html_release" style="font-size:12px;;line-height:1.2em">発売日 : 2016-04-28</div></div><div class="booklog_html_link_amazon"><a href="https://booklog.jp/item/1/4844380540" style="font-size:12px;" target="_blank">ブクログでレビューを見る»</a></div></td></tr></table></div>
 
 まず勉強を始める前の1日は心残りをなくして完全に集中できるようにした。洗濯とか皿洗いとか、睡眠負債の解消とか食べたいものを食べるとか。
@@ -108,7 +109,7 @@ IT系の資格なんてという話もあるが、自分にとっては勉強の
 
 そしてこのタイプの試験はあんまり試験勉強をするようなものではないと思った。
 
-例えば「 `docker run` 時に `--name` を指定しなかった場合にデフォルトでつけられる名前の可能性としてありうるものは以下のうちどれ？」のような、重箱の隅を突くような問題が出てくる。
+例えば「`docker run`時に`--name`を指定しない場合にデフォルトでつけられる名前の可能性としてありうるものは以下のうちどれ？」のような、重箱の隅を突くような問題が出てくる。
 
 この知識自体は本質ではないし、試せばすぐにわかるので記憶しておく意義は薄い。
 これを知っていて欲しいというよりも、「業務経験あるならこれわかるよね？」というタイプの問いなのだと思う。
