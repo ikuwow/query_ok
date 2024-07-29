@@ -8,7 +8,10 @@
         "max": 150
       },
       "no-doubled-joshi": {
-        "allow": ["も", "や", "に"]
+        "allow": ["も", "や", "に", "とか", "か", "が"]
+      },
+      "max-ten": {
+        "max": 4
       }
     },
     "preset-jtf-style": {
