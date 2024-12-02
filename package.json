@@ -37,7 +37,7 @@
     "textlint": "^14.4.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-japanese": "^10.0.3",
-    "textlint-rule-preset-jtf-style": "^2.3.14",
+    "textlint-rule-preset-jtf-style": "^3.0.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.1",
     "webpack-merge": "^6.0.1"
