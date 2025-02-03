@@ -6,7 +6,10 @@ ruby file: '.tool-versions'
 # the following line to use 'https'
 source 'https://rubygems.org'
 
-gem 'middleman', '4.5.0'
+# Latest commit on master branch at 2025/02/03
+# https://github.com/middleman/middleman/commit/18e328a14e7b816fb39304bde707b6f1b7e799cd
+gem 'middleman', git: 'https://github.com/middleman/middleman', ref: '18e328a14e7b816fb39304bde707b6f1b7e799cd'
+
 gem 'middleman-blog'
 gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
