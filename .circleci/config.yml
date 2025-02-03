@@ -70,7 +70,7 @@ jobs:
           command: bundle exec rubocop
           when: always
       - run:
-          command: bundle exec erblint source/**/*.erb
+          command: bundle exec erb_lint source/**/*.erb
           when: always
       - run:
           command: npm run markdownlint
