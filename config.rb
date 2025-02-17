@@ -78,3 +78,5 @@ Middleman::Extensions.register(:oembed_converter, OEmbedConverter)
 activate :oembed_converter do |converter|
   converter.cache_dir = '.cache/oembed_converter_v2/'
 end
+
+println "println does not exist in ruby"
