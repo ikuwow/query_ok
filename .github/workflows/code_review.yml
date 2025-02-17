@@ -21,7 +21,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Code Review GPT
-        uses: mattzcarey/code-review-gpt@v0.1.9
+        # uses: mattzcarey/code-review-gpt@v0.1.9
+        uses: ikuwow/code-review-gpt@support-openai-o3-mini
         with:
           MODEL: 'gpt-4o-mini'
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
