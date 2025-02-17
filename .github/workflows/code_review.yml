@@ -20,11 +20,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Code Review GPT
-        # uses: mattzcarey/code-review-gpt@v0.1.9
-        uses: ikuwow/code-review-gpt@support-openai-o3-mini
+      - uses: oven-sh/setup-bun@v2
         with:
-          # MODEL: 'gpt-4o-mini'
+          bun-version: latest
+
+      - name: Install and Run Code Review GPT
+        shell: bash
+        run: |
+          bun add 'github:ikuwow/code-review-gpt#support-openai-o3-mini'
+          bun code-review-gpt review --ci=github --model="$MODEL" --reviewLanguage="$REVIEW_LANGUAGE"
+        env:
           MODEL: 'o3-mini'
+          REVIEW_LANGUAGE: 'English'
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
           GITHUB_TOKEN: ${{ github.token }}
