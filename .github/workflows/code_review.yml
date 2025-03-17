@@ -23,6 +23,6 @@ jobs:
       - name: Code Review GPT
         uses: mattzcarey/code-review-gpt@v0.1.9
         with:
-          MODEL: 'gpt-4o-mini'
+          MODEL: 'o3-mini'
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
