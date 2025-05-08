@@ -216,7 +216,6 @@ PLATFORMS
 DEPENDENCIES
   builder
   erb_lint
-  haml (< 6.0.0)
   middleman (~> 4.6.0)
   middleman-blog
   middleman-favicon-maker
