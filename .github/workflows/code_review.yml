@@ -21,8 +21,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Code Review GPT
-        uses: mattzcarey/code-review-gpt@v0.1.9
+        uses: mattzcarey/shippie@v0.12.0
         with:
-          MODEL: 'o3-mini'
+          MODEL_STRING: 'openai:o3-mini'
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
