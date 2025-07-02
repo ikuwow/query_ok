@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 
 # Latest commit on master branch at 2025/02/03
 # https://github.com/middleman/middleman/commit/18e328a14e7b816fb39304bde707b6f1b7e799cd
-gem 'middleman', '~> 4.6.0'
+gem 'middleman', '~> 4.6.1'
 
 gem 'middleman-blog'
 gem 'middleman-favicon-maker'
