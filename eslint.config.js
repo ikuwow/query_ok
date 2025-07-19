@@ -7,14 +7,13 @@ export default [
       'vendor/**',
       'build/**',
       '.tmp/**',
-      'dist/**',
-      'webpack.*.js'
+      'dist/**'
     ]
   },
   js.configs.recommended,
   {
     languageOptions: {
-      ecmaVersion: 2015,
+      ecmaVersion: 2020,
       sourceType: 'module',
       globals: {
         // Browser globals
@@ -32,9 +31,6 @@ export default [
         __dirname: 'readonly',
         __filename: 'readonly',
         global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
         // ES6 globals
         Promise: 'readonly',
         Symbol: 'readonly',
