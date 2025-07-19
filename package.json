@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ikuwow/query_ok#readme",
   "devDependencies": {
-    "eslint": "^8.57.1",
+    "eslint": "^9.31.0",
     "markdownlint-cli2": "^0.18.1",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
