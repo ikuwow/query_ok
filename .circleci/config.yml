@@ -64,6 +64,15 @@ jobs:
       name: default
     steps:
       - checkout
+      - run:
+          name: Check Node.js and Ruby versions
+          command: |
+            echo "Node.js version:"
+            node --version
+            echo "npm version:"
+            npm --version
+            echo "Ruby version:"
+            ruby --version
       - bundle_install
       - npm_install
       - run:
@@ -95,6 +104,15 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - run:
+          name: Check Node.js and Ruby versions
+          command: |
+            echo "Node.js version:"
+            node --version
+            echo "npm version:"
+            npm --version
+            echo "Ruby version:"
+            ruby --version
       - run:
           name: Install imagemagick for favicon_maker
           command: |
