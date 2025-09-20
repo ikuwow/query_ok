@@ -9,7 +9,7 @@ executors:
   default:
     working_directory: ~/project
     docker:
-      - image: cimg/ruby:3.3.2-node
+      - image: cimg/ruby:3.4.6-node
     environment:
       BUNDLE_APP_CONFIG: ~/project/.bundle/
 
@@ -20,6 +20,11 @@ commands:
         type: string
         default: v7
     steps:
+      - run:
+          name: Check Ruby version
+          command: |
+            echo "Ruby version:"
+            ruby --version
       - run:
           name: Update bundler to latest
           command: |
@@ -47,6 +52,13 @@ commands:
         type: string
         default: v5
     steps:
+      - run:
+          name: Check Node.js version
+          command: |
+            echo "Node.js version:"
+            node --version
+            echo "npm version:"
+            npm --version
       - restore_cache:
           keys:
             - npm-<< parameters.npm_cache_version >>-{{ .Branch }}-{{ checksum "package-lock.json" }}
