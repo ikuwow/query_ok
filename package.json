@@ -30,7 +30,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "eslint": "^9.31.0",
-    "markdownlint-cli2": "^0.19.1",
+    "markdownlint-cli2": "^0.20.0",
     "sass": "^1.94.2",
     "sass-loader": "^16.0.6",
     "stylelint": "^16.26.1",
