@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> Last remote dev environment verification: 2026-03-21
+
 ## Project Overview
 
 This is ikuwow's personal blog "Query OK." built with Middleman, a static site generator. The blog is deployed to AWS S3 + CloudFront and features Japanese/English technical and life articles.
