@@ -99,3 +99,5 @@ Various linters are configured via `.pre-commit-config.yaml` including shellchec
 - Remove trailing whitespace (except in Markdown where meaningful)
 - The blog uses Japanese textlint presets - be mindful when editing Japanese content
 - Git commits should include co-authorship when working with AI tools
+
+<!-- Debug test for Claude Code web configuration - this line can be removed -->
