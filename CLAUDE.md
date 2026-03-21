@@ -67,13 +67,13 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Technology Stack
 
-- **Static Site Generator**: Middleman 4.6.1 with middleman-blog
-- **Languages**: Ruby 3.3.2 (via asdf) + Node.js 20.12.2
-- **Frontend Build**: Webpack 5
-- **CSS Framework**: Pure CSS
-- **Markdown**: Redcarpet with fenced code blocks, smartypants, autolink
-- **Comments**: utterances (separate repo: ikuwow/queryok_comments)
-- **Syntax Highlighting**: middleman-syntax
+- Static Site Generator: Middleman 4.6.1 with middleman-blog
+- Languages: Ruby 3.3.2 (via asdf) + Node.js 20.12.2
+- Frontend Build: Webpack 5
+- CSS Framework: Pure CSS
+- Markdown: Redcarpet with fenced code blocks, smartypants, autolink
+- Comments: utterances (separate repo: ikuwow/queryok_comments)
+- Syntax Highlighting: middleman-syntax
 
 ### Article Structure
 
@@ -86,7 +86,7 @@ Articles are created in `source/posts/{year}/{year}-{month}-{day}-{title}/index.
 
 ### Custom Extensions
 
-- **oEmbed Converter**: Automatically converts URLs (Twitter, YouTube, etc.) to embedded content
+- oEmbed Converter: Automatically converts URLs (Twitter, YouTube, etc.) to embedded content
 - Cache stored in `.cache/oembed_converter_v2/`
 
 ### Pre-commit Hooks
