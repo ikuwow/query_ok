@@ -31,7 +31,7 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.1.0",
     "markdownlint-cli2": "^0.22.1",
-    "sass": "^1.98.0",
+    "sass": "^1.99.0",
     "sass-loader": "^16.0.7",
     "stylelint": "^17.9.1",
     "stylelint-config-standard": "^40.0.0",
