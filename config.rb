@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'uglifier'
-
 Time.zone = 'Tokyo'
 
 set :url_root, 'https://queryok.ikuwow.com'
@@ -36,9 +34,6 @@ ignore '/**/.*.swp'
 
 configure :build do
   activate :minify_css
-  activate :minify_javascript, compressor: lambda {
-    Uglifier.new(harmony: true)
-  }
   activate :minify_html
 
   activate :asset_hash
