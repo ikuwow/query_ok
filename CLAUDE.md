@@ -17,10 +17,9 @@ npm install
 
 # Start development server (http://localhost:4567/)
 bundle exec middleman server
-
-# Watch and build frontend assets
-npm run watch
 ```
+
+Frontend assets are built and watched automatically: webpack runs as a Middleman external pipeline (`npm run watch` in server mode, `npm run build` in build mode).
 
 ### Build Commands
 
@@ -67,7 +66,7 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Technology Stack
 
-- Static Site Generator: Middleman 4.6 with middleman-blog (version pinned in Gemfile)
+- Static Site Generator: Middleman with middleman-blog (Middleman version pinned in Gemfile)
 - Languages: Ruby + Node.js (versions pinned in .tool-versions, managed via asdf)
 - Frontend Build: Webpack 5
 - CSS Framework: Pure CSS

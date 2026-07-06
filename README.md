@@ -23,10 +23,9 @@ Start the dev server:
 
 ```
 bundle exec middleman server
-npm run watch
 ```
 
-The site runs at http://localhost:4567/, and `npm run watch` builds frontend assets.
+The site runs at http://localhost:4567/. Frontend assets are built and watched automatically via the webpack external pipeline.
 
 ## Writing an article
 
