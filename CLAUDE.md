@@ -67,8 +67,8 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Technology Stack
 
-- Static Site Generator: Middleman 4.6.1 with middleman-blog
-- Languages: Ruby 3.3.2 (via asdf) + Node.js 20.12.2
+- Static Site Generator: Middleman 4.6 with middleman-blog (version pinned in Gemfile)
+- Languages: Ruby + Node.js (versions pinned in .tool-versions, managed via asdf)
 - Frontend Build: Webpack 5
 - CSS Framework: Pure CSS
 - Markdown: Redcarpet with fenced code blocks, smartypants, autolink
@@ -77,16 +77,23 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Article Structure
 
-Articles are created in `source/posts/{year}/{year}-{month}-{day}-{title}/index.html.md` format. Front matter includes:
+Articles are created in `source/posts/{year}/{year}-{month}-{day}-{title}/index.html.md` format.
 
-- title
-- created_at
-- tags
-- eyecatch (optional)
+Use `./article.sh <title>` to create a new article (creates a branch, generates the article, commits and pushes), or `bundle exec middleman article <title>` for generation only.
+
+Front matter keys:
+
+- `title`
+- `date` (format: `YYYY-MM-DD HH:MM JST`)
+- `tags` (comma-separated string, multiple tags allowed)
+- `thumbnail` (optional)
+- `published: false` (optional, marks a draft)
+
+The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Never rename the directory of a published article: it changes the URL and orphans its utterances comment thread.
 
 ### Custom Extensions
 
-- oEmbed Converter: Automatically converts URLs (Twitter, YouTube, etc.) to embedded content
+- oEmbed Converter: Converts standalone Twitter/X status URLs in Markdown into embedded HTML (Twitter/X only)
 - Cache stored in `.cache/oembed_converter_v2/`
 
 ### Pre-commit Hooks
@@ -99,3 +106,4 @@ Various linters are configured via `.pre-commit-config.yaml` including shellchec
 - Remove trailing whitespace (except in Markdown where meaningful)
 - The blog uses Japanese textlint presets - be mindful when editing Japanese content
 - Git commits should include co-authorship when working with AI tools
+- utterances comments are keyed by pathname (`issue-term="pathname"`), so changing an article URL loses its existing comment thread
