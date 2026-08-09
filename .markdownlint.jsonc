@@ -6,6 +6,9 @@
   // line-length
   "MD013": false,
 
+  // no-trailing-punctuation: the blog's name is "Query OK.", period included
+  "MD026": { "punctuation": ",;:!。，；：！" },
+
   // no-inline-html
   "MD033": false,
 
