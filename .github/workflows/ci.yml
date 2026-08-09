@@ -60,6 +60,10 @@ jobs:
         with:
           name: site
           path: build/
+          # deploy runs `aws s3 sync --delete`, so anything missing here is
+          # deleted from the live bucket
+          if-no-files-found: error
+          include-hidden-files: true
           retention-days: 1
 
   deploy:
