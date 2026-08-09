@@ -48,10 +48,10 @@ npm run textlint-fix
 
 ### Deployment
 
-The site is automatically deployed via CircleCI when pushing to the master branch. Manual deployment:
+The site is automatically deployed via GitHub Actions when pushing to the master branch. Manual deployment:
 
 ```bash
-aws s3 sync --delete build s3://queryok.ikuwow.com/
+aws s3 sync --delete build s3://<bucket>/
 ```
 
 ## Architecture and Structure
