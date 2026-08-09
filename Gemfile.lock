@@ -70,7 +70,6 @@ GEM
       concurrent-ruby (~> 1.0)
     hashie (5.1.0)
       logger
-    htmlcompressor (0.2.0)
     http_parser.rb (0.8.0)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
@@ -132,9 +131,6 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.6.1)
-    middleman-minify-html (3.4.1)
-      htmlcompressor (~> 0.2.0)
-      middleman-core (>= 3.2)
     middleman-syntax (3.6.1)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
@@ -224,7 +220,6 @@ DEPENDENCIES
   middleman-blog
   middleman-favicon-maker
   middleman-livereload
-  middleman-minify-html
   middleman-syntax
   redcarpet
   rubocop
