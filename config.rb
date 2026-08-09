@@ -36,19 +36,9 @@ configure :build do
   activate :minify_css
   activate :minify_html
 
-  activate :asset_hash
-
-  activate :favicon_maker, icons: {
-    '_favicon_template.png' => [
-      { icon: 'apple-touch-icon.png', size: '180x180' },
-      { icon: 'apple-touch-icon-precomposed.png', size: '180x180' },
-      { icon: 'apple-touch-icon-152x152-precomposed.png' },
-      { icon: 'apple-touch-icon-114x114-precomposed.png' },
-      { icon: 'apple-touch-icon-72x72-precomposed.png' },
-      { icon: 'favicon.png', size: '16x16' },
-      { icon: 'favicon.ico', size: '64x64,32x32,24x24,16x16' }
-    ]
-  }
+  # Browsers request /favicon.png by that exact name, so it must keep it.
+  # asset_hash already exempts .ico and apple-touch-icon* on its own.
+  activate :asset_hash, ignore: [/^favicon\.png$/]
 end
 
 activate :directory_indexes
