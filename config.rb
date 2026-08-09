@@ -34,7 +34,6 @@ ignore '/**/.*.swp'
 
 configure :build do
   activate :minify_css
-  activate :minify_html
 
   activate :asset_hash
 
