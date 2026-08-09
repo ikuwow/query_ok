@@ -11,7 +11,6 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 4.6.3'
 
 gem 'middleman-blog'
-gem 'middleman-favicon-maker'
 gem 'middleman-livereload'
 gem 'middleman-syntax'
 
