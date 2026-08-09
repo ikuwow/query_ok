@@ -36,8 +36,9 @@ configure :build do
   activate :minify_css
   activate :minify_html
 
-  # Browsers request /favicon.png by that exact name, so it must keep it.
-  # asset_hash already exempts .ico and apple-touch-icon* on its own.
+  # No HTML references favicon.png, so asset_hash has no reference to rewrite
+  # and a hashed name would leave the file reachable only at the digest URL.
+  # asset_hash exempts .ico and apple-touch-icon* on its own.
   activate :asset_hash, ignore: [/^favicon\.png$/]
 end
 
