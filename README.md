@@ -1,6 +1,6 @@
-Query OK.
+# Query OK.
+
 [![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok)
-===========================
 
 ikuwow's blog.
 
@@ -14,14 +14,14 @@ ikuwow's blog.
 
 Install dependencies:
 
-```
+```bash
 bundle install
 npm install
 ```
 
 Start the dev server:
 
-```
+```bash
 bundle exec middleman server
 ```
 
@@ -29,7 +29,7 @@ The site runs at http://localhost:4567/. Frontend assets are built and watched a
 
 ## Writing an article
 
-```
+```bash
 ./article.sh <title>
 ```
 
@@ -37,7 +37,7 @@ This creates a branch, generates the article scaffold, commits and pushes it.
 
 ## How to Deploy
 
-```
+```bash
 aws s3 sync --delete build s3://queryok.ikuwow.com/
 ```
 

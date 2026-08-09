@@ -59,6 +59,8 @@ GEM
     fast_blank (1.0.1)
     fastimage (2.4.0)
     ffi (1.17.3)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
     haml (6.4.0)
       temple (>= 0.8.2)
       thor
@@ -135,6 +137,10 @@ GEM
     nokogiri (1.19.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    nokogiri (1.19.4-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.4-x86_64-linux-gnu)
+      racc (~> 1.4)
     padrino-helpers (0.16.0)
       i18n (>= 0.6.7, < 2)
       padrino-support (= 0.16.0)
@@ -205,7 +211,9 @@ GEM
     webrick (1.9.2)
 
 PLATFORMS
+  arm64-darwin
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   builder
