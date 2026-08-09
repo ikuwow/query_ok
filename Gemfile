@@ -12,7 +12,6 @@ gem 'middleman', '~> 4.6.3'
 
 gem 'middleman-blog'
 gem 'middleman-livereload'
-gem 'middleman-minify-html'
 gem 'middleman-syntax'
 
 gem 'ruby-oembed'

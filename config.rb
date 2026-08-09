@@ -34,7 +34,6 @@ ignore '/**/.*.swp'
 
 configure :build do
   activate :minify_css
-  activate :minify_html
 
   # No HTML references favicon.png, so asset_hash has no reference to rewrite
   # and a hashed name would leave the file reachable only at the digest URL.
