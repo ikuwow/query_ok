@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - run: npm ci
+      - run: bundle exec rubocop
+        if: ${{ !cancelled() }}
+      - run: bundle exec erb_lint source/**/*.erb
+        if: ${{ !cancelled() }}
+      - run: npm run markdownlint
+        if: ${{ !cancelled() }}
+      - run: npm run eslint
+        if: ${{ !cancelled() }}
+      - run: npm run stylelint
+        if: ${{ !cancelled() }}
+      - run: npm run textlint
+        if: ${{ !cancelled() }}
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - run: npm ci
+      - name: Build static pages
+        run: bundle exec middleman build
+      - name: Build static pages with verbose output
+        if: failure()
+        run: bundle exec middleman build --verbose
+      - uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: build/
+          # deploy runs `aws s3 sync --delete`, so anything missing here is
+          # deleted from the live bucket
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: [lint, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: site
+          path: build
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Deploy to S3
+        env:
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+        run: aws s3 sync --delete build "s3://${S3_BUCKET}/"
+      - name: Invalidate CloudFront caches
+        env:
+          DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${DISTRIBUTION_ID}" \
+            --paths "/*"
