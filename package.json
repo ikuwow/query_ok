@@ -47,7 +47,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
     "css-loader": "^7.1.5",
-    "purecss": "^3.0.0",
+    "purecss": "^3.1.0",
     "style-loader": "^4.0.0"
   }
 }
