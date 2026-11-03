@@ -9,7 +9,7 @@
         <p class="post-meta">
         <time><%= article.date.strftime('%B %d, %Y') %></time>
         <% article.tags.each do |tag| %>
-          <%= partial 'tag', locals: {tag: tag} %>
+          <%= partial 'tag', locals: { tag: tag } %>
         <% end %>
 
         </p>
@@ -18,7 +18,7 @@
             <p>
                 <%= strip_tags(article.summary) %>
             </p>
-            <%= link_to 'Read More', article, :class => "pure-button btn-read-more" %>
+            <%= link_to 'Read More', article, class: 'pure-button btn-read-more' %>
         </div>
     </section>
 <% end %>
