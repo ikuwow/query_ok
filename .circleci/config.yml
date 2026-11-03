@@ -124,7 +124,6 @@ jobs:
       - save_cache:
           key: articles-<< parameters.article_cache_version >>-{{ .Branch }}-{{ .Revision }}
           paths:
-            - build
             - .cache
       - persist_to_workspace:
           root: ~/project
@@ -142,6 +141,12 @@ jobs:
       - bundle_install
       - npm_install
       - aws-cli/install
+      # aws s3 sync uploads a same-size file only when its mtime is newer
+      # than the S3 object, and an asset hash change keeps HTML the same size.
+      # Build-time mtimes can predate the previous deploy's upload.
+      - run:
+          name: Mark build output newer than the live objects
+          command: find build -type f -exec touch {} +
       - deploy:
           name: deploy to s3
           command: |
@@ -162,6 +167,8 @@ workflows:
       - build
       - lint
       - deploy:
+          # Concurrent sync --delete runs remove each other's hashed assets.
+          serial-group: << pipeline.project.slug >>/deploy
           context: slack-notification
           filters:
             branches:
