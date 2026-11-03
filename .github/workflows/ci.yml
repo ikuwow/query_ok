@@ -5,12 +5,18 @@ on:
     branches:
       - master
   pull_request:
+  # Dependabot merges are made with GITHUB_TOKEN, which starts no push run,
+  # so these runs build and deploy them. Runs at most 4 days apart also keep
+  # the oEmbed cache clear of the eviction of caches unused for 7 days.
+  schedule:
+    - cron: "0 18 * * 0,3"
 
 permissions:
   contents: read
 
-# Runs on master queue instead of overlapping, because concurrent deploys
-# delete each other's hashed assets with `aws s3 sync --delete`.
+# Master runs never overlap: a new run waits for the running one and replaces
+# any run still pending, because concurrent deploys delete each other's hashed
+# assets with `aws s3 sync --delete`.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
@@ -53,8 +59,8 @@ jobs:
           node-version-file: .tool-versions
           cache: npm
       - run: npm ci
-      # A status URL the oEmbed endpoint no longer resolves builds only from
-      # its cached response
+      # A failed oEmbed fetch fails the build, so a status URL the endpoint no
+      # longer resolves builds only from its cached response
       - uses: actions/cache@v6
         with:
           path: .cache
@@ -69,14 +75,14 @@ jobs:
         with:
           name: site
           path: build/
-          # deploy runs `aws s3 sync --delete`, so anything missing here is
-          # deleted from the live bucket
+          # deploy runs `aws s3 sync --delete`, so anything missing from this
+          # artifact is deleted from the live bucket
           if-no-files-found: error
           include-hidden-files: true
           retention-days: 1
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     needs: [lint, build]
     runs-on: ubuntu-latest
     permissions:

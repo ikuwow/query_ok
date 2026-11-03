@@ -48,7 +48,7 @@ CI runs each lint command above except `textlint-fix` on every pull request and 
 
 ### Deployment
 
-The site is automatically deployed via GitHub Actions when pushing to the master branch. Manual deployment, after `bundle exec middleman build`:
+The site is automatically deployed via GitHub Actions when pushing to the master branch, and by a twice-weekly scheduled run, which is what deploys Dependabot merges. Manual deployment, after `bundle exec middleman build`:
 
 ```bash
 ./deploy.sh
