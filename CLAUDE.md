@@ -1,7 +1,5 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Project Overview
 
 This is ikuwow's personal blog "Query OK." built with Middleman, a static site generator. The blog is deployed to AWS S3 + CloudFront and features Japanese/English technical and life articles.
@@ -46,6 +44,8 @@ bundle exec erb_lint source/**/*.erb  # ERB templates
 npm run textlint-fix
 ```
 
+CI runs each lint command above except `textlint-fix` on every push and fails on any error, so run the ones covering the files you changed before pushing.
+
 ### Deployment
 
 The site is automatically deployed via CircleCI when pushing to the master branch. Manual deployment, after `bundle exec middleman build`:
@@ -58,7 +58,7 @@ The site is automatically deployed via CircleCI when pushing to the master branc
 
 ### Key Directories
 
-- `source/posts/` - Blog articles organized by year (e.g., `2024/2024-01-01-title/index.html.md`)
+- `source/posts/` - Blog articles (layout in Article Structure)
 - `source/layouts/` - ERB layout templates
 - `source/stylesheets/` - SCSS stylesheets (compiled via Webpack)
 - `extensions/` - Custom Middleman extensions (oEmbed converter)
@@ -66,11 +66,11 @@ The site is automatically deployed via CircleCI when pushing to the master branc
 
 ### Technology Stack
 
-- Static Site Generator: Middleman with middleman-blog (Middleman version pinned in Gemfile)
-- Languages: Ruby + Node.js (versions pinned in .tool-versions, managed via asdf)
+- Static Site Generator: Middleman with middleman-blog (Middleman version constrained in Gemfile, both resolved in Gemfile.lock)
+- Languages: Ruby + Node.js (versions pinned in .tool-versions)
 - Frontend Build: Webpack 5
 - CSS Framework: Pure CSS
-- Markdown: Redcarpet with fenced code blocks, smartypants, autolink
+- Markdown: Redcarpet with fenced code blocks, smartypants, autolink, strikethrough
 - Comments: utterances (separate repo: ikuwow/queryok_comments)
 - Syntax Highlighting: middleman-syntax
 
@@ -88,21 +88,15 @@ Front matter keys:
 - `thumbnail` (optional)
 - `published: false` (optional, marks a draft)
 
-The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Never rename the directory of a published article: it changes the URL and orphans its utterances comment thread.
+The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Keep the URL of every published article unchanged: utterances keys comment threads by pathname (`issue-term="pathname"`), so a changed URL orphans the thread. Renaming an article's directory changes its URL, and changing `blog.permalink` or `directory_indexes` in `config.rb` changes every article's URL.
 
 ### Custom Extensions
 
 - oEmbed Converter: Converts standalone Twitter/X status URLs in Markdown into embedded HTML (Twitter/X only)
 - Cache stored in `.cache/oembed_converter_v2/`
+- A failed oEmbed fetch fails `middleman build`, so keep `.cache/`: a status URL the oEmbed endpoint no longer resolves, such as a deleted tweet, builds only from its cached response
+- `.cache/` is gitignored, so a new worktree starts without it; copy it from the main checkout before running `middleman build` there
 
 ### Pre-commit Hooks
 
-Various linters are configured via `.pre-commit-config.yaml` including shellcheck for shell scripts.
-
-## Important Notes
-
-- Always ensure files end with a newline
-- Remove trailing whitespace (except in Markdown where meaningful)
-- The blog uses Japanese textlint presets - be mindful when editing Japanese content
-- Git commits should include co-authorship when working with AI tools
-- utterances comments are keyed by pathname (`issue-term="pathname"`), so changing an article URL loses its existing comment thread
+When a hook in `.pre-commit-config.yaml` rewrites files and fails the commit, re-stage them and commit again.
