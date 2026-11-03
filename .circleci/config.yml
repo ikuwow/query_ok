@@ -141,16 +141,9 @@ jobs:
       - bundle_install
       - npm_install
       - aws-cli/install
-      # aws s3 sync uploads a same-size file only when its mtime is newer
-      # than the S3 object, and an asset hash change keeps HTML the same size.
-      # Build-time mtimes can predate the previous deploy's upload.
-      - run:
-          name: Mark build output newer than the live objects
-          command: find build -type f -exec touch {} +
       - deploy:
           name: deploy to s3
-          command: |
-            aws s3 sync --delete build s3://queryok.ikuwow.com/
+          command: ./deploy.sh
       - deploy:
           name: Invalidate Cloudfront Caches
           command: |

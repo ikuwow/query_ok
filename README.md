@@ -38,7 +38,7 @@ This creates a branch, generates the article scaffold, commits and pushes it.
 ## How to Deploy
 
 ```bash
-aws s3 sync --delete build s3://queryok.ikuwow.com/
+./deploy.sh
 ```
 
 ## License
