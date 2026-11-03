@@ -1,6 +1,6 @@
 # Query OK.
 
-[![CircleCI](https://circleci.com/gh/ikuwow/query_ok.svg?style=svg)](https://circleci.com/gh/ikuwow/query_ok)
+[![CI](https://github.com/ikuwow/query_ok/actions/workflows/ci.yml/badge.svg)](https://github.com/ikuwow/query_ok/actions/workflows/ci.yml)
 
 ikuwow's blog.
 
@@ -36,6 +36,8 @@ The site runs at http://localhost:4567/. Frontend assets are built and watched a
 This creates a branch, generates the article scaffold, commits and pushes it.
 
 ## How to Deploy
+
+Pushing to `master` deploys automatically via GitHub Actions. Manual deployment, after `bundle exec middleman build`:
 
 ```bash
 ./deploy.sh

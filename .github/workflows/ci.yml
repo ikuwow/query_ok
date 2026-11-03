@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  # Dependabot merges are made with GITHUB_TOKEN, which starts no push run,
+  # so these runs build and deploy them. Runs at most 4 days apart also keep
+  # the oEmbed cache clear of the eviction of caches unused for 7 days.
+  schedule:
+    - cron: "17 18 * * 0,3"
+
+permissions:
+  contents: read
+
+# Master runs never overlap: a new run waits for the running one and replaces
+# any run still pending, because concurrent deploys delete each other's hashed
+# assets with `aws s3 sync --delete`.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - run: npm ci
+      - run: bundle exec rubocop
+        if: ${{ !cancelled() }}
+      - run: bundle exec erb_lint source/**/*.erb
+        if: ${{ !cancelled() }}
+      - run: npm run markdownlint
+        if: ${{ !cancelled() }}
+      - run: npm run eslint
+        if: ${{ !cancelled() }}
+      - run: npm run stylelint
+        if: ${{ !cancelled() }}
+      - run: npm run textlint
+        if: ${{ !cancelled() }}
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - run: npm ci
+      # A failed oEmbed fetch fails the build, so a status URL the endpoint no
+      # longer resolves builds only from its cached response
+      - uses: actions/cache@v6
+        with:
+          path: .cache
+          key: oembed-${{ github.sha }}
+          restore-keys: oembed-
+      - name: Build static pages
+        run: bundle exec middleman build
+      - name: Build static pages with verbose output
+        if: failure()
+        run: bundle exec middleman build --verbose
+      - uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: build/
+          # deploy runs `aws s3 sync --delete`, so anything missing from this
+          # artifact is deleted from the live bucket
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    needs: [lint, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: site
+          path: build
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Deploy to S3
+        run: ./deploy.sh
+      - name: Invalidate CloudFront caches
+        env:
+          DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${DISTRIBUTION_ID}" \
+            --paths "/*"

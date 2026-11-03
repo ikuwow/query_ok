@@ -44,11 +44,11 @@ bundle exec erb_lint source/**/*.erb  # ERB templates
 npm run textlint-fix
 ```
 
-CI runs each lint command above except `textlint-fix` on every push and fails on any error, so run the ones covering the files you changed before pushing.
+CI runs each lint command above except `textlint-fix` on every pull request and on every push to master, and fails on any error, so run the ones covering the files you changed before pushing.
 
 ### Deployment
 
-The site is automatically deployed via CircleCI when pushing to the master branch. Manual deployment, after `bundle exec middleman build`:
+The site is automatically deployed via GitHub Actions when pushing to the master branch, and by a twice-weekly scheduled run, which is what deploys Dependabot merges. Manual deployment, after `bundle exec middleman build`:
 
 ```bash
 ./deploy.sh
