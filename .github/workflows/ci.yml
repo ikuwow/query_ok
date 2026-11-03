@@ -9,7 +9,7 @@ on:
   # so these runs build and deploy them. Runs at most 4 days apart also keep
   # the oEmbed cache clear of the eviction of caches unused for 7 days.
   schedule:
-    - cron: "0 18 * * 0,3"
+    - cron: "17 18 * * 0,3"
 
 permissions:
   contents: read
