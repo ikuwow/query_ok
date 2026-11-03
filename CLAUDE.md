@@ -66,7 +66,7 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Technology Stack
 
-- Static Site Generator: Middleman with middleman-blog (version constrained in Gemfile, resolved in Gemfile.lock)
+- Static Site Generator: Middleman with middleman-blog (Middleman version constrained in Gemfile, both resolved in Gemfile.lock)
 - Languages: Ruby + Node.js (versions pinned in .tool-versions)
 - Frontend Build: Webpack 5
 - CSS Framework: Pure CSS
@@ -88,13 +88,14 @@ Front matter keys:
 - `thumbnail` (optional)
 - `published: false` (optional, marks a draft)
 
-The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Keep the directory name of a published article unchanged: renaming it changes the URL and orphans its utterances comment thread, which utterances keys by pathname (`issue-term="pathname"`).
+The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Keep the URL of every published article unchanged: utterances keys comment threads by pathname (`issue-term="pathname"`), so a changed URL orphans the thread. Renaming an article's directory changes its URL, and changing `blog.permalink` or `directory_indexes` in `config.rb` changes every article's URL.
 
 ### Custom Extensions
 
 - oEmbed Converter: Converts standalone Twitter/X status URLs in Markdown into embedded HTML (Twitter/X only)
 - Cache stored in `.cache/oembed_converter_v2/`
 - A failed oEmbed fetch fails `middleman build`, so keep `.cache/`: a status URL the oEmbed endpoint no longer resolves, such as a deleted tweet, builds only from its cached response
+- `.cache/` is gitignored, so a new worktree starts without it; copy it from the main checkout before running `middleman build` there
 
 ### Pre-commit Hooks
 
