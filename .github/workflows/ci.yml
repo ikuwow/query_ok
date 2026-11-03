@@ -36,7 +36,9 @@ jobs:
       - run: npm ci
       - run: bundle exec rubocop
         if: ${{ !cancelled() }}
-      - run: bundle exec erb_lint source/**/*.erb
+      - run: |
+          shopt -s globstar
+          bundle exec erb_lint source/**/*.erb
         if: ${{ !cancelled() }}
       - run: npm run markdownlint
         if: ${{ !cancelled() }}
