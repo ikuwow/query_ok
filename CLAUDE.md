@@ -58,7 +58,7 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Key Directories
 
-- `source/posts/` - Blog articles organized by year (e.g., `2024/2024-01-01-title/index.html.md`)
+- `source/posts/` - Blog articles (layout in Article Structure)
 - `source/layouts/` - ERB layout templates
 - `source/stylesheets/` - SCSS stylesheets (compiled via Webpack)
 - `extensions/` - Custom Middleman extensions (oEmbed converter)
@@ -66,7 +66,7 @@ aws s3 sync --delete build s3://queryok.ikuwow.com/
 
 ### Technology Stack
 
-- Static Site Generator: Middleman with middleman-blog (Middleman version pinned in Gemfile)
+- Static Site Generator: Middleman with middleman-blog (version constrained in Gemfile, resolved in Gemfile.lock)
 - Languages: Ruby + Node.js (versions pinned in .tool-versions)
 - Frontend Build: Webpack 5
 - CSS Framework: Pure CSS
@@ -88,7 +88,7 @@ Front matter keys:
 - `thumbnail` (optional)
 - `published: false` (optional, marks a draft)
 
-The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Never rename the directory of a published article: it changes the URL and orphans its utterances comment thread, which utterances keys by pathname (`issue-term="pathname"`).
+The article URL is `/entry/{title}/`, where `{title}` comes from the directory name's title part, not from the front matter `title` (which is typically Japanese). Keep the directory name of a published article unchanged: renaming it changes the URL and orphans its utterances comment thread, which utterances keys by pathname (`issue-term="pathname"`).
 
 ### Custom Extensions
 
@@ -98,4 +98,4 @@ The article URL is `/entry/{title}/`, where `{title}` comes from the directory n
 
 ### Pre-commit Hooks
 
-`.pre-commit-config.yaml` runs trailing-whitespace (keeping Markdown line breaks), end-of-file-fixer, check-added-large-files, and markdownlint-cli2 on commit. The first two rewrite files and fail the commit, so re-stage and commit again after they run.
+When a hook in `.pre-commit-config.yaml` rewrites files and fails the commit, re-stage them and commit again.
